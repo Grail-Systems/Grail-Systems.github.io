@@ -79,7 +79,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
 }
 #printLetter{display:none}
 @media print{#printLetter{display:block}}
-.found{margin:6px 0 0 1rem;padding:0;color:var(--ink);font-size:.93rem}.found li{margin-bottom:4px}</style>
+.found{margin:6px 0 0 1rem;padding:0;color:var(--ink);font-size:.93rem}.found li{margin-bottom:4px}.rise{color:#2D6A4F;font-weight:600}</style>
 </head>
 <body>
 <div class="wrap">
@@ -112,6 +112,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
   <section aria-labelledby="water">
     <h2 id="water">How far the water has dropped</h2>
     <p>State-monitored wells in this county, sorted by how far the water level has fallen since records began.</p>
+    <p id="waterSummary" class="muted"></p>
     <ul class="rows" id="waterList"><li class="loading">Loading…</li></ul>
     <details id="wellsOnFile">
       <summary>Every public-supply and industrial well on file, by aquifer</summary>
@@ -242,13 +243,14 @@ get('frontend/mega_permits.json').then(list => {
 get('frontend/usgs_telemetry.json').then(list => {
   const rows = list.filter(x => inCounty(x.title)).sort((a, b) => (b.drop_ft || 0) - (a.drop_ft || 0));
   $('nWater').textContent = rows.length;
+  const nDown = rows.filter(x => (x.drop_ft || 0) > 0).length; const sub = $('waterSummary'); if (sub) sub.textContent = nDown + ' of ' + rows.length + ' have dropped since their first measurement. The rest have risen. Records start in different years, so compare each well to itself.';
   const ul = $('waterList'); ul.innerHTML = '';
   if (!rows.length) ul.appendChild(el('li', 'muted', 'No monitored wells on file for this county yet.'));
   rows.slice(0, 12).forEach(x => {
     const li = el('li'); const txt = plain(x.bottom_line);
     const h = el('h3'); h.appendChild(document.createTextNode('State well ' + (x.state_well_number || '') + ': '));
     const since = (txt.match(/since (\d{4})/) || [])[1];
-    h.appendChild(el('span', 'drop', x.drop_ft != null ? 'down ' + Math.round(x.drop_ft) + ' ft' + (since ? ' since ' + since : '') : 'level on file'));
+    const dft = x.drop_ft == null ? null : Math.round(x.drop_ft); h.appendChild(el('span', dft > 0 ? 'drop' : 'rise', dft == null ? 'level on file' : (dft > 0 ? 'down ' + dft + ' ft' : dft < 0 ? 'up ' + (-dft) + ' ft' : 'no change') + (since ? ' since ' + since : '')));
     li.appendChild(h);
     const p = el('p', null, txt + ' ');
     if (x.source_url) p.appendChild(link(x.source_url, 'Source'));
