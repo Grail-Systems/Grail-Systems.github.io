@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="wrap">
-<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/network">Join the network</a></nav>
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/network">Join the network</a><a href="/records">Records</a></nav>
 
 <div class="hero">
   <h1>Who's behind it</h1>
@@ -66,7 +66,15 @@ const companies = [
   {name:"Diode Ventures", kind:"Data center developer", counties:["Henderson"], entities:"Diode Ventures (Kansas)", know:"Withdrew its Cedar Creek Lake project in July 2026 after failing to meet the Governor's standards.", conf:"Reporting"},
   {name:"RCM Hill LLC", kind:"Data center developer", counties:["Hill"], entities:"RCM Hill LLC", know:"Sued Hill County for $100M over its moratorium; the county rescinded it.", conf:"Reporting"},
   {name:"Stream Data Centers", kind:"Data center developer", counties:["Young"], entities:"Project Saltworks", know:"Proposed about 890 acres and 15 buildings in Graham, about $10B.", conf:"Reporting"},
-  {name:"QTS and Lancium", kind:"Data center developers", counties:["Hall","Taylor"], entities:"QTS (Blackstone); Lancium Clean Campus", know:"Up to 11 buildings near Turkey with a 1 GW grid connection. Lancium also hosts Stargate Abilene.", conf:"Reporting"}
+  {name:"QTS and Lancium", kind:"Data center developers", counties:["Hall","Taylor"], entities:"QTS (Blackstone); Lancium Clean Campus", know:"Up to 11 buildings near Turkey with a 1 GW grid connection. Lancium also hosts Stargate Abilene.", conf:"Reporting"},
+  {name:"Meta", kind:"Data center owner", counties:["El Paso"], entities:"Land bought through Wurldwide LLC", know:"Up to $10B campus in Northeast El Paso. Water capped at 2.5 million gal/day, expected to average about 480,000. The city gave an 80% tax cut for 25 years tied to at least 50 permanent jobs.", conf:"Reporting"},
+  {name:"Amazon", kind:"Data center owner", counties:["Somervell","Hood"], entities:"Amazon Web Services", know:"Got county incentives for a project near Comanche Peak nuclear plant before Somervell County resolved to oppose new data centers. Also listed at 2300 Coates Road in Hood County.", conf:"Reporting"},
+  {name:"Lancium", kind:"Data center developer", counties:["Taylor","Childress","Hall"], entities:"Lancium Clean Campus", know:"Developer behind Stargate Abilene. Says its Childress site draws about 11,000 gal/day from the Red River Water Authority and that it will return 1 million gal/day.", conf:"Reporting"},
+  {name:"Sailfish Development", kind:"Data center park developer", counties:["Hood"], entities:"Comanche Circle", know:"About 2,100 to 2,600 acres near Tolar with on-site power, water and wastewater. Conditionally approved Jan 2026 and told to provide water details within 45 days.", conf:"Reporting"},
+  {name:"Pacifico Energy", kind:"Data center developer", counties:["Hood"], entities:"Fort Spunky", know:"862 acres across the Brazos River from Pecan Plantation. Reported paused.", conf:"Reporting"},
+  {name:"Bilateral Energy", kind:"Data center developer", counties:["Hood"], entities:"Project Patriot", know:"About 1,200 MW reported in Hood County. Needs verification.", conf:"Reporting"},
+  {name:"Big Digital Energy / 10NetZero", kind:"AI data center developer", counties:["Hood"], entities:"Hood County AI Campus", know:"About 300 MW reported. Needs verification.", conf:"Reporting"},
+  {name:"Infrakey", kind:"Data center developer", counties:["McLennan"], entities:"Infrakey", know:"$10B proposal near Waco. Claims $50M a year in tax revenue for Lacy Lakeview.", conf:"Reporting"}
 ];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function render() {
