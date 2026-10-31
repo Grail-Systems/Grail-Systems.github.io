@@ -199,3 +199,5 @@ build(dict(slug="milam", name="Milam", checked=C,
     ("Ask who owns the water rights","A private lake water reservation can bypass the debates residents expect."),
     ("Track every announced site","Stargate named Milam County with no public details. Watch TDLR filings and the appraisal district.")],
   sources="The Block; Greenpeace USA research; Baxtel; Data Center Dynamics; TechRadar."))
+
+import subprocess; subprocess.run(["python3", "tools/add_live.py"])
