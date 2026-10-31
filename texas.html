@@ -118,7 +118,9 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
       <option value="operating">Operating</option>
       <option value="stopped">Withdrawn or stopped</option>
     </select>
+    <label style="display:flex;align-items:center;gap:6px;font-weight:600"><input type="checkbox" id="soonFilter"> <span id="soonLabel">Hearing or deadline in the next 30 days</span></label>
   </div>
+  <div id="upcoming"></div>
   <ul class="rows" id="rows"></ul>
   <p style="margin-top:14px"><button id="dlProjects" style="background:var(--pine);color:var(--paper);border:0;padding:10px 16px;font:inherit;font-weight:700;border-radius:4px;cursor:pointer">Download projects (CSV)</button> <button id="dlActions" style="background:transparent;color:var(--pine);border:1.5px solid var(--pine);padding:9px 15px;font:inherit;font-weight:700;border-radius:4px;cursor:pointer">Download government actions (CSV)</button></p>
   <span class="src">Records: government records we hold. Court filings: lawsuits. Reporting: published news that still needs a record behind it.</span>
@@ -559,11 +561,26 @@ document.getElementById("legend").innerHTML = Object.keys(statusText).map(k =>
 const map = L.map("map", {scrollWheelZoom:false}).fitBounds([[25.8,-106.6],[36.5,-93.5]]);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:18, attribution:"&copy; OpenStreetMap contributors"}).addTo(map);
 
+const soon = new Set();
+const fmtD = d => new Date(d + "T12:00:00").toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
+const pslug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const extraFields = p => [["Location", p.loc], ["Related companies and LLCs", p.llc], ["Land", p.land], ["Incentives", p.incent], ["Key dates", p.dates]].filter(x => x[1]);
+const nextLine = e => `${esc(fmtD(e.date))}${e.time ? ", " + esc(e.time) : ""}: ${esc(e.what)}${e.where ? ", " + esc(e.where) : ""}`;
+function extraHTML(p) {
+  return (p.next || []).map(e => `<p><b style="color:var(--alarm)">Coming up:</b> ${nextLine(e)}</p>`).join("") +
+    extraFields(p).map(([k, v]) => `<p><b>${k}:</b> ${esc(v)}</p>`).join("");
+}
+function popupHTML(p) {
+  return `<strong>${esc(p.name)}</strong><br>${esc(p.county)} County · ${statusText[p.status]}<br><br>` +
+    (p.next || []).map(e => `<b style="color:var(--alarm)">Coming up:</b> ${nextLine(e)}<br>`).join("") +
+    `<b>Developer:</b> ${esc(p.dev)}<br><b>Power:</b> ${esc(p.power)}<br><b>Water:</b> ${esc(p.water)}<br>` +
+    extraFields(p).map(([k, v]) => `<b>${k}:</b> ${esc(v)}<br>`).join("") +
+    `<br>${esc(p.note)}<br><br>${p.src ? "<b>Sources:</b> " + esc(p.src) + "<br><br>" : ""}` +
+    `<span class="tag">${esc(p.conf)}</span>${p.link ? `<a href="${p.link}">County page</a>` : ""} &nbsp;<a href="#${pslug(p.name)}">Link to this project</a>`;
+}
 const markers = projects.map(p => {
   const m = L.circleMarker([p.lat, p.lng], {radius:9, color:"#fff", weight:2, fillColor:colors[p.status], fillOpacity:.95}).addTo(map);
-  m.bindPopup(`<strong>${esc(p.name)}</strong><br>${esc(p.county)} County · ${statusText[p.status]}<br><br>
-    <b>Developer:</b> ${esc(p.dev)}<br><b>Power:</b> ${esc(p.power)}<br><b>Water:</b> ${esc(p.water)}<br><br>${esc(p.note)}<br><br>${p.src ? '<b>Sources:</b> ' + esc(p.src) + '<br><br>' : ''}
-    <span class="tag">${esc(p.conf)}</span>${p.link ? `<a href="${p.link}">County page</a>` : ""}`);
+  m.bindPopup(popupHTML(p), {maxHeight: 340});
   return m;
 });
 
@@ -575,8 +592,8 @@ function render() {
   list.innerHTML = "";
   let shown = 0;
   projects.forEach((p, i) => {
-    const hay = [p.name, p.county, p.dev, p.water, p.note].join(" ").toLowerCase();
-    const show = (!q || hay.includes(q)) && (!t || p.type === t) && (!s || p.status === s);
+    const hay = [p.name, p.county, p.dev, p.water, p.note, p.loc, p.llc, p.land, p.incent, p.dates].join(" ").toLowerCase();
+    const show = (!q || hay.includes(q)) && (!t || p.type === t) && (!s || p.status === s) && (!document.getElementById("soonFilter").checked || soon.has(p.name));
     if (!show) { map.removeLayer(markers[i]); return; }
     markers[i].addTo(map); shown++;
     const li = document.createElement("li");
@@ -585,13 +602,14 @@ function render() {
       <h3>${esc(p.name)}</h3>
       <p><b>Developer:</b> ${esc(p.dev)}</p>
       <p><b>Power:</b> ${esc(p.power)} · <b>Water:</b> ${esc(p.water)}</p>
-      <p>${esc(p.note)}</p>${p.src ? '<p><b>Sources:</b> ' + esc(p.src) + '</p>' : ''}`;
+      <p>${esc(p.note)}</p>${p.src ? '<p><b>Sources:</b> ' + esc(p.src) + '</p>' : ''}${extraHTML(p)}`;
     li.onclick = () => { map.setView([p.lat, p.lng], 10); markers[i].openPopup(); document.getElementById("map").scrollIntoView({behavior:"smooth", block:"center"}); };
     list.appendChild(li);
   });
   if (!shown) list.innerHTML = `<li class="empty">No projects match that search.</li>`;
 }
 ["search","typeFilter","statusFilter"].forEach(id => document.getElementById(id).addEventListener("input", render));
+document.getElementById("soonFilter").addEventListener("change", render);
 render();
 
 document.getElementById("actions").innerHTML = actions.map(a =>
@@ -606,10 +624,9 @@ function download(name, text) {
   a.href = URL.createObjectURL(new Blob([text], {type:"text/csv"}));
   a.download = name; document.body.appendChild(a); a.click(); a.remove();
 }
-document.getElementById("dlProjects").onclick = () => download("texas-watch-projects.csv", toCSV(projects.map(p => Object.assign({}, p, {status: statusText[p.status], type: typeText[p.type]})), ["name","county","type","status","dev","power","water","note","conf","src","lat","lng"]));
+document.getElementById("dlProjects").onclick = () => download("texas-watch-projects.csv", toCSV(projects.map(p => Object.assign({}, p, {status: statusText[p.status], type: typeText[p.type]})), ["name","county","type","status","dev","loc","llc","power","land","water","incent","dates","note","conf","src","lat","lng"]));
 document.getElementById("dlActions").onclick = () => download("texas-watch-government-actions.csv", toCSV(actions, ["who","when","what","result","lesson","src"]));
 const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-markers.forEach((m, i) => m.setPopupContent(m.getPopup().getContent() + ` &nbsp;<a href="#${slug(projects[i].name)}">Link to this project</a>`));
 function goToHash() {
   const h = decodeURIComponent(location.hash.slice(1));
   const i = projects.findIndex(p => slug(p.name) === h);
@@ -619,6 +636,24 @@ function goToHash() {
 }
 window.addEventListener("hashchange", goToHash);
 goToHash();
+
+Promise.all([fetch("/data/details.json").then(r => r.json()), fetch("/data/events.json").then(r => r.json())]).then(([D, E]) => {
+  projects.forEach(p => Object.assign(p, D[p.name] || {}));
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const in30 = new Date(today); in30.setDate(in30.getDate() + 30);
+  const up = E.filter(e => new Date(e.date + "T12:00:00") >= today).sort((a, b) => a.date.localeCompare(b.date));
+  up.forEach(e => {
+    const d = new Date(e.date + "T12:00:00");
+    e.projects.forEach(n => { const p = projects.find(x => x.name === n); if (!p) return; (p.next = p.next || []).push(e); if (d <= in30) soon.add(n); });
+  });
+  markers.forEach((m, i) => m.setPopupContent(popupHTML(projects[i])));
+  document.getElementById("soonLabel").textContent = `Hearing or deadline in the next 30 days (${soon.size})`;
+  if (up.length) document.getElementById("upcoming").innerHTML = `<h3 style="margin-top:18px">Coming up</h3><ul class="rows">` + up.map(e =>
+    `<li><span class="tag">${esc(fmtD(e.date))}${e.time ? ", " + esc(e.time) : ""}</span>${e.expected ? '<span class="tag">Expected</span>' : ""}
+     <h3>${esc(e.what)}</h3><p>${esc(e.where || "")}${e.projects.length ? " · Affects: " + e.projects.map(n => `<a href="#${pslug(n)}">${esc(n)}</a>`).join(", ") : ""}</p>
+     ${e.src ? `<p><b>Source:</b> ${esc(e.src)}</p>` : ""}</li>`).join("") + `</ul>`;
+  render();
+}).catch(() => {});
 </script>
 </body>
 </html>
