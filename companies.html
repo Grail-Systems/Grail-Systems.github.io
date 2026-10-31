@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Companies | Texas Watch | Grail Systems</title>
+<meta name="description" content="Who is behind Texas data center, crypto mining and power projects: parent companies, LLCs, counties and lawsuits.">
+<meta property="og:title" content="Who's Behind Texas Data Centers">
+<meta property="og:description" content="Parent companies, shell LLCs, counties and lawsuits for data center and crypto developers in Texas.">
+<meta property="og:url" content="https://grailsystems.io/companies">
+<meta property="og:image" content="https://grailsystems.io/img/grail_share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/watch.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/network">Join the network</a></nav>
+
+<div class="hero">
+  <h1>Who's behind it</h1>
+  <p>Projects are often filed under single-purpose LLCs with names that tell you nothing. This page connects them to the companies behind them, and shows where else those companies operate, so one county can learn from another's experience.</p>
+  <p class="by">Built by Fawn Elizabeth Zion, Grail Systems. Checked Oct 31, 2026.</p>
+</div>
+
+<section>
+  <h2>Companies we track</h2>
+  <p>Search by company, LLC or county.</p>
+  <input id="search" type="search" placeholder="Search" aria-label="Search companies">
+  <ul class="rows" id="list"></ul>
+  <span class="src">Sources are listed on each project in <a href="/texas">Texas Watch</a>. Records means government records we hold; Court filings means lawsuits; Reporting means published news.</span>
+</section>
+
+<section>
+  <h2>Know something we don't?</h2>
+  <p>If you've found an LLC, permit or land deal tied to one of these companies, send it to <a href="mailto:contact@grailsystems.io?subject=Companies%20tip">contact@grailsystems.io</a>. We verify before we publish.</p>
+</section>
+
+<footer>
+  <span>Companies · Texas Watch · Grail Systems</span>
+  <a href="/texas">Texas Watch</a>
+  <a href="/standards">The Deep East Texas Standard</a>
+  <a href="/angelina/">Angelina County Watch</a>
+  <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
+</footer>
+</div>
+<script>
+const companies = [
+  {name:"AmpZ / EPG Champion", kind:"Data center developer", counties:["Angelina"], entities:"AmpZ Champion Data Center Holdings (Denver); EPG Champion Development", know:"Asked the City of Lufkin for about 20 million gallons a day in July 2025. Targets 245 MW scaling to 2.1 GW at the former paper mill.", conf:"Records"},
+  {name:"HyperDataGrid", kind:"Data center developer", counties:["Angelina"], entities:"HyperDataGrid LLC (Houston); Paluxy LandCo LLC (land)", know:"Applied for a $620M building and $620M in equipment on Ben Dunn Rd, with five on-site wells and no water cap. Asked the County for a payment in lieu of taxes.", conf:"Records"},
+  {name:"WattBridge", kind:"Gas power plant developer", counties:["Angelina"], entities:"Longleaf Generating", know:"Asked Pineywoods GCD for 1.5 billion gallons a year in March 2026 for a 600 MW plant. On hold since July 2026.", conf:"Records"},
+  {name:"1606 Corp", kind:"Power plant buyer (OTC: CBDW)", counties:["Angelina"], entities:"1606 Corp", know:"Term sheet of about $11.7M for the former 55 MW Aspen Power biomass plant, with an EthosEnergy operations letter of intent.", conf:"Records"},
+  {name:"MARA Holdings", kind:"Bitcoin miner moving into AI (NASDAQ: MARA)", counties:["Hood","Matagorda"], entities:"Formerly Marathon Digital Holdings", know:"Its Granbury mine faces several nuisance lawsuits over noise and vibration. In July 2026 it bought about 1,200 acres in Matagorda County for a 2 GW campus.", conf:"Court filings"},
+  {name:"Riot Platforms", kind:"Bitcoin miner moving into AI (NASDAQ: RIOT)", counties:["Milam","Navarro"], entities:"Riot Platforms; formerly Whinstone (Rockdale)", know:"Runs a 700 MW site at Rockdale and a 1 GW ERCOT-approved campus in Corsicana. AMD now leases AI space at both.", conf:"Reporting"},
+  {name:"Bitdeer", kind:"Bitcoin miner", counties:["Milam"], entities:"Bitdeer (spun off from Bitmain)", know:"Operates beside Riot on former Alcoa land in Rockdale.", conf:"Reporting"},
+  {name:"Galaxy Digital", kind:"Bitcoin miner moving into AI (NASDAQ: GLXY)", counties:["Dickens"], entities:"Helios (bought from Argo Blockchain for $65M)", know:"ERCOT approved an 830 MW connection; the site could reach 1.6 GW.", conf:"Reporting"},
+  {name:"Core Scientific", kind:"Bitcoin miner moving into AI", counties:["Denton","Reeves"], entities:"Core Scientific", know:"Secured 300 MW at Pecos in April 2026.", conf:"Reporting"},
+  {name:"Vantage Data Centers", kind:"Data center developer", counties:["Shackelford","Bexar"], entities:"Frontier campus; TX12; partner VoltaGrid (on-site gas power)", know:"Building the $25B+ Frontier campus for Oracle and OpenAI. Sued under the Clean Air Act over 405 MW of on-site gas plants in San Antonio, case 5:26-cv-06032.", conf:"Court filings"},
+  {name:"VoltaGrid", kind:"On-site gas power supplier", counties:["Shackelford","Bexar"], entities:"VoltaGrid (Houston)", know:"Builds behind-the-meter gas plants for data centers. Co-defendant in the San Antonio Clean Air Act suit.", conf:"Court filings"},
+  {name:"Crusoe / Oracle / OpenAI (Stargate)", kind:"AI data center partnership", counties:["Taylor","Shackelford","Milam"], entities:"Stargate; Crusoe builds Abilene", know:"Abilene is partly operating at about 1.2 GW projected; a 600 MW expansion was dropped in March 2026.", conf:"Reporting"},
+  {name:"Google", kind:"Data center owner", counties:["Ellis","Gray","Haskell","Armstrong"], entities:"Built Midlothian through shell company Alamo Mission LLC (project Sharka)", know:"Plans $40B in Texas through 2027. A clear example of why to watch for unfamiliar LLC names on land records.", conf:"Reporting"},
+  {name:"DataBank", kind:"Data center developer", counties:["Ellis"], entities:"A separate LLC per building, e.g. DB Data Center Red Oak 12, LLC", know:"480 MW campus in Red Oak. State TDLR filings show each new $155M to $325M building before construction starts.", conf:"Records"},
+  {name:"Compass Datacenters", kind:"Data center developer", counties:["Ellis"], entities:"Compass Datacenters", know:"Offered Ellis County a $15M animal shelter grant amid opposition, June 2026.", conf:"Records"},
+  {name:"Fermi America", kind:"Data center and power developer", counties:["Carson"], entities:"Fermi America", know:"Raised $746M to build an 11 GW campus near Amarillo; reported to be at least a year behind schedule.", conf:"Reporting"},
+  {name:"Diode Ventures", kind:"Data center developer", counties:["Henderson"], entities:"Diode Ventures (Kansas)", know:"Withdrew its Cedar Creek Lake project in July 2026 after failing to meet the Governor's standards.", conf:"Reporting"},
+  {name:"RCM Hill LLC", kind:"Data center developer", counties:["Hill"], entities:"RCM Hill LLC", know:"Sued Hill County for $100M over its moratorium; the county rescinded it.", conf:"Reporting"},
+  {name:"Stream Data Centers", kind:"Data center developer", counties:["Young"], entities:"Project Saltworks", know:"Proposed about 890 acres and 15 buildings in Graham, about $10B.", conf:"Reporting"},
+  {name:"QTS and Lancium", kind:"Data center developers", counties:["Hall","Taylor"], entities:"QTS (Blackstone); Lancium Clean Campus", know:"Up to 11 buildings near Turkey with a 1 GW grid connection. Lancium also hosts Stargate Abilene.", conf:"Reporting"}
+];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function render() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const list = document.getElementById("list");
+  const shown = companies.filter(c => !q || [c.name, c.kind, c.entities, c.know, c.counties.join(" ")].join(" ").toLowerCase().includes(q));
+  list.innerHTML = shown.length ? shown.map(c => `<li>
+    ${c.counties.map(k => `<span class="tag">${esc(k)} County</span>`).join("")}<span class="tag">${esc(c.conf)}</span>
+    <h3>${esc(c.name)}</h3>
+    <p><b>What it is:</b> ${esc(c.kind)}</p>
+    <p><b>Entities:</b> ${esc(c.entities)}</p>
+    <p>${esc(c.know)}</p></li>`).join("") : `<li><p>No companies match that search.</p></li>`;
+}
+document.getElementById("search").addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
