@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Water | Texas Watch | Grail Systems</title>
+<meta name="description" content="Every public water number we could find for Texas data centers, crypto mines and power plants, side by side, and how many projects have disclosed nothing.">
+<meta property="og:title" content="How much water? The numbers Texas data centers have made public">
+<meta property="og:description" content="Side by side: every known water figure, and the projects that have disclosed nothing.">
+<meta property="og:url" content="https://grailsystems.io/water">
+<meta property="og:image" content="https://grailsystems.io/img/grail_share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/watch.css">
+<style>
+.bar{height:12px;background:var(--pine);border-radius:2px;margin-top:6px;min-width:2px}
+.bar.alarm{background:var(--alarm)}
+.gpd{font-family:'Young Serif',Georgia,serif;color:var(--pine);font-size:1.25rem}
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:18px 0 6px}
+.counts div{background:var(--card);padding:16px}
+.counts b{display:block;font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:2.1rem;line-height:1.1;color:var(--pine)}
+.counts span{font-size:.92rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/checklist">Checklist</a><a href="/records">Records</a></nav>
+<div class="hero">
+  <h1>How much water?</h1>
+  <p>Texas does not require data centers to tell anyone how much water they plan to use, or report what they actually use. These are the numbers that have come out anyway, through public records, company reports and the press. Most projects have disclosed nothing.</p>
+  <p class="by">Compiled by Grail Systems and the East Texas Legacy Coalition. Checked Oct 31, 2026.</p>
+</div>
+
+<section>
+  <h2>Put it in perspective</h2>
+  <div class="counts">
+    <div><b>~20M</b><span>gallons a day Amp Z asked Lufkin for, July 2025</span></div>
+    <div><b>22M</b><span>gallons the whole city of Abilene uses on an average day</span></div>
+    <div><b>25B</b><span>gallons a year Texas data centers already use, counting the water behind their power</span></div>
+    <div><b>Most</b><span>projects on our map have disclosed no water number at all</span></div>
+  </div>
+  <span class="src">Abilene figure: Abilene water utility, as reported by the Texas Tribune. Statewide figure: Houston Advanced Research Center, January 2026.</span>
+</section>
+
+<section>
+  <h2>The known numbers, side by side</h2>
+  <p>In gallons per day, converted where needed. Bars are drawn to scale against the largest request. Red marks requests and caps; green marks actual or expected use.</p>
+  <ul class="rows" id="list"></ul>
+</section>
+
+<section>
+  <h2>What the numbers tell us</h2>
+  <ul class="rows">
+    <li><h3>The biggest numbers come from records requests</h3><p>Lufkin's 20 million gallon request and WattBridge's 1.5 billion gallon a year request came out through public records, not press releases.</p></li>
+    <li><h3>Caps can be far above real use</h3><p>Meta's El Paso cap is 2.5 million gallons a day, about five times its expected average. A cap that loose protects little.</p></li>
+    <li><h3>Low-water designs exist</h3><p>Google's air-cooled Pflugerville site used about 10,000 gallons in all of 2024. Its Midlothian campus used 182 million.</p></li>
+    <li><h3>Savings claims are not numbers</h3><p>Several developers say they'll save "billions of gallons" without saying how much they will actually use. Ask for the number, the source and the cap, in writing.</p></li>
+    <li><h3>Power plants drink too</h3><p>A gigawatt of data centers with its own power plant can need 10 to 21 million gallons a day, depending on cooling. Ask about the power plant's water, not just the data center's.</p></li>
+  </ul>
+  <span class="src">Power plant range: Davis Graham & Stubbs legal alert citing industry estimates, 2026.</span>
+</section>
+
+<footer>
+  <span>Water · Texas Watch · Grail Systems</span>
+  <a href="/texas">Texas Watch</a>
+  <a href="/standards">The Standard</a>
+  <a href="/corrections">Corrections</a>
+  <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
+</footer>
+</div>
+<script>
+const rows = [
+  {name:"Amp Z / Project Lufkin (Angelina)", gpd:20000000, kind:"ask", text:"Requested from the City of Lufkin, July 2025.", conf:"Records"},
+  {name:"Diode Ventures, Cedar Creek Lake (Henderson)", gpd:5000000, kind:"ask", text:"Planned by year five. Project withdrawn July 2026.", conf:"Reporting"},
+  {name:"Longleaf Generating / WattBridge (Angelina)", gpd:4100000, kind:"ask", text:"1.5 billion gallons a year requested from the Pineywoods groundwater district, March 2026.", conf:"Records"},
+  {name:"Fermi America (Amarillo)", gpd:2500000, kind:"ask", text:"City of Amarillo agreement, up to 2.5 million gallons a day at $8.72 per 1,000 gallons.", conf:"Reporting"},
+  {name:"Meta El Paso: cap", gpd:2500000, kind:"ask", text:"Maximum allowed by El Paso Water.", conf:"Reporting"},
+  {name:"Google Midlothian (Ellis)", gpd:500000, kind:"use", text:"182.3 million gallons consumed in 2024, Google's own report.", conf:"Company report"},
+  {name:"Meta El Paso: expected average", gpd:480000, kind:"use", text:"El Paso Water's estimate.", conf:"Reporting"},
+  {name:"Lancium Childress", gpd:11000, kind:"use", text:"Drawn from the Red River Water Authority, per the company.", conf:"Reporting"},
+  {name:"HyperDataGrid (Angelina)", gpd:500, kind:"use", text:"Claimed by the developer, with five on-site wells and no cap.", conf:"Records"},
+  {name:"Google Pflugerville (Travis)", gpd:27, kind:"use", text:"About 10,000 gallons in all of 2024. Air-cooled.", conf:"Company report"}
+];
+const max = Math.max(...rows.map(r => r.gpd));
+const fmt = n => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + " million" : n.toLocaleString("en-US");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.getElementById("list").innerHTML = rows.map(r => `<li>
+  <span class="tag">${r.kind === "ask" ? "Request or cap" : "Actual or expected use"}</span><span class="tag">${esc(r.conf)}</span>
+  <h3>${esc(r.name)}</h3><span class="gpd">${fmt(r.gpd)} gallons a day</span>
+  <div class="bar ${r.kind === "ask" ? "alarm" : ""}" style="width:${Math.max(0.4, 100 * r.gpd / max)}%"></div>
+  <p>${esc(r.text)}</p></li>`).join("");
+</script>
+</body>
+</html>
