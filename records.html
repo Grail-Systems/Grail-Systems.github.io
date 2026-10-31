@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Records | Texas Watch | Grail Systems</title>
+<meta name="description" content="Every public records request ETLC and Grail Systems have filed about data centers and water in East Texas: what we asked, what we found, and who is late.">
+<meta property="og:title" content="The Records">
+<meta property="og:description" content="What we asked for, what we found, and which agencies are late. Public records on data centers and water in East Texas.">
+<meta property="og:url" content="https://grailsystems.io/records">
+<meta property="og:image" content="https://grailsystems.io/img/grail_share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/watch.css">
+<style>
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:18px 0 6px}
+.counts div{background:var(--card);padding:16px}
+.counts b{display:block;font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:2.1rem;line-height:1.1;color:var(--pine)}
+.counts span{font-size:.92rem;color:var(--muted)}
+ul.found{margin:6px 0 0;padding-left:1.1rem;color:var(--ink)}
+ul.found li{border:0;padding:2px 0;font-size:.97rem}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:600;color:var(--pine);font-size:.95rem}
+ol.time{list-style:none;margin:8px 0 0;padding:0}
+ol.time li{border:0;padding:4px 0;font-size:.93rem;color:var(--muted)}
+ol.time b{color:var(--ink);font-weight:600;margin-right:6px}
+.late{color:var(--alarm);font-weight:700}
+.filters{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:12px}
+@media (max-width:600px){.filters{grid-template-columns:1fr}}
+select{padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);font:inherit;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/companies">Companies</a><a href="/network">Join the network</a></nav>
+
+<div class="hero">
+  <h1>The records</h1>
+  <p>Every public records request we've filed about data centers, power plants and water in East Texas: what we asked for, what came back, and what we're still waiting on. When an agency is late, it says so here.</p>
+  <p class="by">Filed by Fawn Elizabeth Zion and the East Texas Legacy Coalition. Published by Grail Systems. <span id="updated"></span></p>
+</div>
+
+<section>
+  <h2>At a glance</h2>
+  <div class="counts" id="counts"><div><b>…</b><span>loading</span></div></div>
+</section>
+
+<section id="list-section">
+  <h2>Every request</h2>
+  <div class="filters">
+    <input id="search" type="search" placeholder="Search by agency, number or topic" aria-label="Search requests">
+    <select id="stateFilter" aria-label="Filter by status"><option value="">All statuses</option></select>
+  </div>
+  <ul class="rows" id="list"><li><p>Loading records…</p></li></ul>
+</section>
+
+<section>
+  <h2>How the clock works</h2>
+  <p>Under the Texas Public Information Act, an agency must release records promptly. If it can't within 10 business days, it must certify in writing the date the records will be ready. If it wants to withhold anything, it must ask the Attorney General for a ruling within 10 business days.</p>
+  <p>Our policy: when an agency misses a deadline, we contact it by business day 10, send a written warning by day 15, and go up the chain by day 20. Past-due status stays public unless we've agreed to an extension.</p>
+  <span class="src">Want to file your own? The <a href="/angelina/">Angelina County Watch</a> page has a free request builder.</span>
+</section>
+
+<footer>
+  <span>Records · Texas Watch · Grail Systems</span>
+  <a href="/texas">Texas Watch</a>
+  <a href="/angelina/">Angelina County Watch</a>
+  <a href="/standards">The Standard</a>
+  <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
+</footer>
+</div>
+<script>
+const SOURCES = [
+  "https://raw.githubusercontent.com/Grail-Systems/carrizo_wilcox_aquifer/main/frontend/records.json",
+  "/data/records.json"
+];
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = d => { if (!d) return ""; const x = new Date(d + "T12:00:00"); return isNaN(x) ? d : x.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}); };
+const stateText = {open:"Open", waiting:"Waiting", ag:"At the Attorney General", closed:"Closed", done:"Done", late:"Past due", pastdue:"Past due", overdue:"Past due"};
+let all = [];
+
+async function load() {
+  for (const url of SOURCES) {
+    try {
+      const r = await fetch(url, {cache:"no-store"});
+      if (!r.ok) continue;
+      return await r.json();
+    } catch (e) {}
+  }
+  throw new Error("no source");
+}
+
+function clockLine(c) {
+  if (!c || typeof c !== "object") return "";
+  const bits = [];
+  if (c.certified) bits.push("Agency certified records ready by " + fmt(c.certified));
+  if (c.ag_requested) bits.push("Agency asked the Attorney General for a ruling on " + fmt(c.ag_requested));
+  return bits.length ? `<p>${esc(bits.join(". "))}.</p>` : "";
+}
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const st = document.getElementById("stateFilter").value;
+  const list = document.getElementById("list");
+  const shown = all.filter(r => (!st || r.state === st) &&
+    (!q || [r.agency, r.number, r.status, r.asked, (r.found || []).join(" ")].join(" ").toLowerCase().includes(q)));
+  if (!shown.length) { list.innerHTML = `<li><p>No requests match.</p></li>`; return; }
+  list.innerHTML = shown.map(r => {
+    const late = /past due|overdue|late/i.test(r.status || "") || ["late","pastdue","overdue"].includes(r.state);
+    const events = (r.events || []).slice().sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+    return `<li>
+      <span class="tag">${esc(r.agency)}</span>${r.number ? `<span class="tag">${esc(r.number)}</span>` : ""}<span class="tag">Filed ${esc(fmt(r.filed))}</span>
+      <h3 class="${late ? "late" : ""}">${esc(r.status || stateText[r.state] || r.state)}</h3>
+      <p><b>What we asked for:</b> ${esc(r.asked)}</p>
+      ${(r.found && r.found.length) ? `<p><b>What we found:</b></p><ul class="found">${r.found.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+      ${r.waiting ? `<p><b>Still waiting on:</b> ${esc(r.waiting)}</p>` : ""}
+      ${clockLine(r.clock)}
+      ${events.length ? `<details><summary>Show timeline (${events.length})</summary><ol class="time">${events.map(e => `<li><b>${esc(fmt(e.date))}</b>${esc(e.text)}</li>`).join("")}</ol></details>` : ""}
+    </li>`;
+  }).join("");
+}
+
+load().then(d => {
+  all = (d.requests || []).slice().sort((a, b) => (b.filed || "").localeCompare(a.filed || ""));
+  if (d.updated) document.getElementById("updated").textContent = "Updated " + fmt(d.updated) + ".";
+  const agencies = new Set(all.map(r => r.agency));
+  const count = s => all.filter(r => r.state === s).length;
+  const openish = all.filter(r => !["closed","done"].includes(r.state)).length;
+  document.getElementById("counts").innerHTML = [
+    [all.length, "requests filed"],
+    [agencies.size, "agencies asked"],
+    [openish, "still open"],
+    [count("ag"), "sent to the Attorney General"]
+  ].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("");
+  const sel = document.getElementById("stateFilter");
+  [...new Set(all.map(r => r.state))].forEach(s => { const o = document.createElement("option"); o.value = s; o.textContent = stateText[s] || s; sel.appendChild(o); });
+  ["search","stateFilter"].forEach(id => document.getElementById(id).addEventListener("input", render));
+  render();
+}).catch(() => {
+  document.getElementById("list").innerHTML = `<li><p>The records couldn't load right now. Please try again later.</p></li>`;
+  document.getElementById("counts").innerHTML = "";
+});
+</script>
+</body>
+</html>
