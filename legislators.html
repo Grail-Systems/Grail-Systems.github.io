@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where Are Your Legislators? | Texas Watch</title>
+<meta name="description" content="Data center, crypto mine and power plant projects in every Texas House and Senate district, for the 2027 legislative session.">
+<meta property="og:title" content="How many data center projects are in your legislator's district?">
+<meta property="og:description" content="Every tracked Texas project, mapped to Texas House and Senate districts.">
+<meta property="og:url" content="https://grailsystems.io/legislators">
+<meta property="og:image" content="https://grailsystems.io/img/grail_share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/watch.css">
+<style>
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:18px 0 6px}
+.counts div{background:var(--card);padding:16px}
+.counts b{display:block;font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:2.1rem;line-height:1.1;color:var(--pine)}
+.counts span{font-size:.92rem;color:var(--muted)}
+select{width:100%;padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);font:inherit;border-radius:4px;margin-top:10px}
+.tabs{display:flex;gap:8px;margin-top:12px}
+.tabs button{background:transparent;color:var(--pine);border:1.5px solid var(--pine);padding:8px 14px;font:inherit;font-weight:700;border-radius:4px;cursor:pointer}
+.tabs button.on{background:var(--pine);color:var(--paper)}
+.n{font-family:'Young Serif',Georgia,serif;color:var(--alarm);font-size:1.3rem;margin-right:6px}
+ul.plist{margin:6px 0 0;padding-left:1.1rem}
+ul.plist li{border:0;padding:1px 0;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/water">Water</a><a href="/checklist">Checklist</a></nav>
+<div class="hero">
+  <h1>Where are your legislators?</h1>
+  <p>Every data center, crypto mine and power plant project we track, sorted by Texas House and Senate district. Use it to show a lawmaker exactly what's coming to the people they represent before the 2027 session.</p>
+  <p class="by">From Texas Watch, by Grail Systems and the East Texas Legacy Coalition. District data: Texas Legislative Reference Library.</p>
+</div>
+
+<section>
+  <h2>At a glance</h2>
+  <div class="counts" id="counts"></div>
+</section>
+
+<section>
+  <h2>Find your county</h2>
+  <select id="county" aria-label="Choose a county"><option value="">Choose a county with a tracked project</option></select>
+  <ul class="rows" id="countyOut"></ul>
+</section>
+
+<section>
+  <h2>Every district</h2>
+  <div class="tabs"><button id="tH" class="on">Texas House</button><button id="tS">Texas Senate</button></div>
+  <ul class="rows" id="dist"></ul>
+</section>
+
+<section>
+  <h2>About this data</h2>
+  <ul class="rows">
+    <li><h3>Members are from the 89th Legislature (2025)</h3><p>The November 3, 2026 election may change some seats before the 2027 session. District numbers do not change. Confirm current members at the Texas Legislature's "Who Represents Me" tool.</p></li>
+    <li><h3>Split counties</h3><p>Where a county is split among several districts, its projects are listed under each of those districts until exact locations are confirmed.</p></li>
+    <li><h3>Senate District 22</h3><p>The Legislative Reference Library's county table does not list Senate District 22, which covers counties including Hood, Somervell, Hill, Bosque and McLennan. The seat may be vacant. We show the district without a name rather than guess.</p></li>
+    <li><h3>Bowie County</h3><p>The source table does not list Bowie County's House district. Check "Who Represents Me" for it.</p></li>
+  </ul>
+  <span class="src">Sources: Texas Legislative Reference Library, Texas Representatives by county and Texas Senators by county, 89th Legislature (2025). Projects: <a href="/texas">Texas Watch</a>, with sources on each project.</span>
+</section>
+
+<footer>
+  <span>Legislators · Texas Watch · Grail Systems</span>
+  <a href="/texas">Texas Watch</a>
+  <a href="/standards">The Deep East Texas Standard</a>
+  <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
+</footer>
+</div>
+<script>
+const H = {"Anderson":"8 Harris","Angelina":"9 Ashby","Archer":"69 Frank","Armstrong":"86 Smithee","Atascosa":"80 McLaughlin","Austin":"85 Kitzman","Bastrop":"17 Gerdes","Bell":"54 Buckley;55 Hickland","Bexar":"116 Martinez Fischer;117 Cortez;118 Lujan;119 Campos;120 Gervin-Hawkins;121 LaHood;122 Dorazio;123 Bernal;124 Garcia;125 López","Bosque":"13 Orr","Bowie":"","Brazoria":"25 Vasut;29 Barry","Brazos":"12 Wharton;14 Dyson","Brewster":"74 Morales","Caldwell":"17 Gerdes","Cameron":"35 Longoria;37 Lopez;38 Gámez","Carson":"87 Fairly","Childress":"88 King","Deaf Smith":"86 Smithee","Delta":"62 Luther","Denton":"57 Hayes;63 Bumgarner;64 Hopper;65 Little;106 Patterson","Dickens":"83 Burrows","Ector":"81 Landgraf","El Paso":"74 Morales;75 González;77 Perez;78 Moody;79 Ordaz","Ellis":"10 Harrison","Fayette":"85 Kitzman","Freestone":"13 Orr","Glasscock":"72 Darby","Gray":"88 King","Grayson":"62 Luther","Guadalupe":"44 Schoolcraft","Hale":"88 King","Hall":"88 King","Haskell":"69 Frank","Hays":"45 Zwiener;73 Isaac","Henderson":"4 Bell;8 Harris","Hill":"13 Orr","Hood":"59 Slawson","Hopkins":"2 Money","Hudspeth":"74 Morales","Hunt":"2 Money","Jack":"68 Spiller","Jefferson":"21 Phelan;22 Manuel","Kaufman":"4 Bell","Kent":"83 Burrows","Leon":"13 Orr","Liberty":"18 Holt","Matagorda":"30 Louderback","McCulloch":"53 Virdell","McLennan":"13 Orr;56 Curry","Medina":"53 Virdell","Midland":"82 Craddick","Milam":"17 Gerdes","Montgomery":"3 Bell;15 Toth;16 Metcalf;18 Holt","Navarro":"8 Harris","Newton":"11 Shofner","Nolan":"71 Lambert","Nueces":"32 Hunter;34 Villalobos","Pecos":"53 Virdell","Presidio":"74 Morales","Reeves":"74 Morales","Shackelford":"68 Spiller","Smith":"5 Hefner;6 Alders","Somervell":"58 Kerwin","Tarrant":"90 Romero;91 Lowe;92 Bhojani;94 Tinderholt;95 Collier;96 Cook;97 McQueeney;98 Capriglione;99 Geren;101 Turner","Taylor":"71 Lambert","Tom Green":"72 Darby","Travis":"19 Troxclair;46 Cole;47 Goodwin;48 Howard;49 Hinojosa;50 Talarico;51 Flores","Victoria":"30 Louderback","Walker":"12 Wharton","Webb":"42 Raymond;80 McLaughlin","Wharton":"85 Kitzman","Wichita":"69 Frank","Wilbarger":"69 Frank","Williamson":"20 Wilson;52 Harris Davila;136 Bucy","Wise":"64 Hopper","Young":"68 Spiller","Zavala":"80 McLaughlin"};
+const S = {"Anderson":"3 Nichols","Angelina":"3 Nichols","Archer":"30 Hagenbuch","Armstrong":"31 Sparks","Atascosa":"19 Gutierrez;24 Flores","Austin":"18 Kolkhorst","Bastrop":"5 Schwertner","Bell":"24 Flores","Bexar":"19 Gutierrez;21 Zaffirini;25 Campbell;26 Menéndez","Bosque":"22 ","Bowie":"1 Hughes","Brazoria":"11 Middleton;17 Huffman","Brazos":"5 Schwertner","Brewster":"19 Gutierrez;29 Blanco","Caldwell":"21 Zaffirini","Cameron":"27 Hinojosa","Carson":"31 Sparks","Childress":"28 Perry","Deaf Smith":"31 Sparks","Delta":"1 Hughes","Denton":"12 Parker;30 Hagenbuch","Dickens":"28 Perry","Ector":"31 Sparks","El Paso":"29 Blanco","Ellis":"2 Hall","Fayette":"18 Kolkhorst","Freestone":"5 Schwertner","Glasscock":"31 Sparks","Gray":"28 Perry","Grayson":"30 Hagenbuch","Guadalupe":"19 Gutierrez;21 Zaffirini;25 Campbell","Hale":"28 Perry","Hall":"31 Sparks","Haskell":"28 Perry","Hays":"21 Zaffirini;25 Campbell","Henderson":"3 Nichols","Hill":"22 ","Hood":"22 ","Hopkins":"1 Hughes","Hudspeth":"29 Blanco","Hunt":"8 Paxton","Jack":"30 Hagenbuch","Jefferson":"3 Nichols;4 Ligon","Kaufman":"2 Hall","Kent":"28 Perry","Leon":"5 Schwertner","Liberty":"3 Nichols","Matagorda":"17 Huffman","McCulloch":"28 Perry","McLennan":"22 ","Medina":"24 Flores","Midland":"31 Sparks","Milam":"5 Schwertner","Montgomery":"4 Ligon;7 Bettencourt;18 Kolkhorst","Navarro":"2 Hall","Newton":"3 Nichols","Nolan":"28 Perry","Nueces":"20 Hinojosa;27 Hinojosa","Pecos":"29 Blanco","Presidio":"29 Blanco","Reeves":"29 Blanco","Shackelford":"10 King","Smith":"1 Hughes","Somervell":"22 ","Tarrant":"9 Rehmet;10 King;12 Parker;23 West","Taylor":"28 Perry","Tom Green":"28 Perry","Travis":"14 Eckhardt;21 Zaffirini;25 Campbell","Victoria":"18 Kolkhorst","Walker":"5 Schwertner","Webb":"21 Zaffirini","Wharton":"17 Huffman","Wichita":"28 Perry;30 Hagenbuch","Wilbarger":"28 Perry","Williamson":"5 Schwertner;24 Flores","Wise":"12 Parker","Young":"30 Hagenbuch","Zavala":"19 Gutierrez"};
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const cty = c => c.replace(/\s*\(.*\)\s*/, "").trim();
+const parse = v => (v || "").split(";").filter(x => x.trim()).map(x => { const m = x.trim().match(/^(\d+)\s*(.*)$/); return {d: +m[1], who: m[2]}; });
+const plink = p => `<li><a href="/texas#${slug(p.name)}">${esc(p.name)}</a> <span class="tag">${esc(cty(p.county))} County</span></li>`;
+fetch("/data/projects.json").then(r => r.json()).then(P => {
+  const byCounty = {};
+  P.forEach(p => { const c = cty(p.county); (byCounty[c] = byCounty[c] || []).push(p); });
+  const build = (M, label, title) => {
+    const D = {};
+    Object.keys(byCounty).forEach(c => parse(M[c]).forEach(({d, who}) => {
+      D[d] = D[d] || {d, who, counties: new Set(), projects: []};
+      D[d].counties.add(c); D[d].projects.push(...byCounty[c]);
+    }));
+    return Object.values(D).sort((a, b) => b.projects.length - a.projects.length || a.d - b.d);
+  };
+  const HD = build(H), SD = build(S);
+  document.getElementById("counts").innerHTML = [
+    [P.length, "projects tracked"], [Object.keys(byCounty).length, "counties"],
+    [HD.length, "Texas House districts touched"], [SD.length, "of 31 Texas Senate districts touched"]
+  ].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("");
+  const sel = document.getElementById("county");
+  Object.keys(byCounty).sort().forEach(c => { const o = document.createElement("option"); o.value = c; o.textContent = `${c} County (${byCounty[c].length})`; sel.appendChild(o); });
+  sel.onchange = () => {
+    const c = sel.value, out = document.getElementById("countyOut");
+    if (!c) { out.innerHTML = ""; return; }
+    const h = parse(H[c]), s = parse(S[c]);
+    out.innerHTML = `<li><h3>${esc(c)} County</h3>
+      <p><b>Texas House:</b> ${h.length ? h.map(x => `District ${x.d}${x.who ? ", Rep. " + esc(x.who) : ""}`).join("; ") : "not listed in source; check Who Represents Me"}</p>
+      <p><b>Texas Senate:</b> ${s.map(x => `District ${x.d}${x.who ? ", Sen. " + esc(x.who) : " (member not listed in source)"}`).join("; ")}</p>
+      <ul class="plist">${byCounty[c].map(plink).join("")}</ul></li>`;
+  };
+  const render = (list, kind) => {
+    document.getElementById("dist").innerHTML = list.map(x => `<li>
+      <span class="n">${x.projects.length}</span><span class="tag">${kind} District ${x.d}</span>
+      <h3>${x.who ? (kind === "House" ? "Rep. " : "Sen. ") + esc(x.who) : "Member not listed in source"}</h3>
+      <p>Counties: ${[...x.counties].sort().map(esc).join(", ")}</p>
+      <details><summary>Show ${x.projects.length} project${x.projects.length === 1 ? "" : "s"}</summary><ul class="plist">${x.projects.map(plink).join("")}</ul></details></li>`).join("");
+  };
+  const tH = document.getElementById("tH"), tS = document.getElementById("tS");
+  tH.onclick = () => { tH.classList.add("on"); tS.classList.remove("on"); render(HD, "House"); };
+  tS.onclick = () => { tS.classList.add("on"); tH.classList.remove("on"); render(SD, "Senate"); };
+  render(HD, "House");
+}).catch(() => { document.getElementById("dist").innerHTML = "<li><p>Data could not load. Please try again later.</p></li>"; });
+</script>
+</body>
+</html>
