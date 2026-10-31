@@ -87,6 +87,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
   <ul class="rows">
     <li><h3>The state has hit pause</h3><p>In August 2026 the Governor ordered an audit of every data center in the grid queue, after some ignored a state survey on water and power use. ERCOT paused approvals while the audit runs, expected to finish around December 10, 2026. In September he told TCEQ to suspend data center permits until the grid and water reviews are done.</p></li>
     <li><h3>Water is the blind spot</h3><p>Texas does not require data centers to disclose how much water they plan to use or report what they actually use. The state water plan has not counted them either. That is why local agreements, and this map, matter.</p></li>
+    <li><h3>Low-water designs exist</h3><p>Google's own reports show its Midlothian campus used 182.3 million gallons of water in 2024. Its air-cooled site in Pflugerville used about 10,000 gallons all year. When a developer says it can't avoid heavy water use, that's a choice, not a law of physics.</p></li>
   </ul>
   <span class="src">Sources: ERCOT and Governor's office figures as reported by the Texas Tribune and POWER Magazine; Houston Advanced Research Center white paper, January 2026; Texas Observer; Austin Chronicle.</span>
 </section>
@@ -209,7 +210,7 @@ const projects = [
    dev:"Bitdeer (spun off from Bitmain)", power:"Not confirmed", water:"Not confirmed", conf:"Reporting",
    note:"Less than half a mile from Riot, also on former Alcoa land."},
   {name:"Riot Corsicana", county:"Navarro", type:"crypto", status:"construction", lat:32.090, lng:-96.470,
-   dev:"Riot Platforms (NASDAQ: RIOT)", power:"1 GW approved by ERCOT; about 400 MW built", water:"Immersion cooling claimed; water use not confirmed", conf:"Reporting",
+   dev:"Riot Platforms (NASDAQ: RIOT)", power:"1 GW approved by ERCOT; about 400 MW built", water:"City of Corsicana, from Navarro Mills Lake (per the city, 2022). Amount never disclosed", conf:"Reporting",
    note:"Campus grew to 858 acres in 2025. AMD doubled its AI lease here to 50 MW in 2026."},
   {name:"Galaxy Helios", county:"Dickens", type:"crypto", status:"construction", lat:33.620, lng:-100.840,
    dev:"Galaxy Digital (NASDAQ: GLXY)", power:"830 MW connection approved by ERCOT; 1.6 GW theoretical", water:"Not confirmed", conf:"Reporting",
@@ -251,7 +252,7 @@ const projects = [
    dev:"Compass Datacenters", power:"About 360 MW", water:"Not disclosed", conf:"Records",
    note:"375 acres. Offered Ellis County a $15M grant for an animal shelter amid local opposition, June 2026.", link:"/ellis/"},
   {name:"Google Midlothian campus", county:"Ellis", type:"data", status:"operating", lat:32.470, lng:-96.990,
-   dev:"Google, built through shell company Alamo Mission LLC (project name Sharka)", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   dev:"Google, built through shell company Alamo Mission LLC (project name Sharka)", power:"Not disclosed", water:"182.3 million gallons in 2024, about 500,000 gal/day (Google's own report)", conf:"Reporting",
    note:"375 acres plus 165 more. Phase 4 under construction.", link:"/ellis/"},
   {name:"Google Red Oak campus", county:"Ellis", type:"data", status:"operating", lat:32.550, lng:-96.840,
    dev:"Google", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
@@ -318,7 +319,13 @@ const projects = [
    note:"$10B proposal. The same company holds an air permit near Dinosaur Valley State Park."},
   {name:"Pacifico Cedar Creek Campus", county:"Bastrop", type:"data", status:"proposed", lat:30.110, lng:-97.320,
    dev:"Pacifico Energy", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
-   note:"Same developer as Fort Spunky in Hood County. Needs verification."}
+   note:"Same developer as Fort Spunky in Hood County. Needs verification."},
+  {name:"Google Pflugerville", county:"Travis", type:"data", status:"operating", lat:30.440, lng:-97.620,
+   dev:"Google", power:"Not disclosed", water:"About 10,000 gallons in all of 2024 (air-cooled)", conf:"Reporting",
+   note:"Google's own reports show low-water designs exist: this air-cooled site used about 10,000 gallons in a year, while Midlothian used 182 million."},
+  {name:"San Marcos data center (Francis Harris Lane)", county:"Hays", type:"data", status:"stopped", lat:29.860, lng:-97.920,
+   dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 200 acres. The City Council denied the rezoning 5-2 in February 2026 after hundreds protested; in June the city banned data centers outright."}
 ];
 
 const actions = [
@@ -342,7 +349,8 @@ const actions = [
   {who:"Austin County", when:"July 2026", what:"Unanimously adopted a countywide moratorium on new AI data centers and battery storage until a health and safety review is done.", result:"In place as of late July. The county attorney may seek court orders against violators.", lesson:"Pairing a pause with a defined safety study may stand on firmer ground, but the legal risk remains."},
   {who:"City of El Paso", when:"May to July 2026", what:"Voted unanimously to stop recruiting or incentivizing future hyperscale data centers, then adopted its first Data Center Policy Framework.", result:"Applies to future projects; the council kept Meta's existing deal.", lesson:"A city can close the door on future incentives even while keeping an old deal."},
   {who:"City of Fort Worth", when:"June 2026", what:"Proposed data center rules: 250-foot setbacks from homes, generators at least 300 feet away, a crypto mining ban, closed-loop cooling and stricter noise limits.", result:"Proposed.", lesson:"A major Texas city is proposing the same protections rural counties are asking for."},
-  {who:"City of San Marcos", when:"June 2026", what:"Banned data centers.", result:"Adopted, per reporting.", lesson:"Cities have zoning power counties lack. Check whether a site is inside a city or its extraterritorial jurisdiction."}
+  {who:"City of San Marcos", when:"June 2026", what:"Became the first Texas city to ban data centers, voting 4-3 to prohibit them in every zoning district, months after denying a 200-acre proposal.", result:"Adopted. A state senator vowed a legal challenge; the city says a zoning ban is not a moratorium.", lesson:"Cities have zoning power counties lack. Check whether a site is inside a city or its extraterritorial jurisdiction."},
+  {who:"Hays County", when:"Jan to June 2026", what:"Commissioned its first full water study since 2011, refused an agreement for a 340-acre development over the Edwards Aquifer recharge zone, and passed a non-binding pause on high-water-use projects including data centers.", result:"The pause is symbolic, but the water study and the refusal are real.", lesson:"Without zoning, a county can still study its water and decline its own agreements."}
 ];
 
 const css = getComputedStyle(document.documentElement);
