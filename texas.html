@@ -168,7 +168,49 @@ const projects = [
    note:"Second in Texas for data center construction spending."},
   {name:"Stargate Milam County", county:"Milam", type:"data", status:"proposed", lat:30.850, lng:-96.980,
    dev:"OpenAI Stargate partners", power:"Not confirmed", water:"Not confirmed", conf:"Reporting",
-   note:"Announced late 2025. Details still needed."}
+   note:"Announced late 2025. Details still needed."},
+  {name:"Riot Rockdale", county:"Milam", type:"crypto", status:"operating", lat:30.655, lng:-97.000,
+   dev:"Riot Platforms (NASDAQ: RIOT)", power:"700 MW", water:"Lake water reservation, about $2.1M a year (per Greenpeace research)", conf:"Reporting",
+   note:"Former Alcoa aluminum smelter. Riot bought about 200 leased acres for $96M and signed AMD as an AI tenant."},
+  {name:"Bitdeer Rockdale", county:"Milam", type:"crypto", status:"operating", lat:30.665, lng:-97.012,
+   dev:"Bitdeer (spun off from Bitmain)", power:"Not confirmed", water:"Not confirmed", conf:"Reporting",
+   note:"Less than half a mile from Riot, also on former Alcoa land."},
+  {name:"Riot Corsicana", county:"Navarro", type:"crypto", status:"construction", lat:32.090, lng:-96.470,
+   dev:"Riot Platforms (NASDAQ: RIOT)", power:"1 GW approved by ERCOT; about 400 MW built", water:"Immersion cooling claimed; water use not confirmed", conf:"Reporting",
+   note:"Campus grew to 858 acres in 2025. AMD doubled its AI lease here to 50 MW in 2026."},
+  {name:"Galaxy Helios", county:"Dickens", type:"crypto", status:"construction", lat:33.620, lng:-100.840,
+   dev:"Galaxy Digital (NASDAQ: GLXY)", power:"830 MW connection approved by ERCOT; 1.6 GW theoretical", water:"Not confirmed", conf:"Reporting",
+   note:"Bought from Argo Blockchain for $65M. Converting from bitcoin mining to AI data centers."},
+  {name:"MARA Matagorda County campus", county:"Matagorda", type:"data", status:"proposed", lat:28.800, lng:-96.000,
+   dev:"MARA Holdings (NASDAQ: MARA)", power:"2 GW planned", water:"Not confirmed", conf:"Reporting",
+   note:"About 1,200 acres of powered land bought from HIF USA, July 2026. Same company as the Granbury mine."},
+  {name:"Vantage West Side campuses", county:"Bexar", type:"data", status:"construction", lat:29.400, lng:-98.650,
+   dev:"Vantage Data Centers, with VoltaGrid", power:"About 405 MW of on-site gas generation", water:"Not confirmed", conf:"Court filings",
+   note:"14270 Omicron Dr and 5207 Rogers Rd, San Antonio. Public Citizen and Sierra Club sued under the Clean Air Act, saying the gas plants were split into minor permits to dodge major-source review. Case 5:26-cv-06032."},
+  {name:"Project Saltworks", county:"Young", type:"data", status:"proposed", lat:33.100, lng:-98.590,
+   dev:"Stream Data Centers", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 890 acres in Graham, 15 buildings, about $10B investment."},
+  {name:"Flexential Talty campus", county:"Kaufman", type:"data", status:"proposed", lat:32.680, lng:-96.390,
+   dev:"Flexential", power:"108 MW", water:"Not disclosed", conf:"Reporting",
+   note:"110 acres bought July 2026. First phase 36 MW."},
+  {name:"Rowan Temple campus", county:"Bell", type:"data", status:"construction", lat:31.130, lng:-97.340,
+   dev:"Rowan Digital Infrastructure", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"1855 Bob White Road. Plans for a second building filed July 2026."},
+  {name:"QTS at Lancium, Hall County", county:"Hall", type:"data", status:"proposed", lat:34.390, lng:-100.890,
+   dev:"QTS (Blackstone), with Lancium", power:"1 GW grid connection", water:"Not disclosed", conf:"Reporting",
+   note:"Up to 11 buildings on 465 acres near Turkey, about $10B."},
+  {name:"Core Scientific Denton", county:"Denton", type:"crypto", status:"operating", lat:33.210, lng:-97.130,
+   dev:"Core Scientific", power:"Not confirmed", water:"Not confirmed", conf:"Reporting",
+   note:"Bitcoin mining site shifting toward AI hosting."},
+  {name:"Core Scientific Pecos", county:"Reeves", type:"data", status:"construction", lat:31.420, lng:-103.490,
+   dev:"Core Scientific", power:"300 MW secured (April 2026)", water:"Not confirmed", conf:"Reporting",
+   note:"West Texas, in a drought-stressed basin."},
+  {name:"PowerHouse Caldwell County", county:"Caldwell", type:"data", status:"proposed", lat:29.880, lng:-97.670,
+   dev:"PowerHouse Data Centers", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 500 acres between Austin and San Antonio."},
+  {name:"Pace Glasscock County", county:"Glasscock", type:"data", status:"proposed", lat:31.870, lng:-101.520,
+   dev:"Pace", power:"100 MW initial", water:"Not disclosed", conf:"Reporting",
+   note:"Announced April 2026."}
 ];
 
 const actions = [
@@ -176,12 +218,13 @@ const actions = [
   {who:"Hill County", when:"May 2026", what:"One-year moratorium on data centers.", result:"Sued for $100M within weeks; rescinded and replaced with a developer checklist.", lesson:"Moratoriums invite lawsuits. Contract terms and abatement guidelines hold up better."},
   {who:"West Cedar Creek MUD, Henderson County", when:"May 2026", what:"Paused high-intensity water commitments.", result:"Data center development stopped.", lesson:"Water providers may hold the strongest single lever."},
   {who:"Hood County", when:"2024 to 2026", what:"Funded a professional sound study near a bitcoin mine.", result:"Created a public record of noise levels even without noise authority.", lesson:"Measure first. A baseline study helps every later fight."},
-  {who:"Angelina County", when:"July 2026", what:"Resolution 010-26 asking the Legislature for setback, noise, lighting and water authority, plus draft abatement protections.", result:"Adopted July 2026. Road-use agreement counsel hired October 2026.", lesson:"Agreements can carry protections a county cannot impose by ordinance."}
+  {who:"Angelina County", when:"July 2026", what:"Resolution 010-26 asking the Legislature for setback, noise, lighting and water authority, plus draft abatement protections.", result:"Adopted July 2026. Road-use agreement counsel hired October 2026.", lesson:"Agreements can carry protections a county cannot impose by ordinance."},
+  {who:"Public Citizen, Sierra Club and Environmental Integrity Project", when:"2026", what:"Federal Clean Air Act lawsuit against Vantage and VoltaGrid over on-site gas plants at two San Antonio data centers.", result:"Pending in federal court.", lesson:"Check whether a project's power plant was split into small permits. Splitting one project into pieces is how scrutiny gets dodged."}
 ];
 
 const css = getComputedStyle(document.documentElement);
 const v = n => css.getPropertyValue(n).trim();
-const colors = {proposed:v("--alarm"), construction:v("--brass"), operating:v("--muted"), stopped:v("--pine")};
+const colors = {proposed:v("--alarm"), construction:v("--brass"), operating:v("--muted"), stopped:"#4cc27a"};
 const statusText = {proposed:"Proposed or under review", construction:"Under construction", operating:"Operating", stopped:"Withdrawn or stopped"};
 const typeText = {data:"Data center", crypto:"Crypto mine", power:"Power plant"};
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -197,7 +240,7 @@ document.getElementById("counts").innerHTML = [
 document.getElementById("legend").innerHTML = Object.keys(statusText).map(k =>
   `<span><span class="dot" style="background:${colors[k]}"></span>${statusText[k]}</span>`).join("");
 
-const map = L.map("map", {scrollWheelZoom:false}).setView([31.4, -98.5], 6);
+const map = L.map("map", {scrollWheelZoom:false}).fitBounds([[25.8,-106.6],[36.5,-93.5]]);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:18, attribution:"&copy; OpenStreetMap contributors"}).addTo(map);
 
 const markers = projects.map(p => {
