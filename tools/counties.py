@@ -77,3 +77,24 @@ build(dict(slug="elpaso", name="El Paso", checked=C,
     ("Ask who pays for power","A state utility commissioner raised concern that household customers could subsidize the cost of serving the data center."),
     ("It's not too late for benefits","El Paso is negotiating a community benefits agreement after incentives were granted.")],
   sources="El Paso Matters / Texas Standard (Oct 2025); KFOX14 (2026); KVIA (July 7, 2026); El Paso Inc.; Blockspace; GovTech Insider."))
+build(dict(slug="hays", name="Hays", checked=C,
+  title="Hays County Watch",
+  desc="San Marcos became the first Texas city to ban data centers. How Hays County residents fought back over the Edwards Aquifer and a historic drought.",
+  intro="Between Austin and San Antonio, in a multiyear drought over the Edwards Aquifer, Hays County residents turned out by the hundreds against data centers. In June 2026, San Marcos became the first city in Texas to ban them.",
+  counts=[("1st","Texas city to ban data centers: San Marcos"),("~5","potential data centers counted by local water advocates"),("2011","the last full county water study, until this year"),("4-3","the San Marcos council vote")],
+  projects=[
+    (["Denied","Reporting"],"San Marcos data center, Francis Harris Lane","About 200 acres at 904 Francis Harris Lane. The City Council denied the rezoning 5-2 in February 2026 after hundreds protested inside and outside city hall."),
+    (["Watch list","Reporting"],"Other proposals near San Marcos","At least two data centers have been proposed in unincorporated Hays County near the city's borders, and local water advocates count about five potential projects in the area.")],
+  timeline=[
+    ("Jan 20, 2026","County orders a water study","Its first comprehensive water study since 2011."),
+    ("Feb 17-18, 2026","San Marcos denies a 200-acre data center","The vote was 5-2 after an overflow crowd."),
+    ("Feb 2026","County tables a 30-day pause","County attorneys warned it would almost certainly bring a lawsuit."),
+    ("June 12, 2026","County refuses an aquifer-zone deal","Denied an agreement with a 340-acre development over the Edwards Aquifer recharge zone."),
+    ("June 2026","San Marcos bans data centers","Voted 4-3 to prohibit them in every zoning district, the first Texas city to do so. A state senator vowed a legal challenge."),
+    ("June 23, 2026","County passes a symbolic pause","A non-binding resolution pausing consideration of high-water-use developments, including data centers.")],
+  lessons=[
+    ("Cities can do what counties can't","Zoning power let San Marcos ban data centers outright. Find out whether a site is inside a city or its extraterritorial jurisdiction."),
+    ("A ban is not a moratorium","San Marcos changed its zoning rules rather than pausing permits, which it argues puts it on firmer legal ground."),
+    ("Study your water","A county without zoning power can still commission a water study, and the facts it finds shape every decision after."),
+    ("Show up","Hundreds of residents at city hall turned a rezoning vote.")],
+  sources="Texas Tribune (June 30, 2026); KSAT; Community Impact; KUT; The Real Deal; Hoodline."))
