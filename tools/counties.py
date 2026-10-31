@@ -201,3 +201,4 @@ build(dict(slug="milam", name="Milam", checked=C,
   sources="The Block; Greenpeace USA research; Baxtel; Data Center Dynamics; TechRadar."))
 
 import subprocess; subprocess.run(["python3", "tools/add_live.py"])
+subprocess.run(["python3", "tools/add_builder.py"])
