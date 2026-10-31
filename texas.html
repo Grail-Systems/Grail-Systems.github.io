@@ -154,7 +154,7 @@ const projects = [
    note:"3641 Ben Dunn Rd, about 187 acres. $620M building plus $620M equipment in its application; 10 to 20 employees.", link:"/angelina/"},
   {name:"Longleaf Generating", county:"Angelina", type:"power", status:"proposed", lat:31.330, lng:-94.600,
    dev:"WattBridge", power:"600 MW natural gas", water:"1.5 billion gal/yr requested from Pineywoods GCD, March 2026",
-   conf:"Records", note:"On hold since July 2026.", link:"/angelina/"},
+   conf:"Records", note:"ERCOT ID 26INR0294, connecting at the Redland Substation near Kurth Lake. The County approved a 10-year tax abatement for Long Leaf Generating LLC in May 2025. On hold since July 2026.", link:"/angelina/"},
   {name:"Former Aspen Power biomass plant", county:"Angelina", type:"power", status:"proposed", lat:31.360, lng:-94.760,
    dev:"1606 Corp (OTC: CBDW)", power:"55 MW", water:"Not disclosed", conf:"Records",
    note:"About $11.7M term sheet; EthosEnergy operations letter of intent, Sept 2026.", link:"/angelina/"},
@@ -250,7 +250,13 @@ const projects = [
    note:"About 5,200 acres south of Dallas, acquired 2025."},
   {name:"PowerHouse Westlake", county:"Tarrant", type:"data", status:"proposed", lat:32.990, lng:-97.200,
    dev:"PowerHouse Data Centers", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
-   note:"About 88 acres north of Fort Worth. Plans filed by Kimley-Horn."}
+   note:"About 88 acres north of Fort Worth. Plans filed by Kimley-Horn."},
+  {name:"Longleaf II Power Station", county:"Angelina", type:"power", status:"proposed", lat:31.345, lng:-94.585,
+   dev:"Not confirmed", power:"600 MW natural gas", water:"Not disclosed", conf:"Records",
+   note:"ERCOT ID 30INR0114, projected online July 2030. A second 600 MW gas plant, separate from Longleaf, so the county may face 1,200 MW of new gas generation.", link:"/angelina/"},
+  {name:"Sun Angel ESS", county:"Angelina", type:"power", status:"proposed", lat:31.250, lng:-94.720,
+   dev:"Not identified", power:"202 MW battery storage", water:"Not applicable", conf:"Records",
+   note:"ERCOT ID 27INR0247, projected online September 2028. Battery sites need fire response plans.", link:"/angelina/"}
 ];
 
 const actions = [
@@ -260,7 +266,8 @@ const actions = [
   {who:"Hood County", when:"2024 to 2026", what:"Funded a professional sound study near a bitcoin mine.", result:"Created a public record of noise levels even without noise authority.", lesson:"Measure first. A baseline study helps every later fight."},
   {who:"Angelina County", when:"July 2026", what:"Resolution 010-26 asking the Legislature for setback, noise, lighting and water authority, plus draft abatement protections.", result:"Adopted July 2026. Road-use agreement counsel hired October 2026.", lesson:"Agreements can carry protections a county cannot impose by ordinance."},
   {who:"Public Citizen, Sierra Club and Environmental Integrity Project", when:"2026", what:"Federal Clean Air Act lawsuit against Vantage and VoltaGrid over on-site gas plants at two San Antonio data centers.", result:"Pending in federal court.", lesson:"Check whether a project's power plant was split into small permits. Splitting one project into pieces is how scrutiny gets dodged."},
-  {who:"Ellis County, with Compass Datacenters", when:"June 2026", what:"Compass proposed a $15M grant for a new county animal shelter amid opposition to its Red Oak campus.", result:"Proposed, per reporting.", lesson:"Developers offer gifts to ease opposition. Get every benefit in a binding agreement, not a press release."}
+  {who:"Ellis County, with Compass Datacenters", when:"June 2026", what:"Compass proposed a $15M grant for a new county animal shelter amid opposition to its Red Oak campus.", result:"Proposed, per reporting.", lesson:"Developers offer gifts to ease opposition. Get every benefit in a binding agreement, not a press release."},
+  {who:"Angelina County, Long Leaf abatement", when:"May 2025", what:"Approved a 10-year tax abatement for Long Leaf Generating LLC: 100% for the first three years, then stepping down.", result:"Granted before the plant was tied to data center demand.", lesson:"Abatements for the power plant behind a data center deserve the same scrutiny as the data center itself."}
 ];
 
 const css = getComputedStyle(document.documentElement);
