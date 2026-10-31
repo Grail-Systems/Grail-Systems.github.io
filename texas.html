@@ -76,6 +76,22 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
 </section>
 
 <section>
+  <h2>The big picture</h2>
+  <p>The projects on this map are a fraction of what is coming.</p>
+  <div class="counts">
+    <a href="#projects"><b>474 GW</b><span>requested from the Texas grid, from more than 1,800 large-load requests</span></a>
+    <a href="#projects"><b>About 90%</b><span>of that request is data centers</span></a>
+    <a href="#projects"><b>5x</b><span>the grid's record peak demand</span></a>
+    <a href="#projects"><b>25 billion</b><span>gallons a year already used by Texas data centers, counting the water behind their power</span></a>
+  </div>
+  <ul class="rows">
+    <li><h3>The state has hit pause</h3><p>In August 2026 the Governor ordered an audit of every data center in the grid queue, after some ignored a state survey on water and power use. ERCOT paused approvals while the audit runs, expected to finish around December 10, 2026. In September he told TCEQ to suspend data center permits until the grid and water reviews are done.</p></li>
+    <li><h3>Water is the blind spot</h3><p>Texas does not require data centers to disclose how much water they plan to use or report what they actually use. The state water plan has not counted them either. That is why local agreements, and this map, matter.</p></li>
+  </ul>
+  <span class="src">Sources: ERCOT and Governor's office figures as reported by the Texas Tribune and POWER Magazine; Houston Advanced Research Center white paper, January 2026; Texas Observer; Austin Chronicle.</span>
+</section>
+
+<section>
   <h2>The map</h2>
   <p>Tap a pin for details. Pins sit at the county or nearest documented location, not exact property lines, unless a public record gives the address.</p>
   <div id="map" role="region" aria-label="Map of tracked Texas projects"></div>
@@ -171,13 +187,13 @@ const projects = [
    dev:"MARA Holdings (NASDAQ: MARA)", power:"Behind-the-meter at the Wolf Hollow II gas plant", water:"Not disclosed",
    conf:"Court filings", note:"Several nuisance lawsuits over noise and vibration. A county-funded study found about 60 dB near the site."},
   {name:"Stargate Abilene", county:"Taylor", type:"data", status:"construction", lat:32.450, lng:-99.730,
-   dev:"Crusoe, for Oracle and OpenAI", power:"About 1.2 GW projected", water:"Not confirmed", conf:"Reporting",
+   dev:"Crusoe, for Oracle and OpenAI", power:"About 1.2 GW projected", water:"City of Abilene. Closed-loop; about 8 million gallons to fill the system, then minor top-ups", conf:"Reporting",
    note:"Partly operating. A planned 600 MW expansion was dropped in March 2026."},
   {name:"Frontier / Stargate Shackelford", county:"Shackelford", type:"data", status:"construction", lat:32.730, lng:-99.300,
    dev:"Vantage Data Centers, for Oracle and OpenAI", power:"About 1.4 to 2 GW, on-site gas power by VoltaGrid", water:"Not confirmed",
    conf:"Reporting", note:"Reported $25B or more investment. Projected completion late 2028."},
   {name:"Fermi America campus", county:"Carson (Amarillo area)", type:"data", status:"construction", lat:35.320, lng:-101.560,
-   dev:"Fermi America", power:"11 GW planned", water:"Not confirmed", conf:"Reporting",
+   dev:"Fermi America", power:"11 GW planned", water:"City of Amarillo agreement for up to 2.5 million gal/day, at $8.72 per 1,000 gallons (Oct 2025)", conf:"Reporting",
    note:"Raised $746M in its IPO. Reported to be at least a year behind schedule."},
   {name:"Google, Gray County", county:"Gray", type:"data", status:"construction", lat:35.540, lng:-100.960,
    dev:"Google", power:"Not disclosed", water:"Not confirmed", conf:"Reporting",
@@ -256,7 +272,28 @@ const projects = [
    note:"ERCOT ID 30INR0114, projected online July 2030. A second 600 MW gas plant, separate from Longleaf, so the county may face 1,200 MW of new gas generation.", link:"/angelina/"},
   {name:"Sun Angel ESS", county:"Angelina", type:"power", status:"proposed", lat:31.250, lng:-94.720,
    dev:"Not identified", power:"202 MW battery storage", water:"Not applicable", conf:"Records",
-   note:"ERCOT ID 27INR0247, projected online September 2028. Battery sites need fire response plans.", link:"/angelina/"}
+   note:"ERCOT ID 27INR0247, projected online September 2028. Battery sites need fire response plans.", link:"/angelina/"},
+  {name:"Meta El Paso", county:"El Paso", type:"data", status:"construction", lat:31.920, lng:-106.300,
+   dev:"Meta (land bought as Wurldwide LLC)", power:"Not disclosed", water:"El Paso Water: cap 2.5 million gal/day; expected average about 480,000 gal/day; closed-loop", conf:"Reporting",
+   note:"Up to $10B planned. The city gave an 80% tax cut for 25 years tied to at least 50 permanent jobs, and has directed staff to draft a community benefits agreement."},
+  {name:"Lancium Childress", county:"Childress", type:"data", status:"operating", lat:34.430, lng:-100.200,
+   dev:"Lancium", power:"Not disclosed", water:"About 11,000 gal/day from the Red River Water Authority; company says it will return 1 million gal/day", conf:"Reporting",
+   note:"Same developer as the Stargate Abilene campus."},
+  {name:"Amazon near Comanche Peak", county:"Somervell", type:"data", status:"proposed", lat:32.300, lng:-97.790,
+   dev:"Amazon", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"County approved incentives, then in May 2026 resolved to oppose new data centers until the Legislature acts."},
+  {name:"Glen Rose AI data center", county:"Somervell", type:"data", status:"stopped", lat:32.270, lng:-97.820,
+   dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"North of Dinosaur Valley State Park. Opposed by the county in May 2026."},
+  {name:"Infrakey Lacy Lakeview", county:"McLennan", type:"data", status:"proposed", lat:31.620, lng:-97.100,
+   dev:"Infrakey", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"$10B proposal near Waco. The company claims $50M a year in tax revenue for Lacy Lakeview."},
+  {name:"Prosper / FM 1385 data center", county:"Denton (Prosper area)", type:"data", status:"proposed", lat:33.240, lng:-96.920,
+   dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Rezoning of farmland along FM 1385. Residents say required notices missed nearby homes."},
+  {name:"Harlingen data center", county:"Cameron", type:"data", status:"proposed", lat:26.190, lng:-97.700,
+   dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Residents asked the City Commission to oppose it over water and power use."}
 ];
 
 const actions = [
@@ -267,7 +304,13 @@ const actions = [
   {who:"Angelina County", when:"July 2026", what:"Resolution 010-26 asking the Legislature for setback, noise, lighting and water authority, plus draft abatement protections.", result:"Adopted July 2026. Road-use agreement counsel hired October 2026.", lesson:"Agreements can carry protections a county cannot impose by ordinance."},
   {who:"Public Citizen, Sierra Club and Environmental Integrity Project", when:"2026", what:"Federal Clean Air Act lawsuit against Vantage and VoltaGrid over on-site gas plants at two San Antonio data centers.", result:"Pending in federal court.", lesson:"Check whether a project's power plant was split into small permits. Splitting one project into pieces is how scrutiny gets dodged."},
   {who:"Ellis County, with Compass Datacenters", when:"June 2026", what:"Compass proposed a $15M grant for a new county animal shelter amid opposition to its Red Oak campus.", result:"Proposed, per reporting.", lesson:"Developers offer gifts to ease opposition. Get every benefit in a binding agreement, not a press release."},
-  {who:"Angelina County, Long Leaf abatement", when:"May 2025", what:"Approved a 10-year tax abatement for Long Leaf Generating LLC: 100% for the first three years, then stepping down.", result:"Granted before the plant was tied to data center demand.", lesson:"Abatements for the power plant behind a data center deserve the same scrutiny as the data center itself."}
+  {who:"Angelina County, Long Leaf abatement", when:"May 2025", what:"Approved a 10-year tax abatement for Long Leaf Generating LLC: 100% for the first three years, then stepping down.", result:"Granted before the plant was tied to data center demand.", lesson:"Abatements for the power plant behind a data center deserve the same scrutiny as the data center itself."},
+  {who:"State of Texas: grid audit and freeze", when:"Aug 2026", what:"The Governor ordered the PUC and ERCOT to audit every data center in the grid queue before any more advance, citing data centers that ignored the state's water and power survey.", result:"ERCOT paused approvals. The queue holds about 474 GW, about 90% data centers. The audit is expected to finish around Dec 10, 2026.", lesson:"The state itself says growth is outrunning oversight. Counties should not rush agreements before the audit is done."},
+  {who:"State of Texas: water reporting and permit freeze", when:"Sept 2026", what:"The Governor directed the TWDB to enforce data center water reporting, then told TCEQ to suspend data center permits pending the grid and water reviews.", result:"TCEQ's compliance report was due Oct 19, 2026.", lesson:"Ask every developer how the permit freeze affects its timeline, and whether it answered the state's survey."},
+  {who:"Somervell County", when:"May 2026", what:"Unanimous resolution opposing new data centers until the Legislature addresses water and energy.", result:"Adopted, months after approving incentives for an Amazon project.", lesson:"A county can take a public position without a moratorium."},
+  {who:"Caldwell County", when:"May 2026", what:"Resolution 29-2026 opposing open-loop evaporative cooling and high-volume drinking water use, and asking for county authority.", result:"Adopted unanimously.", lesson:"Name the specific technology you oppose. It is clearer and harder to attack."},
+  {who:"Hood County", when:"Feb 2026", what:"Considered pausing data center construction while eight proposals were pending.", result:"Rejected after a state senator warned of legal action.", lesson:"Expect pressure from Austin as well as from developers."},
+  {who:"City of El Paso", when:"2026", what:"Council directed staff to draft a community benefits agreement for the Meta data center.", result:"In progress.", lesson:"Benefits can still be negotiated after incentives are granted."}
 ];
 
 const css = getComputedStyle(document.documentElement);
