@@ -112,6 +112,19 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
 </section>
 
 <section>
+  <h2>How to spot a project early</h2>
+  <p>Developers leave a paper trail long before they announce. Anyone can check these, for free:</p>
+  <ul class="rows">
+    <li><h3>State building filings (TDLR)</h3><p>Any big commercial building in Texas must be registered with the Texas Department of Licensing and Regulation, with the owner, address, cost and start date. Search the TABS project database by county or city.</p></li>
+    <li><h3>Air permits (TCEQ)</h3><p>Turbines and backup generators need air permits. A gas permit on rural land with nothing announced is a red flag.</p></li>
+    <li><h3>Grid requests (ERCOT)</h3><p>ERCOT's large-load reports show how much new power is being requested, and where.</p></li>
+    <li><h3>Land records (appraisal districts)</h3><p>Watch for large parcels bought by unfamiliar LLCs. Big companies often use shell names. Google built in Midlothian as Alamo Mission LLC.</p></li>
+    <li><h3>Local agendas</h3><p>Commissioners court, city council, groundwater district and appraisal board agendas. Look for tax abatements, road closures, water contracts and nondisclosure agreements.</p></li>
+    <li><h3>Company announcements</h3><p>Investor presentations, earnings calls and job postings often name a site before neighbors are told.</p></li>
+  </ul>
+</section>
+
+<section>
   <h2>See something we're missing?</h2>
   <p>If a data center, crypto mine or power plant is coming to your county, tell us. Send the county, the company name if you know it, and any link, agenda, permit or photo. We verify everything before it goes on the map, and we never publish private residents' contact information.</p>
   <p><a href="mailto:contact@grailsystems.io?subject=Texas%20Watch%20tip">contact@grailsystems.io</a></p>
@@ -210,7 +223,31 @@ const projects = [
    note:"About 500 acres between Austin and San Antonio."},
   {name:"Pace Glasscock County", county:"Glasscock", type:"data", status:"proposed", lat:31.870, lng:-101.520,
    dev:"Pace", power:"100 MW initial", water:"Not disclosed", conf:"Reporting",
-   note:"Announced April 2026."}
+   note:"Announced April 2026."},
+  {name:"DataBank Red Oak campus", county:"Ellis", type:"data", status:"construction", lat:32.500, lng:-96.820,
+   dev:"DataBank (Dallas), a separate LLC for each building", power:"480 MW at full build", water:"Not disclosed", conf:"Records",
+   note:"292 acres, up to eight buildings. State TDLR filing shows building DFW14 at 3600 Batchler Rd, $325M, starting Dec 1, 2026."},
+  {name:"Compass Red Oak campus", county:"Ellis", type:"data", status:"construction", lat:32.530, lng:-96.860,
+   dev:"Compass Datacenters", power:"About 360 MW", water:"Not disclosed", conf:"Records",
+   note:"375 acres. Offered Ellis County a $15M grant for an animal shelter amid local opposition, June 2026."},
+  {name:"Google Midlothian campus", county:"Ellis", type:"data", status:"operating", lat:32.470, lng:-96.990,
+   dev:"Google, built through shell company Alamo Mission LLC (project name Sharka)", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"375 acres plus 165 more. Phase 4 under construction."},
+  {name:"Google Red Oak campus", county:"Ellis", type:"data", status:"operating", lat:32.550, lng:-96.840,
+   dev:"Google", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 165 acres. First building operating. Part of Google's $40B Texas plan through 2027."},
+  {name:"Google Haskell County campuses", county:"Haskell", type:"data", status:"proposed", lat:33.160, lng:-99.730,
+   dev:"Google", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Two campuses announced as part of the $40B Texas plan."},
+  {name:"Google Armstrong County campus", county:"Armstrong", type:"data", status:"proposed", lat:34.970, lng:-101.360,
+   dev:"Google", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Announced as part of the $40B Texas plan."},
+  {name:"Cawley Partners data center park", county:"Ellis (to verify)", type:"data", status:"proposed", lat:32.450, lng:-96.750,
+   dev:"Cawley Partners", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 5,200 acres south of Dallas, acquired 2025."},
+  {name:"PowerHouse Westlake", county:"Tarrant", type:"data", status:"proposed", lat:32.990, lng:-97.200,
+   dev:"PowerHouse Data Centers", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"About 88 acres north of Fort Worth. Plans filed by Kimley-Horn."}
 ];
 
 const actions = [
@@ -219,7 +256,8 @@ const actions = [
   {who:"West Cedar Creek MUD, Henderson County", when:"May 2026", what:"Paused high-intensity water commitments.", result:"Data center development stopped.", lesson:"Water providers may hold the strongest single lever."},
   {who:"Hood County", when:"2024 to 2026", what:"Funded a professional sound study near a bitcoin mine.", result:"Created a public record of noise levels even without noise authority.", lesson:"Measure first. A baseline study helps every later fight."},
   {who:"Angelina County", when:"July 2026", what:"Resolution 010-26 asking the Legislature for setback, noise, lighting and water authority, plus draft abatement protections.", result:"Adopted July 2026. Road-use agreement counsel hired October 2026.", lesson:"Agreements can carry protections a county cannot impose by ordinance."},
-  {who:"Public Citizen, Sierra Club and Environmental Integrity Project", when:"2026", what:"Federal Clean Air Act lawsuit against Vantage and VoltaGrid over on-site gas plants at two San Antonio data centers.", result:"Pending in federal court.", lesson:"Check whether a project's power plant was split into small permits. Splitting one project into pieces is how scrutiny gets dodged."}
+  {who:"Public Citizen, Sierra Club and Environmental Integrity Project", when:"2026", what:"Federal Clean Air Act lawsuit against Vantage and VoltaGrid over on-site gas plants at two San Antonio data centers.", result:"Pending in federal court.", lesson:"Check whether a project's power plant was split into small permits. Splitting one project into pieces is how scrutiny gets dodged."},
+  {who:"Ellis County, with Compass Datacenters", when:"June 2026", what:"Compass proposed a $15M grant for a new county animal shelter amid opposition to its Red Oak campus.", result:"Proposed, per reporting.", lesson:"Developers offer gifts to ease opposition. Get every benefit in a binding agreement, not a press release."}
 ];
 
 const css = getComputedStyle(document.documentElement);
