@@ -144,3 +144,58 @@ build(dict(slug="newton", name="Newton", checked=C,
     ("Letters of support matter","A judge's letter can be quoted in a press release as an endorsement. Ask officials what they have signed, and post it publicly."),
     ("Watch the river","The site sits on the Sabine River. Ask where any water would come from, and where wastewater would go.")],
   sources="KJAS (two articles, Aug 2026); East Texas Banner; KFDM (Oct 2025 and 2023); Newswire (2022); Texas Forest Country Partnership; More Than Just Parks tracker."))
+build(dict(slug="anderson", name="Anderson", checked=C,
+  title="Anderson County Watch",
+  desc="Project Anderson: a 5.2 GW, $16 billion gas plant built to power data centers, between the Trinity and Neches rivers. What residents need to know.",
+  intro="Between the Trinity and Neches rivers, NextEra plans one of the largest gas plants in the country: 5.2 gigawatts on about 1,700 acres, built to serve data centers. It is part of a U.S.-Japan trade deal, which puts it under federal control and leaves the county with little say.",
+  counts=[("5.2 GW","of gas generation planned"),("$16B","estimated cost"),("1,700","acres near Tennessee Colony"),("100 vs 3,000","permanent jobs: the city's number vs a lawmaker's")],
+  projects=[
+    (["Announced","Reporting"],"Project Anderson","NextEra Energy Resources will build and operate the plant, jointly owned by Japan and the U.S. government under a $550B trade deal, with gas from Comstock Resources. It can serve up to 5 GW of large loads such as data centers, and the U.S. Commerce Department says a data center will follow. NextEra says the plant will be air-cooled and it is exploring recycled water instead of fresh groundwater. Groundbreaking is expected in 2027, with the first phase running in 2028 and construction through 2032.")],
+  timeline=[
+    ("March 2026","Federal approval announced","Part of 10 GW of NextEra gas plants in Texas and Pennsylvania tied to the U.S.-Japan deal."),
+    ("April 7, 2026","First public meeting","Residents asked about water, noise and fire protection. A volunteer fire chief who lives three miles away said it would ruin a quiet county."),
+    ("May 2026","City of Palestine posts details","At least 100 full-time jobs after construction, plus hundreds of construction jobs."),
+    ("2027","Groundbreaking expected","")],
+  lessons=[
+    ("Power plants come first","A gas hub built for large loads is an invitation to data centers. Watch for the data center that follows."),
+    ("Compare the jobs numbers","A state representative claimed 3,000 long-term jobs; the city's own page says at least 100. Ask for the number in writing."),
+    ("Federal projects still need local services","Counties keep some tools, such as noise rules and road agreements, and volunteer fire departments must be ready for a plant this size."),
+    ("Get the water plan in writing","Air cooling and recycled water are promises today. Ask the Trinity River Authority and the groundwater district what has been requested.")],
+  sources="Utility Dive (Mar 24, 2026); Data Center Dynamics; Texas Scorecard (Mar 26, 2026); KETK (Apr 2026); City of Palestine (May 2026); The Center Square."))
+build(dict(slug="navarro", name="Navarro", checked=C,
+  title="Navarro County Watch",
+  desc="Riot's 1 GW Corsicana campus, a 600 MW powered-land campus, and the lake that supplies them. What's happening in Navarro County.",
+  intro="South of Dallas, Corsicana hosts one of the largest bitcoin mining campuses in the world, now shifting to AI, and more developers are lining up behind it. The water comes from Navarro Mills Lake.",
+  counts=[("1 GW","approved by ERCOT for Riot Corsicana"),("858","acres in Riot's campus"),("600 MW","listed for a second powered-land campus"),("0","public numbers on Riot's water use")],
+  projects=[
+    (["Operating and expanding","Reporting"],"Riot Corsicana","Riot Platforms' campus, which ERCOT approved for 1 GW, the first 1 GW load it approved. About 400 MW is built on 858 acres. AMD leases 50 MW for AI computing. The City of Corsicana said in 2022 that Riot's water would come from Navarro Mills Lake; Riot has never published how much."),
+    (["Proposed","Reporting, verify"],"Hedgehog USA powered land campus","Listed at 600 MW by a public tracker."),
+    (["Proposed","Reporting, verify"],"EG AI Rice data center","A small 3 MW edge site near Rice.")],
+  timeline=[
+    ("2022","Riot breaks ground","Residents formed a Facebook group of more than 500 members and started a petition against the mine."),
+    ("2025","Riot buys more land","The campus grows to 858 acres."),
+    ("2026","AI moves in","AMD doubles its lease at Corsicana to 50 MW.")],
+  lessons=[
+    ("Crypto mines become AI campuses","The same site, power and water can switch uses. Agreements should require a new hearing for any change in use."),
+    ("Ask the lake's owner","Navarro Mills Lake water is contracted through the Trinity River Authority. Drought restrictions have been triggered before."),
+    ("Watch what follows","Once one big load arrives, powered-land developers follow.")],
+  sources="Data Center Dynamics; Riot Platforms releases; Greenpeace USA research; Tech Xplore / Dallas Morning News (2022); Baxtel; Trinity River Authority; More Than Just Parks tracker."))
+build(dict(slug="milam", name="Milam", checked=C,
+  title="Milam County Watch",
+  desc="Rockdale's old Alcoa smelter became one of the biggest bitcoin mines in the country. Now AI is moving in, and Stargate has a site here too.",
+  intro="In Rockdale, the land where Alcoa once smelted aluminum now hosts two of the largest bitcoin mines in the country, side by side. AI tenants are moving in, and OpenAI's Stargate has named Milam County as a site.",
+  counts=[("700 MW","Riot's Rockdale capacity"),("$2.1M","a year Riot pays for a lake water reservation, per Greenpeace research"),("2","giant crypto mines side by side"),("1","Stargate site announced")],
+  projects=[
+    (["Operating","Reporting"],"Riot Rockdale","Riot Platforms, 700 MW, on former Alcoa land. Riot bought about 200 acres it had leased for $96M and signed AMD as an AI tenant. Uses a mix of air and immersion cooling, with a lake water reservation reported at about $2.1M a year."),
+    (["Operating","Reporting"],"Bitdeer Rockdale","Spun off from China's Bitmain, less than half a mile from Riot on former Alcoa land."),
+    (["Announced","Reporting"],"Stargate Milam County","Named as an OpenAI Stargate site in late 2025. Details are still not public.")],
+  timeline=[
+    ("2021","Riot buys the Whinstone site",""),
+    ("2023","Rockdale becomes one of the largest bitcoin mines in North America",""),
+    ("Late 2025","Stargate names Milam County",""),
+    ("2026","AMD signs on at Rockdale","Riot begins shifting to AI hosting.")],
+  lessons=[
+    ("Old industrial land draws new loads","The Alcoa site had the power lines; the miners followed. Compare Lufkin's paper mill and Bon Wier's plywood mill."),
+    ("Ask who owns the water rights","A private lake water reservation can bypass the debates residents expect."),
+    ("Track every announced site","Stargate named Milam County with no public details. Watch TDLR filings and the appraisal district.")],
+  sources="The Block; Greenpeace USA research; Baxtel; Data Center Dynamics; TechRadar."))
