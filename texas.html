@@ -284,7 +284,7 @@ const projects = [
    dev:"Amazon", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
    note:"County approved incentives, then in May 2026 resolved to oppose new data centers until the Legislature acts."},
   {name:"Glen Rose AI data center", county:"Somervell", type:"data", status:"stopped", lat:32.270, lng:-97.820,
-   dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   dev:"Possibly Black Mountain Power, which holds an air permit near the park (verify)", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
    note:"North of Dinosaur Valley State Park. Opposed by the county in May 2026."},
   {name:"Infrakey Lacy Lakeview", county:"McLennan", type:"data", status:"proposed", lat:31.620, lng:-97.100,
    dev:"Infrakey", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
@@ -298,18 +298,27 @@ const projects = [
   {name:"Comanche Circle", county:"Hood", type:"data", status:"proposed", lat:32.380, lng:-97.920,
    dev:"Sailfish Development", power:"On-site generation (size not disclosed)", water:"On-site water and wastewater; source not disclosed", conf:"Reporting",
    note:"About 2,100 to 2,600 acres near Tolar. Conditionally approved Jan 13, 2026, with 45 days to provide water details.", link:"/hood/"},
-  {name:"Fort Spunky", county:"Hood", type:"data", status:"proposed", lat:32.350, lng:-97.650,
-   dev:"Pacifico Energy", power:"About 100 MW reported", water:"Not disclosed", conf:"Reporting",
-   note:"862 acres across the Brazos River from Pecan Plantation. Reported paused.", link:"/hood/"},
+  {name:"Fort Spunky", county:"Hood", type:"data", status:"stopped", lat:32.350, lng:-97.650,
+   dev:"Pacifico Energy", power:"About 100 MW reported, off-grid gas", water:"Not disclosed", conf:"Reporting",
+   note:"862 acres across the Brazos River from Pecan Plantation. Reported canceled.", link:"/hood/"},
   {name:"Project Patriot", county:"Hood", type:"data", status:"proposed", lat:32.460, lng:-97.810,
-   dev:"Bilateral Energy", power:"About 1,200 MW reported", water:"Not disclosed", conf:"Reporting",
-   note:"Listed by an industry tracker; needs verification.", link:"/hood/"},
+   dev:"Bilateral Energy LLC (Houston)", power:"Reported 600 to 1,200 MW, with on-site power", water:"Not disclosed", conf:"Reporting",
+   note:"2,100 acres at Knox Ranch, 2801 W US Hwy 377, annexed by Granbury. Residents sued the city under the Open Meetings Act and launched recalls of five city leaders.", link:"/hood/"},
   {name:"Hood County AI campus", county:"Hood", type:"data", status:"proposed", lat:32.410, lng:-97.760,
    dev:"Big Digital Energy / 10NetZero", power:"About 300 MW reported", water:"Not disclosed", conf:"Reporting",
-   note:"Listed by an industry tracker; needs verification.", link:"/hood/"},
-  {name:"Amazon AWS, Coates Road", county:"Hood", type:"data", status:"proposed", lat:32.420, lng:-97.740,
+   note:"About 30 acres at 2400 County Road 326. Planned for 2028.", link:"/hood/"},
+  {name:"Amazon AWS, Coates Road", county:"Hood", type:"data", status:"stopped", lat:32.420, lng:-97.740,
    dev:"Amazon", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
-   note:"2300 Coates Road. Listed by an industry tracker; needs verification.", link:"/hood/"}
+   note:"Project Spectrum: about $5B on 1,265 acres next to Comanche Peak nuclear plant. Reported withdrawn.", link:"/hood/"},
+  {name:"Project Red and Project Yellow", county:"Hood", type:"data", status:"proposed", lat:32.400, lng:-97.880,
+   dev:"Not identified in reporting", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Developers sued Hood County for automatic approval, claiming it missed a 30-day deadline. A judge dismissed the suit in July 2026.", link:"/hood/"},
+  {name:"Black Mountain Power, Fort Worth", county:"Tarrant", type:"data", status:"proposed", lat:32.750, lng:-97.330,
+   dev:"Black Mountain Power", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"$10B proposal. The same company holds an air permit near Dinosaur Valley State Park."},
+  {name:"Pacifico Cedar Creek Campus", county:"Bastrop", type:"data", status:"proposed", lat:30.110, lng:-97.320,
+   dev:"Pacifico Energy", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"Same developer as Fort Spunky in Hood County. Needs verification."}
 ];
 
 const actions = [
@@ -322,12 +331,14 @@ const actions = [
   {who:"Ellis County, with Compass Datacenters", when:"June 2026", what:"Compass proposed a $15M grant for a new county animal shelter amid opposition to its Red Oak campus.", result:"Proposed, per reporting.", lesson:"Developers offer gifts to ease opposition. Get every benefit in a binding agreement, not a press release."},
   {who:"Angelina County, Long Leaf abatement", when:"May 2025", what:"Approved a 10-year tax abatement for Long Leaf Generating LLC: 100% for the first three years, then stepping down.", result:"Granted before the plant was tied to data center demand.", lesson:"Abatements for the power plant behind a data center deserve the same scrutiny as the data center itself."},
   {who:"State of Texas: grid audit and freeze", when:"Aug 2026", what:"The Governor ordered the PUC and ERCOT to audit every data center in the grid queue before any more advance, citing data centers that ignored the state's water and power survey.", result:"ERCOT paused approvals. The queue holds about 474 GW, about 90% data centers. The audit is expected to finish around Dec 10, 2026.", lesson:"The state itself says growth is outrunning oversight. Counties should not rush agreements before the audit is done."},
-  {who:"State of Texas: water reporting and permit freeze", when:"Sept 2026", what:"The Governor directed the TWDB to enforce data center water reporting, then told TCEQ to suspend data center permits pending the grid and water reviews.", result:"TCEQ's compliance report was due Oct 19, 2026.", lesson:"Ask every developer how the permit freeze affects its timeline, and whether it answered the state's survey."},
+  {who:"State of Texas: water reporting and permit freeze", when:"Sept 2026", what:"The Governor directed the TWDB to enforce data center water reporting, then told TCEQ to suspend data center permits pending the grid and water reviews.", result:"On Oct 19, TCEQ told the Governor it had paused permits directly supporting data centers; Public Citizen says some are still moving. The Attorney General opened an investigation Sept 24 into data centers that ignored the water survey.", lesson:"Ask every developer how the permit freeze affects its timeline, and whether it answered the state's survey."},
   {who:"Somervell County", when:"May 2026", what:"Unanimous resolution opposing new data centers until the Legislature addresses water and energy.", result:"Adopted, months after approving incentives for an Amazon project.", lesson:"A county can take a public position without a moratorium."},
   {who:"Caldwell County", when:"May 2026", what:"Resolution 29-2026 opposing open-loop evaporative cooling and high-volume drinking water use, and asking for county authority.", result:"Adopted unanimously.", lesson:"Name the specific technology you oppose. It is clearer and harder to attack."},
   {who:"Hood County", when:"Feb 2026", what:"Considered pausing data center construction while eight proposals were pending.", result:"Rejected after a state senator warned of legal action.", lesson:"Expect pressure from Austin as well as from developers."},
   {who:"City of El Paso", when:"2026", what:"Council directed staff to draft a community benefits agreement for the Meta data center.", result:"In progress.", lesson:"Benefits can still be negotiated after incentives are granted."},
-  {who:"Hood County: stricter rules and a special law", when:"March 2026", what:"After two failed moratorium votes, commissioners unanimously adopted stricter rules for large industrial projects. A 1999 state law gives Hood special powers to protect the Lake Granbury watershed.", result:"Developers have sued the county twice since.", lesson:"Check whether your county has a special law of its own, and document every reason for a decision."}
+  {who:"Hood County: stricter rules and a special law", when:"March 2026", what:"After two failed moratorium votes, commissioners unanimously adopted stricter rules for large industrial projects. A 1999 state law gives Hood special powers to protect the Lake Granbury watershed.", result:"Developers have sued the county twice since.", lesson:"Check whether your county has a special law of its own, and document every reason for a decision."},
+  {who:"Hood County: court win", when:"July 2026", what:"Developers sued for automatic approval of two data center campuses, claiming the county missed a 30-day deadline on their plans.", result:"A judge dismissed the suit.", lesson:"Counties can win. Track every statutory deadline so no developer can claim automatic approval."},
+  {who:"Granbury residents", when:"April and July 2026", what:"Sued the city over the 2,100-acre Project Patriot annexation under the Open Meetings Act, then launched recalls of five city leaders.", result:"Pending.", lesson:"When officials act behind closed doors, the Open Meetings Act and recalls are residents' tools."}
 ];
 
 const css = getComputedStyle(document.documentElement);
