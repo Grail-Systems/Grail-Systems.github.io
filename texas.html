@@ -147,7 +147,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
   <h2>See something we're missing?</h2>
   <p>If a data center, crypto mine or power plant is coming to your county, tell us. Send the county, the company name if you know it, and any link, agenda, permit or photo. We verify everything before it goes on the map, and we never publish private residents' contact information.</p>
   <p><a href="mailto:contact@grailsystems.io?subject=Texas%20Watch%20tip">contact@grailsystems.io</a></p>
-  <span class="src">Corrections: if anything here is wrong, email us and we will fix it publicly, with the date of the change.</span>
+  <span class="src">Corrections: if anything here is wrong, email us and we will fix it publicly, with the date of the change. See every <a href="/corrections">correction</a> so far.</span>
 </section>
 
 <footer>
@@ -465,6 +465,17 @@ function download(name, text) {
 }
 document.getElementById("dlProjects").onclick = () => download("texas-watch-projects.csv", toCSV(projects.map(p => Object.assign({}, p, {status: statusText[p.status], type: typeText[p.type]})), ["name","county","type","status","dev","power","water","note","conf","lat","lng"]));
 document.getElementById("dlActions").onclick = () => download("texas-watch-government-actions.csv", toCSV(actions, ["who","when","what","result","lesson"]));
+const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+markers.forEach((m, i) => m.setPopupContent(m.getPopup().getContent() + ` &nbsp;<a href="#${slug(projects[i].name)}">Link to this project</a>`));
+function goToHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const i = projects.findIndex(p => slug(p.name) === h);
+  if (i < 0) return;
+  markers[i].addTo(map); map.setView([projects[i].lat, projects[i].lng], 10); markers[i].openPopup();
+  document.getElementById("map").scrollIntoView({block:"center"});
+}
+window.addEventListener("hashchange", goToHash);
+goToHash();
 </script>
 </body>
 </html>
