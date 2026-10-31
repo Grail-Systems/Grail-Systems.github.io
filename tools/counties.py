@@ -98,3 +98,28 @@ build(dict(slug="hays", name="Hays", checked=C,
     ("Study your water","A county without zoning power can still commission a water study, and the facts it finds shape every decision after."),
     ("Show up","Hundreds of residents at city hall turned a rezoning vote.")],
   sources="Texas Tribune (June 30, 2026); KSAT; Community Impact; KUT; The Real Deal; Hoodline."))
+build(dict(slug="easttexas", name="East Texas", checked=C,
+  title="East Texas Watch",
+  desc="Old mill sites, gas hubs and data centers across the Piney Woods, from the Angelina and Neches rivers to the Sabine. What's coming to East Texas.",
+  intro="Developers have discovered East Texas for the same reasons families love it: water, land and room. From Lufkin's old paper mill to the old plywood mill at Bon Wier, from Cedar Creek Lake to the Neches River, these projects share the same rivers and the same aquifer.",
+  counts=[("2","old mill sites targeted: Lufkin and Bon Wier"),("1.8 GW","listed for the Newton County campus"),("$16B","NextEra's planned gas hub in Anderson County"),("1","project already withdrawn: Cedar Creek Lake")],
+  projects=[
+    (["Proposed","Records"],"Amp Z / Project Lufkin, Angelina County","Former Southland Paper Mill on State Highway 103 East. About 1,041 acres, expandable to 4,000, targeting 245 MW and scaling to 2.1 GW. Asked the City of Lufkin for about 20 million gallons a day. See Angelina County Watch."),
+    (["Proposed","Records"],"HyperDataGrid and Longleaf, Angelina County","A data center on Ben Dunn Road with five on-site wells, and WattBridge's 600 MW gas plant near Kurth Lake. ERCOT also lists a second 600 MW Longleaf plant and a 202 MW battery project."),
+    (["Purchase agreement","Reporting, verify"],"East Texas Energy Campus, Newton County","About 1,600 acres at the former L-P Plywood mill in Bon Wier, on the Sabine River. Clean Holding Company signed a purchase agreement in July 2026; a tracker lists it at 1.8 GW."),
+    (["Announced","Reporting"],"NextEra gas hub, Anderson County","A $16 billion natural gas generation hub with a data center to follow. Residents fear for Lake Palestine and the Neches River."),
+    (["Withdrawn","Reporting"],"Diode Ventures, Henderson County","Would have drawn up to 5 million gallons a day from Cedar Creek Lake. Withdrawn July 2026. See Henderson County Watch."),
+    (["Denied","Reporting"],"Bitcoin mine near downtown Tyler, Smith County","The City of Tyler denied the rezoning in July 2026."),
+    (["Proposed","Reporting, verify"],"Two projects near Texarkana, Bowie County","An AI data center at the I-30 megasite in Hooks, and Project Big Pine at the TexAmericas Center.")],
+  timeline=[
+    ("Feb 2026","Amp Z eyes the Lufkin mill","Residents organize as the East Texas Legacy Coalition."),
+    ("May 2026","Cedar Creek water district pauses big commitments","Data center development in Henderson County halts."),
+    ("July 2026","Diode withdraws; Tyler denies a bitcoin mine; Angelina asks Austin for authority","And a purchase agreement is signed for the Bon Wier mill site."),
+    ("Aug to Sept 2026","The state freezes data center approvals","The Governor orders a grid audit and a TCEQ permit pause."),
+    ("Nov 9, 2026","Pineywoods Groundwater Conservation District rules hearing","1:30 p.m., Kurth Lake Lodge.")],
+  lessons=[
+    ("Old mill sites are targets","They come with power lines, water rights, rail and industrial history. Watch every closed mill in your county."),
+    ("Our rivers connect us","The Angelina feeds the Neches. What happens upstream reaches everyone downstream, so neighboring counties should work together."),
+    ("Water providers hold power","Cedar Creek Lake was saved when the water district paused new commitments."),
+    ("Use the Deep East Texas Standard","Contract terms any county can ask for. See /standards.")],
+  sources="Angelina County records and ERCOT data (via Angelina County Watch); KJAS (July 31, 2026); The Center Square; Tyler Morning Telegraph (July 24, 2026); Texas Tribune; More Than Just Parks tracker."))
