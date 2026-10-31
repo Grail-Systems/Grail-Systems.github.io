@@ -102,11 +102,11 @@ build(dict(slug="easttexas", name="East Texas", checked=C,
   title="East Texas Watch",
   desc="Old mill sites, gas hubs and data centers across the Piney Woods, from the Angelina and Neches rivers to the Sabine. What's coming to East Texas.",
   intro="Developers have discovered East Texas for the same reasons families love it: water, land and room. From Lufkin's old paper mill to the old plywood mill at Bon Wier, from Cedar Creek Lake to the Neches River, these projects share the same rivers and the same aquifer.",
-  counts=[("2","old mill sites targeted: Lufkin and Bon Wier"),("1.8 GW","listed for the Newton County campus"),("$16B","NextEra's planned gas hub in Anderson County"),("1","project already withdrawn: Cedar Creek Lake")],
+  counts=[("2","old mill sites targeted: Lufkin and Bon Wier"),("$150M+","incentives granted for a Bon Wier biorefinery that was never built"),("$16B","NextEra's planned gas hub in Anderson County"),("1","project already withdrawn: Cedar Creek Lake")],
   projects=[
     (["Proposed","Records"],"Amp Z / Project Lufkin, Angelina County","Former Southland Paper Mill on State Highway 103 East. About 1,041 acres, expandable to 4,000, targeting 245 MW and scaling to 2.1 GW. Asked the City of Lufkin for about 20 million gallons a day. See Angelina County Watch."),
     (["Proposed","Records"],"HyperDataGrid and Longleaf, Angelina County","A data center on Ben Dunn Road with five on-site wells, and WattBridge's 600 MW gas plant near Kurth Lake. ERCOT also lists a second 600 MW Longleaf plant and a 202 MW battery project."),
-    (["Purchase agreement","Reporting, verify"],"East Texas Energy Campus, Newton County","About 1,600 acres at the former L-P Plywood mill in Bon Wier, on the Sabine River. Clean Holding Company signed a purchase agreement in July 2026; a tracker lists it at 1.8 GW."),
+    (["Disputed","Reporting"],"Bon Wier Innovation Park, Newton County","About 1,400 to 1,600 acres at the former L-P Plywood mill on the Sabine River, now marketed to data centers. A July 2026 release announced a deal with a data center developer; the owner then said no sale or deal was made. See Newton County Watch."),
     (["Announced","Reporting"],"NextEra gas hub, Anderson County","A $16 billion natural gas generation hub with a data center to follow. Residents fear for Lake Palestine and the Neches River."),
     (["Withdrawn","Reporting"],"Diode Ventures, Henderson County","Would have drawn up to 5 million gallons a day from Cedar Creek Lake. Withdrawn July 2026. See Henderson County Watch."),
     (["Denied","Reporting"],"Bitcoin mine near downtown Tyler, Smith County","The City of Tyler denied the rezoning in July 2026."),
@@ -114,7 +114,7 @@ build(dict(slug="easttexas", name="East Texas", checked=C,
   timeline=[
     ("Feb 2026","Amp Z eyes the Lufkin mill","Residents begin organizing."),
     ("May 2026","Cedar Creek water district pauses big commitments","Data center development in Henderson County halts."),
-    ("July 2026","Diode withdraws; Tyler denies a bitcoin mine; Angelina asks Austin for authority","And a purchase agreement is signed for the Bon Wier mill site."),
+    ("July 2026","Diode withdraws; Tyler denies a bitcoin mine; Angelina asks Austin for authority","A data center deal is announced for the Bon Wier mill site, then denied by the owner."),
     ("Aug to Sept 2026","The state freezes data center approvals","The Governor orders a grid audit and a TCEQ permit pause."),
     ("Nov 9, 2026","Pineywoods Groundwater Conservation District rules hearing","1:30 p.m., Kurth Lake Lodge.")],
   lessons=[
@@ -123,3 +123,24 @@ build(dict(slug="easttexas", name="East Texas", checked=C,
     ("Water providers hold power","Cedar Creek Lake was saved when the water district paused new commitments."),
     ("Use the Deep East Texas Standard","Contract terms any county can ask for. See /standards.")],
   sources="Angelina County records and ERCOT data (via Angelina County Watch); KJAS (July 31, 2026); The Center Square; Tyler Morning Telegraph (July 24, 2026); Texas Tribune; More Than Just Parks tracker."))
+
+build(dict(slug="newton", name="Newton", checked=C,
+  title="Newton County Watch",
+  desc="The old plywood mill at Bon Wier won $150M+ in incentives for a biorefinery that was never built. Now it is being marketed to data centers.",
+  intro="On the Sabine River at Bon Wier, the old L-P Plywood mill site was supposed to become a $1.7 billion biorefinery, backed by more than $150 million in state and local incentives. It was never built. Now the owner is marketing the same land to data centers, with talk of on-site nuclear and gas power.",
+  counts=[("$150M+","state and local incentives granted in 2022"),("Late 2025","when the biorefinery was supposed to be finished"),("1,400-1,600","acres at the site"),("2","conflicting statements about a data center deal")],
+  projects=[
+    (["Disputed","Reporting"],"Bon Wier Innovation Park","Owned by USA BioEnergy of Scottsdale, Arizona, which calls the rail-served site, in a federal opportunity zone, Innovation Park. It advertises behind-the-meter power options including nuclear and gas. A July 31, 2026 release said the owner had entered a purchase agreement with Clean Holding Company for an East Texas Energy Campus; a tracker lists it at 1.8 GW. CEO Nick Andrews then told KJAS that no sale or deal had been made, only a letter of support. Judge Ronnie Cochran says he wrote a letter of recommendation and nothing more.")],
+  timeline=[
+    ("2022","Biorefinery announced","USA BioEnergy picked Bon Wier for a $1.7B plant to turn wood waste into fuels, citing more than $150M in state and local incentives. The Governor welcomed it."),
+    ("2023","Southwest Airlines deal","A 20-year agreement for up to 680 million gallons of sustainable aviation fuel."),
+    ("Oct 2025","Nuclear partner named","Applied Atomics was announced to supply small nuclear power, and the chairman said data centers were interested in the site."),
+    ("Late 2025","Target completion passes","The biorefinery has not been built."),
+    ("July 31, 2026","Data center deal announced","A release said the owner entered a purchase agreement with Clean Holding Company."),
+    ("Aug 2026","Deal denied","The CEO told KJAS no sale or deal was made. The county judge said he only wrote a letter of recommendation.")],
+  lessons=[
+    ("Follow the incentives","When a project changes from one industry to another, ask what happens to the incentives granted for the first one, and whether clawbacks apply."),
+    ("Old mill sites are targets","Bon Wier, like Lufkin's old paper mill, has rail, power lines and industrial history. Developers see that as a head start."),
+    ("Letters of support matter","A judge's letter can be quoted in a press release as an endorsement. Ask officials what they have signed, and post it publicly."),
+    ("Watch the river","The site sits on the Sabine River. Ask where any water would come from, and where wastewater would go.")],
+  sources="KJAS (two articles, Aug 2026); East Texas Banner; KFDM (Oct 2025 and 2023); Newswire (2022); Texas Forest Country Partnership; More Than Just Parks tracker."))
