@@ -179,13 +179,13 @@ const projects = [
    note:"Residents report 50 or more containers and growth in recent weeks.", link:"/angelina/"},
   {name:"Diode Ventures, Cedar Creek Lake", county:"Henderson", type:"data", status:"stopped", lat:32.250, lng:-96.100,
    dev:"Diode Ventures (Kansas)", power:"Not disclosed", water:"Up to 5 million gal/day from Cedar Creek Lake by year five",
-   conf:"Reporting", note:"Withdrawn July 23, 2026, after failing to meet the Governor's standards. The water district paused large new commitments in May."},
+   conf:"Reporting", note:"Withdrawn July 23, 2026, after failing to meet the Governor's standards. The water district paused large new commitments in May.", link:"/henderson/"},
   {name:"RCM Hill data center", county:"Hill", type:"data", status:"proposed", lat:32.010, lng:-97.130,
    dev:"RCM Hill LLC", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
    note:"800 or more acres. Sued the County for $100M over its moratorium; the County rescinded it and the suit was dismissed July 9, 2026."},
   {name:"MARA Granbury bitcoin mine", county:"Hood", type:"crypto", status:"operating", lat:32.340, lng:-97.730,
    dev:"MARA Holdings (NASDAQ: MARA)", power:"Behind-the-meter at the Wolf Hollow II gas plant", water:"Not disclosed",
-   conf:"Court filings", note:"Several nuisance lawsuits over noise and vibration. A county-funded study found about 60 dB near the site."},
+   conf:"Court filings", note:"Several nuisance lawsuits over noise and vibration. A county-funded study found about 60 dB near the site.", link:"/hood/"},
   {name:"Stargate Abilene", county:"Taylor", type:"data", status:"construction", lat:32.450, lng:-99.730,
    dev:"Crusoe, for Oracle and OpenAI", power:"About 1.2 GW projected", water:"City of Abilene. Closed-loop; about 8 million gallons to fill the system, then minor top-ups", conf:"Reporting",
    note:"Partly operating. A planned 600 MW expansion was dropped in March 2026."},
@@ -293,7 +293,22 @@ const projects = [
    note:"Rezoning of farmland along FM 1385. Residents say required notices missed nearby homes."},
   {name:"Harlingen data center", county:"Cameron", type:"data", status:"proposed", lat:26.190, lng:-97.700,
    dev:"Not identified", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
-   note:"Residents asked the City Commission to oppose it over water and power use."}
+   note:"Residents asked the City Commission to oppose it over water and power use."},
+  {name:"Comanche Circle", county:"Hood", type:"data", status:"proposed", lat:32.380, lng:-97.920,
+   dev:"Sailfish Development", power:"On-site generation (size not disclosed)", water:"On-site water and wastewater; source not disclosed", conf:"Reporting",
+   note:"About 2,100 to 2,600 acres near Tolar. Conditionally approved Jan 13, 2026, with 45 days to provide water details.", link:"/hood/"},
+  {name:"Fort Spunky", county:"Hood", type:"data", status:"proposed", lat:32.350, lng:-97.650,
+   dev:"Pacifico Energy", power:"About 100 MW reported", water:"Not disclosed", conf:"Reporting",
+   note:"862 acres across the Brazos River from Pecan Plantation. Reported paused.", link:"/hood/"},
+  {name:"Project Patriot", county:"Hood", type:"data", status:"proposed", lat:32.460, lng:-97.810,
+   dev:"Bilateral Energy", power:"About 1,200 MW reported", water:"Not disclosed", conf:"Reporting",
+   note:"Listed by an industry tracker; needs verification.", link:"/hood/"},
+  {name:"Hood County AI campus", county:"Hood", type:"data", status:"proposed", lat:32.410, lng:-97.760,
+   dev:"Big Digital Energy / 10NetZero", power:"About 300 MW reported", water:"Not disclosed", conf:"Reporting",
+   note:"Listed by an industry tracker; needs verification.", link:"/hood/"},
+  {name:"Amazon AWS, Coates Road", county:"Hood", type:"data", status:"proposed", lat:32.420, lng:-97.740,
+   dev:"Amazon", power:"Not disclosed", water:"Not disclosed", conf:"Reporting",
+   note:"2300 Coates Road. Listed by an industry tracker; needs verification.", link:"/hood/"}
 ];
 
 const actions = [
@@ -310,7 +325,8 @@ const actions = [
   {who:"Somervell County", when:"May 2026", what:"Unanimous resolution opposing new data centers until the Legislature addresses water and energy.", result:"Adopted, months after approving incentives for an Amazon project.", lesson:"A county can take a public position without a moratorium."},
   {who:"Caldwell County", when:"May 2026", what:"Resolution 29-2026 opposing open-loop evaporative cooling and high-volume drinking water use, and asking for county authority.", result:"Adopted unanimously.", lesson:"Name the specific technology you oppose. It is clearer and harder to attack."},
   {who:"Hood County", when:"Feb 2026", what:"Considered pausing data center construction while eight proposals were pending.", result:"Rejected after a state senator warned of legal action.", lesson:"Expect pressure from Austin as well as from developers."},
-  {who:"City of El Paso", when:"2026", what:"Council directed staff to draft a community benefits agreement for the Meta data center.", result:"In progress.", lesson:"Benefits can still be negotiated after incentives are granted."}
+  {who:"City of El Paso", when:"2026", what:"Council directed staff to draft a community benefits agreement for the Meta data center.", result:"In progress.", lesson:"Benefits can still be negotiated after incentives are granted."},
+  {who:"Hood County: stricter rules and a special law", when:"March 2026", what:"After two failed moratorium votes, commissioners unanimously adopted stricter rules for large industrial projects. A 1999 state law gives Hood special powers to protect the Lake Granbury watershed.", result:"Developers have sued the county twice since.", lesson:"Check whether your county has a special law of its own, and document every reason for a decision."}
 ];
 
 const css = getComputedStyle(document.documentElement);
