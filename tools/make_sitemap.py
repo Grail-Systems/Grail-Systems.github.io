@@ -12,7 +12,8 @@ for root, dirs, files in os.walk("."):
         else:
             u = "/" + path[:-5]
         urls.append(u)
-urls = sorted(set(urls))
+EXTRA = ["/carrizo_wilcox_aquifer/", "/carrizo_wilcox_aquifer/records.html", "/carrizo_wilcox_aquifer/founder.html", "/carrizo_wilcox_aquifer/wall_of_shame.html"]
+urls = sorted(set(urls + EXTRA))
 with open("sitemap.xml", "w") as fh:
     fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
     for u in urls:

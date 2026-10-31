@@ -112,7 +112,7 @@ build(dict(slug="easttexas", name="East Texas", checked=C,
     (["Denied","Reporting"],"Bitcoin mine near downtown Tyler, Smith County","The City of Tyler denied the rezoning in July 2026."),
     (["Proposed","Reporting, verify"],"Two projects near Texarkana, Bowie County","An AI data center at the I-30 megasite in Hooks, and Project Big Pine at the TexAmericas Center.")],
   timeline=[
-    ("Feb 2026","Amp Z eyes the Lufkin mill","Residents organize as the East Texas Legacy Coalition."),
+    ("Feb 2026","Amp Z eyes the Lufkin mill","Residents begin organizing."),
     ("May 2026","Cedar Creek water district pauses big commitments","Data center development in Henderson County halts."),
     ("July 2026","Diode withdraws; Tyler denies a bitcoin mine; Angelina asks Austin for authority","And a purchase agreement is signed for the Bon Wier mill site."),
     ("Aug to Sept 2026","The state freezes data center approvals","The Governor orders a grid audit and a TCEQ permit pause."),
