@@ -55,6 +55,14 @@ select{padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);
   <ul class="rows" id="list"><li><p>Loading records…</p></li></ul>
 </section>
 
+<section id="library">
+  <h2>The documents</h2>
+  <p>Every record we've received and published, searchable by the words inside it. Each file has a fingerprint (SHA-256) so anyone can confirm it hasn't been changed.</p>
+  <input id="libSearch" type="search" placeholder="Search inside the documents, e.g. water, abatement, Amp" aria-label="Search inside documents" style="width:100%;padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);font:inherit;border-radius:4px;margin:8px 0">
+  <ul class="rows" id="libList"><li><p>Loading documents…</p></li></ul>
+  <span class="src">Some documents withheld for privacy, such as sign-in sheets listing residents, until they are checked and redacted.</span>
+</section>
+
 <section>
   <h2>How the clock works</h2>
   <p>Under the Texas Public Information Act, an agency must release records promptly. If it can't within 10 business days, it must certify in writing the date the records will be ready. If it wants to withhold anything, it must ask the Attorney General for a ruling within 10 business days.</p>
@@ -141,6 +149,40 @@ load().then(d => {
   document.getElementById("list").innerHTML = `<li><p>The records couldn't load right now. Please try again later.</p></li>`;
   document.getElementById("counts").innerHTML = "";
 });
+</script>
+<script>
+(() => {
+  const URL = "https://raw.githubusercontent.com/Grail-Systems/carrizo_wilcox_aquifer/main/frontend/library.json";
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const fmt = d => { if (!d) return "Undated"; const x = new Date(d + "T12:00:00"); return isNaN(x) ? d : x.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}); };
+  const size = b => b > 1048576 ? (b / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(b / 1024)) + " KB";
+  let docs = [];
+  const snippet = (t, q) => {
+    const i = t.toLowerCase().indexOf(q); if (i < 0) return "";
+    const a = Math.max(0, i - 90), b = Math.min(t.length, i + q.length + 140);
+    return (a ? "…" : "") + esc(t.slice(a, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length, b)) + (b < t.length ? "…" : "");
+  };
+  const render = () => {
+    const q = document.getElementById("libSearch").value.trim().toLowerCase();
+    const ul = document.getElementById("libList");
+    const shown = docs.filter(d => !q || (d.title + " " + (d.request || "") + " " + d.text).toLowerCase().includes(q));
+    if (!shown.length) { ul.innerHTML = "<li><p>No documents match.</p></li>"; return; }
+    ul.innerHTML = shown.map(d => {
+      const snip = q ? snippet(d.text, q) : "";
+      return `<li>
+        ${d.request ? `<span class="tag">${esc(d.request)}</span>` : `<span class="tag">Filing or report</span>`}<span class="tag">${esc(fmt(d.date))}</span>
+        <h3><a href="${esc(d.url)}" rel="noopener">${esc(d.title)}</a></h3>
+        <p>${d.pages ? d.pages + " page" + (d.pages === 1 ? "" : "s") + " · " : ""}PDF, ${size(d.bytes)}${d.searchable ? "" : " · scanned image, words inside can’t be searched yet"}</p>
+        ${snip ? `<p>${snip}</p>` : ""}
+        <details><summary>Fingerprint</summary><p style="word-break:break-all;font-size:.85rem">SHA-256: ${esc(d.sha256)}</p></details>
+      </li>`;
+    }).join("");
+  };
+  fetch(URL, {cache: "no-store"}).then(r => r.json()).then(d => {
+    docs = d.documents || []; render();
+    document.getElementById("libSearch").addEventListener("input", render);
+  }).catch(() => { document.getElementById("libList").innerHTML = "<li><p>Documents couldn’t load right now. Try again in a minute.</p></li>"; });
+})();
 </script>
 </body>
 </html>
