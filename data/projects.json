@@ -313,11 +313,11 @@
   "lat": 31.13,
   "lng": -97.34,
   "dev": "Rowan Digital Infrastructure",
-  "power": "Not disclosed",
+  "power": "Up to 300 MW at full build-out, from Oncor",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "1855 Bob White Road. Plans for a second building filed July 2026.",
-  "src": "Baxtel"
+  "note": "About 700 acres on Bob White Road, about $700M to start. Construction began Jan 2026; a second $780M building was filed in July. The Comptroller lists a Meta subsidiary as the tenant.",
+  "src": "Data Center Dynamics; Temple EDC; Bisnow; Texas Comptroller"
  },
  {
   "name": "QTS at Lancium, Hall County",
@@ -776,7 +776,7 @@
   "status": "stopped",
   "lat": 29.86,
   "lng": -97.92,
-  "dev": "Not identified",
+  "dev": "Highlander SM One LLC (Fort Worth)",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
