@@ -1719,11 +1719,11 @@
   "status": "announced",
   "lat": 31.24,
   "lng": -96.26,
-  "dev": "Crusoe",
-  "power": "1.5 GW listed",
+  "dev": "Crusoe Technologies (first proposed by Belltown Power)",
+  "power": "1.5 GW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "East Texas, between Centerville and Bremond. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A $34B campus near Marquez, between Centerville and Bremond. After 200+ residents packed the room, Leon County commissioners rejected Crusoe's initial tax break application. Residents organized fast, including a local podcast; two more data centers are proposed in the county.",
   "src": "More Than Just Parks data center tracker"
  },
  {
