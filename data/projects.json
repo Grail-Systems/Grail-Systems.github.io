@@ -543,11 +543,11 @@
   "status": "construction",
   "lat": 31.92,
   "lng": -106.3,
-  "dev": "Meta (land bought as Wurldwide LLC)",
-  "power": "Not disclosed",
+  "dev": "Meta (land bought as Wurldwide LLC); now 80% owned by BlackRock",
+  "power": "1 GW of computing; El Paso Electric is building a 366 MW gas plant for it",
   "water": "El Paso Water: cap 2.5 million gal/day; expected average about 480,000 gal/day; closed-loop",
   "conf": "Reporting",
-  "note": "Up to $10B planned. The city gave an 80% tax cut for 25 years tied to at least 50 permanent jobs, and has directed staff to draft a community benefits agreement.",
+  "note": "About $14B with BlackRock (was up to $10B). The city gave an 80% tax cut for 25 years tied to at least 50 permanent jobs, and has directed staff to draft a community benefits agreement.",
   "link": "/elpaso/",
   "src": "El Paso Water via KFOX14; El Paso Matters / Texas Standard; El Paso Inc.; Blockspace"
  },
@@ -1215,11 +1215,11 @@
   "status": "announced",
   "lat": 31.8,
   "lng": -106.25,
-  "dev": "EdgeCore",
+  "dev": "Listed as EdgeCore; the tracker names Meta as operator",
   "power": "1 GW listed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Likely the same campus as Meta El Paso: the tracker lists Meta as operator at the same 1 GW, and we found no EdgeCore project in El Paso. See the Meta El Paso card for the full record.",
   "src": "More Than Just Parks data center tracker"
  },
  {
