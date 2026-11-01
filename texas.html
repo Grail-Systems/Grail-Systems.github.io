@@ -98,7 +98,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
   <p>Tap a pin for details. Pins sit at the county or nearest documented location, not exact property lines, unless a public record gives the address.</p>
   <div id="map" role="region" aria-label="Map of tracked Texas projects"></div>
   <div class="legend" id="legend"></div>
-  <p style="font-size:.85rem;color:var(--muted);margin:6px 0 0">"Announced or reported" means we have not yet found an application, permit or rezoning on file. Tell us if you know of one.</p>
+  <p style="font-size:.85rem;color:var(--muted);margin:6px 0 0">"Announced or reported" means we have not yet found an application, permit or rezoning on file. Tell us if you know of one. <a href="/counties">See a County Watch page for every county on the map.</a></p>
 </section>
 
 <section id="projects">
@@ -644,6 +644,10 @@ function goToHash() {
 }
 window.addEventListener("hashchange", goToHash);
 goToHash();
+fetch("/data/county_pages.json").then(r => r.json()).then(C => {
+  projects.forEach(p => { if (!p.link) { const u = C[p.county.replace(/\s*\(.*\)\s*/, "").trim()]; if (u) p.link = u; } });
+  markers.forEach((m, i) => m.setPopupContent(popupHTML(projects[i]))); render();
+}).catch(() => {});
 
 Promise.all([fetch("/data/details.json").then(r => r.json()), fetch("/data/events.json").then(r => r.json())]).then(([D, E]) => {
   projects.forEach(p => Object.assign(p, D[p.name] || {}));
