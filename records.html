@@ -57,8 +57,9 @@ select{padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);
 
 <section id="library">
   <h2>The documents</h2>
-  <p>Every record we've received and published, searchable by the words inside it. Each file has a fingerprint (SHA-256) so anyone can confirm it hasn't been changed.</p>
+  <p>Every record we've received and published. Search every page, or tap a company, agency or topic to see everything tagged with it. Each file has a fingerprint (SHA-256) so anyone can confirm it hasn't been changed.</p>
   <input id="libSearch" type="search" placeholder="Search inside the documents, e.g. water, abatement, Amp" aria-label="Search inside documents" style="width:100%;padding:10px 12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);font:inherit;border-radius:4px;margin:8px 0">
+  <div id="libTags"></div>
   <ul class="rows" id="libList"><li><p>Loading documents…</p></li></ul>
   <span class="src">Some documents withheld for privacy, such as sign-in sheets listing residents, until they are checked and redacted.</span>
 </section>
@@ -152,32 +153,56 @@ load().then(d => {
 </script>
 <script>
 (() => {
-  const URL = "https://raw.githubusercontent.com/Grail-Systems/carrizo_wilcox_aquifer/main/frontend/library.json";
+  const BASE = "https://raw.githubusercontent.com/Grail-Systems/carrizo_wilcox_aquifer/main/frontend/";
+  const URL = BASE + "library.json";
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const fmt = d => { if (!d) return "Undated"; const x = new Date(d + "T12:00:00"); return isNaN(x) ? d : x.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}); };
   const size = b => b > 1048576 ? (b / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(b / 1024)) + " KB";
-  let docs = [];
+  let docs = [], tag = "", fullState = "none";
+  const body = d => (d.fullText || d.text || "");
   const snippet = (t, q) => {
     const i = t.toLowerCase().indexOf(q); if (i < 0) return "";
     const a = Math.max(0, i - 90), b = Math.min(t.length, i + q.length + 140);
     return (a ? "…" : "") + esc(t.slice(a, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length, b)) + (b < t.length ? "…" : "");
   };
+  const hits = (t, q) => { let n = 0, i = 0; t = t.toLowerCase(); while ((i = t.indexOf(q, i)) >= 0 && n < 999) { n++; i += q.length; } return n; };
+  const loadFull = () => {
+    if (fullState !== "none") return; fullState = "loading";
+    Promise.all(docs.map(d => d.full ? fetch(BASE + d.full).then(r => r.ok ? r.text() : "").then(t => { if (t) d.fullText = t; }).catch(() => {}) : null))
+      .then(() => { fullState = "done"; render(); });
+  };
+  const tagBar = () => {
+    const count = {};
+    docs.forEach(d => (d.tags || []).forEach(([k, t]) => { const key = k + "|" + t; count[key] = (count[key] || 0) + 1; }));
+    const kinds = ["Company", "Agency", "Topic"];
+    document.getElementById("libTags").innerHTML = kinds.map(k => {
+      const ts = Object.keys(count).filter(x => x.startsWith(k + "|")).sort((a, b) => count[b] - count[a]);
+      return ts.length ? `<p style="margin:6px 0"><b>${k === "Company" ? "Companies" : k === "Agency" ? "Agencies" : "Topics"}:</b> ` + ts.map(x => { const t = x.split("|")[1];
+        return `<button type="button" class="libtag" data-tag="${esc(t)}" style="margin:2px;padding:4px 10px;border-radius:999px;border:1.5px solid var(--pine);font:inherit;font-size:.85rem;cursor:pointer;${tag === t ? "background:var(--pine);color:var(--paper)" : "background:transparent;color:var(--pine)"}">${esc(t)} (${count[x]})</button>`; }).join("") + `</p>` : "";
+    }).join("");
+  };
   const render = () => {
     const q = document.getElementById("libSearch").value.trim().toLowerCase();
+    if (q.length >= 3) loadFull();
+    tagBar();
     const ul = document.getElementById("libList");
-    const shown = docs.filter(d => !q || (d.title + " " + (d.request || "") + " " + d.text).toLowerCase().includes(q));
-    if (!shown.length) { ul.innerHTML = "<li><p>No documents match.</p></li>"; return; }
-    ul.innerHTML = shown.map(d => {
-      const snip = q ? snippet(d.text, q) : "";
+    let shown = docs.filter(d => (!tag || (d.tags || []).some(x => x[1] === tag)) && (!q || (d.title + " " + (d.request || "") + " " + body(d)).toLowerCase().includes(q)));
+    const note = q && fullState === "loading" ? `<li><p>Searching every page of every document…</p></li>` : "";
+    if (!shown.length) { ul.innerHTML = note || "<li><p>No documents match.</p></li>"; return; }
+    if (q) shown = shown.slice().sort((a, b) => hits(body(b), q) - hits(body(a), q));
+    ul.innerHTML = note + shown.map(d => {
+      const n = q ? hits(body(d), q) : 0, snip = q ? snippet(body(d), q) : "";
       return `<li>
-        ${d.request ? `<span class="tag">${esc(d.request)}</span>` : `<span class="tag">Filing or report</span>`}<span class="tag">${esc(fmt(d.date))}</span>
+        ${d.request ? `<span class="tag">${esc(d.request)}</span>` : `<span class="tag">Filing or report</span>`}<span class="tag">${esc(fmt(d.date))}</span>${n ? `<span class="tag">${n}${n >= 999 ? "+" : ""} match${n === 1 ? "" : "es"}</span>` : ""}
         <h3><a href="${esc(d.url)}" rel="noopener">${esc(d.title)}</a></h3>
         <p>${d.pages ? d.pages + " page" + (d.pages === 1 ? "" : "s") + " · " : ""}PDF, ${size(d.bytes)}${d.searchable ? "" : " · scanned image, words inside can’t be searched yet"}</p>
         ${snip ? `<p>${snip}</p>` : ""}
+        ${(d.tags || []).length ? `<p style="font-size:.85rem">${d.tags.map(([k, t]) => `<a href="#library" class="libtag" data-tag="${esc(t)}">${esc(t)}</a>`).join(" · ")}</p>` : ""}
         <details><summary>Fingerprint</summary><p style="word-break:break-all;font-size:.85rem">SHA-256: ${esc(d.sha256)}</p></details>
       </li>`;
     }).join("");
   };
+  document.addEventListener("click", e => { const b = e.target.closest(".libtag"); if (!b) return; e.preventDefault(); tag = tag === b.dataset.tag ? "" : b.dataset.tag; render(); document.getElementById("library").scrollIntoView({behavior: "smooth"}); });
   fetch(URL, {cache: "no-store"}).then(r => r.json()).then(d => {
     docs = d.documents || []; render();
     document.getElementById("libSearch").addEventListener("input", render);
