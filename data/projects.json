@@ -1327,11 +1327,11 @@
   "status": "announced",
   "lat": 30.89,
   "lng": -102.88,
-  "dev": "Poolside / CoreWeave",
-  "power": "2 GW listed",
+  "dev": "Poolside (CoreWeave dropped out in 2026)",
+  "power": "2 GW planned from on-site gas, in eight 250 MW phases",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "On the Mitchell family's Longfellow Ranch, 25+ miles outside Fort Stockton. Its anchor tenant, CoreWeave, walked away in 2026; Poolside is looking for a new partner. Shows how fast these deals can change.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1341,11 +1341,11 @@
   "status": "construction",
   "lat": 30.95,
   "lng": -103.0,
-  "dev": "Amazon",
-  "power": "Gas-powered campus; size not disclosed",
+  "dev": "Pacifico Energy, for Amazon",
+  "power": "GW Ranch gas plant planned at about 7.65 GW, off the grid, with batteries",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "About 8,000 acres. TCEQ approved it in early 2026; the developer calls it the largest permitted data center campus in the U.S. Pacifico is now pitching a similar plant in Brewster County's Glass Mountains.",
   "src": "More Than Just Parks data center tracker"
  },
  {
