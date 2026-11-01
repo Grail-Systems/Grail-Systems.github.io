@@ -719,13 +719,13 @@
   "status": "filed",
   "lat": 32.4,
   "lng": -97.88,
-  "dev": "Not identified in reporting",
+  "dev": "Starwood, according to the projects' attorney. Commissioners raised a MARA Holdings connection, which he said was a separate company",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
   "note": "Developers sued Hood County for automatic approval, claiming it missed a 30-day deadline. A judge dismissed the suit in July 2026.",
   "link": "/hood/",
-  "src": "KERA (July 20, 2026); Fort Worth Weekly"
+  "src": "KERA (July 20, 2026); Texas Scorecard; Fort Worth Weekly"
  },
  {
   "name": "Black Mountain Power, Fort Worth",
@@ -849,12 +849,12 @@
   "status": "stopped",
   "lat": 32.35,
   "lng": -95.3,
-  "dev": "Not identified",
+  "dev": "Vulcan Core LLC",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "The City of Tyler denied a rezoning near downtown for a bitcoin mining facility in July 2026.",
-  "src": "Tyler Morning Telegraph"
+  "note": "Vulcan Core sought a special use permit for a bitcoin mine on 1.92 acres at 1101 and 1105 W. Erwin St., near downtown. The Planning and Zoning Commission denied it 5 to 2 on July 7, 2026. A city board later rejected Vulcan Core's appeal over a missed deadline, but KLTV reported in September that a legal fight continues.",
+  "src": "KLTV (July 7 and Sept. 3, 2026); KETK; Data Center Dynamics"
  },
  {
   "name": "Texas Critical Data Centers",
@@ -919,13 +919,13 @@
   "status": "announced",
   "lat": 32.05,
   "lng": -96.4,
-  "dev": "Hedgehog USA",
-  "power": "600 MW listed",
+  "dev": "Hedgehog USA (Plano; CEO Jeff Barber)",
+  "power": "Up to 600 MW by the end of 2027, on natural gas",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Same county as Riot Corsicana. Needs verification.",
+  "note": "Hedgehog announced a long-term gas supply deal with Idemitsu in July 2026. The same release says Marathon Capital is advising on the sale of 100% of the project, so the company that builds here may not be Hedgehog.",
   "link": "/navarro/",
-  "src": "More Than Just Parks data center tracker"
+  "src": "Hedgehog USA release (PR Newswire, July 21, 2026); More Than Just Parks data center tracker"
  },
  {
   "name": "Alpha Digital Campus",
