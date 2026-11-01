@@ -1815,13 +1815,13 @@
   "county": "Wharton",
   "type": "data",
   "status": "construction",
-  "lat": 29.31,
-  "lng": -96.1,
-  "dev": "Amazon Web Services",
-  "power": "Campus; size not disclosed",
+  "lat": 29.27,
+  "lng": -95.95,
+  "dev": "Amazon (Amazon Data Services)",
+  "power": "10 buildings; size not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A $10B campus on about 3,000 acres near Boling, a town of under 400. Ten buildings filed with the state in 2026. County officials signed an NDA with Amazon's consultant, which limits what the public is told. Could become the largest data center campus in Texas.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1915,11 +1915,11 @@
   "status": "stopped",
   "lat": 30.63,
   "lng": -96.33,
-  "dev": "Priority Power Management",
-  "power": "600 MW listed",
+  "dev": "Priority Power Management (PPM Data LLC), backed by I Squared Capital",
+  "power": "600 MW planned, with two 300 MW substations",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed as canceled. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Planned on about 200 acres of city land in College Station's Midtown Business Park. Amid strong opposition, the City Council refused to sell the land, which stopped the project there.",
   "src": "More Than Just Parks data center tracker"
  },
  {
