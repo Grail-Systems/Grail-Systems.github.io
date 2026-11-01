@@ -63,7 +63,7 @@ const companies = [
   {name:"DataBank", kind:"Data center developer", counties:["Ellis"], entities:"A separate LLC per building, e.g. DB Data Center Red Oak 12, LLC", know:"480 MW campus in Red Oak. State TDLR filings show each new $155M to $325M building before construction starts.", conf:"Records"},
   {name:"Compass Datacenters", kind:"Data center developer", counties:["Ellis"], entities:"Compass Datacenters", know:"Offered Ellis County a $15M animal shelter grant amid opposition, June 2026.", conf:"Records"},
   {name:"Fermi America", kind:"Data center and power developer", counties:["Carson"], entities:"Fermi America", know:"Raised $746M to build an 11 GW campus near Amarillo; reported to be at least a year behind schedule.", conf:"Reporting"},
-  {name:"Diode Ventures", kind:"Data center developer", counties:["Henderson"], entities:"Diode Ventures (Kansas)", know:"Withdrew its Cedar Creek Lake project in July 2026 after failing to meet the Governor's standards.", conf:"Reporting"},
+  {name:"Diode Ventures", kind:"Data center developer", counties:["Henderson","Ellis"], entities:"Diode Ventures (Kansas)", know:"Withdrew its Cedar Creek Lake project in July 2026 after failing to meet the Governor's standards.", conf:"Reporting"},
   {name:"RCM Hill LLC", kind:"Data center developer", counties:["Hill"], entities:"RCM Hill LLC", know:"Sued Hill County for $100M over its moratorium; the county rescinded it.", conf:"Reporting"},
   {name:"Stream Data Centers", kind:"Data center developer", counties:["Young"], entities:"Project Saltworks", know:"Proposed about 890 acres and 15 buildings in Graham, about $10B.", conf:"Reporting"},
   {name:"QTS and Lancium", kind:"Data center developers", counties:["Hall","Taylor"], entities:"QTS (Blackstone); Lancium Clean Campus", know:"Up to 11 buildings near Turkey with a 1 GW grid connection. Lancium also hosts Stargate Abilene.", conf:"Reporting"},
@@ -86,19 +86,24 @@ const companies = [
   {name:"Pacifico Energy", kind:"Data center and gas power developer", counties:["Hood","Bastrop","Brewster"], entities:"Pacifico Energy", know:"Its Fort Spunky project in Hood County is reported canceled and its Bastrop campus listed as blocked by a moratorium; it also has a gas-powered campus planned in the Big Bend region.", conf:"Reporting"}
 ];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let REC = {};
+const block = (title, rows) => rows && rows.length ? `<p><b>${title}</b></p><ul style="margin:4px 0 8px;padding-left:1.1rem">` +
+  rows.map(([t, src]) => `<li style="border:0;padding:2px 0">${esc(t)} <span class="src" style="display:inline">(${esc(src)})</span></li>`).join("") + `</ul>` : "";
+const extra = c => { const r = REC[c.name]; return r ? block("Who runs it", r.people) + block("Track record", r.record) : ""; };
 function render() {
   const q = document.getElementById("search").value.toLowerCase();
   const list = document.getElementById("list");
-  const shown = companies.filter(c => !q || [c.name, c.kind, c.entities, c.know, c.counties.join(" ")].join(" ").toLowerCase().includes(q));
+  const shown = companies.filter(c => !q || [c.name, c.kind, c.entities, c.know, c.counties.join(" "), JSON.stringify(REC[c.name] || "")].join(" ").toLowerCase().includes(q));
   list.innerHTML = shown.length ? shown.map(c => `<li>
     ${c.counties.map(k => `<span class="tag">${esc(k)} County</span>`).join("")}<span class="tag">${esc(c.conf)}</span>
     <h3>${esc(c.name)}</h3>
     <p><b>What it is:</b> ${esc(c.kind)}</p>
     <p><b>Entities:</b> ${esc(c.entities)}</p>
-    <p>${esc(c.know)}</p></li>`).join("") : `<li><p>No companies match that search.</p></li>`;
+    <p>${esc(c.know)}</p>${extra(c)}</li>`).join("") : `<li><p>No companies match that search.</p></li>`;
 }
 document.getElementById("search").addEventListener("input", render);
 render();
+fetch("/data/company_records.json").then(r => r.json()).then(d => { REC = d; render(); }).catch(() => {});
 </script>
 </body>
 </html>
