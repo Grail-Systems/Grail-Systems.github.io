@@ -1355,11 +1355,11 @@
   "status": "announced",
   "lat": 31.3,
   "lng": -103.6,
-  "dev": "Chevron and Microsoft",
-  "power": "2.7 GW listed",
-  "water": "Not disclosed",
+  "dev": "Chevron (Energy Forge One LLC), selling power to Microsoft",
+  "power": "2.67 GW gas plant built on site, off the grid; Microsoft data center about 2 GW",
+  "water": "Chevron says the power plant will use brackish groundwater, not fresh water; data center water not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A 20-year deal announced June 2026 for 2,000+ acres near Pecos. Construction has not started; Chevron decides by the end of 2026. First power targeted for 2028.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1369,11 +1369,11 @@
   "status": "announced",
   "lat": 31.45,
   "lng": -103.4,
-  "dev": "Not identified",
-  "power": "1.1 GW listed",
+  "dev": "LandBridge with NRG Energy",
+  "power": "1.1 GW natural gas plant (despite the solar-sounding name)",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "NRG would build a gas plant on LandBridge land in the Delaware Basin to power a hyperscale data center; could run by late 2029. LandBridge also owns the Alpha Digital Campus land.",
   "src": "More Than Just Parks data center tracker"
  },
  {
