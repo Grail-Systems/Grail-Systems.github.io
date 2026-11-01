@@ -1,4 +1,4 @@
-"""Originals batch 46: Cipher Mikeska (one of four 500 MW Cipher 'options', timeline slipping) and InfraTech Carson County ($2.7B, 5,000 acres, every partner unnamed)."""
+"""Originals batch 46: Cipher Mikeska (one of three 500 MW Cipher 'options', timeline slipping) and InfraTech Carson County ($2.7B, 5,000 acres, every partner unnamed)."""
 import json
 L = {
  "Cipher Mikeska HPC data center": [
