@@ -573,11 +573,11 @@
   "status": "stopped",
   "lat": 32.27,
   "lng": -97.82,
-  "dev": "Possibly Black Mountain Power, which holds an air permit near the park (verify)",
+  "dev": "Black Mountain (Fort Worth)",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "North of Dinosaur Valley State Park. Opposed by the county in May 2026.",
+  "note": "A 450-acre data center bordering the north side of Dinosaur Valley State Park, home to some of the best-preserved dinosaur tracks in the world. Somervell County voted it down on May 11, 2026, and passed a resolution opposing new data centers until the state acts.",
   "link": "/somervell/",
   "src": "KERA; Fort Worth Weekly"
  },
@@ -649,7 +649,7 @@
   "power": "About 100 MW reported, off-grid gas",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "862 acres across the Brazos River from Pecan Plantation. Reported canceled.",
+  "note": "862 acres across the Brazos River from Pecan Plantation. Hood County commissioners rejected Pacifico's concept plan 3-2, citing insufficient water. Stopped for now, not canceled: residents are still fighting it.",
   "link": "/hood/",
   "src": "Texas Tribune; Data Center Dynamics; More Than Just Parks tracker"
  },
@@ -892,10 +892,10 @@
   "lat": 29.08,
   "lng": -95.75,
   "dev": "Nightpeak Energy",
-  "power": "620 MW listed",
+  "power": "Two 310 MW data centers with two 310 MW gas turbine plants",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Needs verification.",
+  "note": "A $3.5B project on 158 acres outside Sweeny, about a mile from the San Bernard National Wildlife Refuge. Brazoria County commissioners voted 5-0 to deny its $10.5M tax break, but the project can still go forward; the company says it could energize from 2027.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -920,11 +920,11 @@
   "status": "announced",
   "lat": 31.4,
   "lng": -103.7,
-  "dev": "LandBridge and PowerBridge",
-  "power": "2 GW announced",
+  "dev": "PowerBridge, on land optioned from LandBridge; power venture with Liberty Energy",
+  "power": "Up to 2 GW of on-site power, near the Waha gas hub",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Needs verification.",
+  "note": "An option to lease up to 3,400 acres, signed April 2026, with first power targeted for 2027. No tenant named. LandBridge, which owns about 320,000 acres in the Permian, is also the landowner behind the Reeves County gas plant with NRG.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -934,11 +934,11 @@
   "status": "announced",
   "lat": 31.99,
   "lng": -102.08,
-  "dev": "HiVolt Energy",
-  "power": "150 MW listed",
-  "water": "Not disclosed",
+  "dev": "FO Permian Partners with HiVolt Energy",
+  "power": "150 MW of off-grid gas with batteries at first; the company pitches 5 GW",
+  "water": "Not disclosed; the company says water is secured",
   "conf": "Reporting",
-  "note": "Needs verification.",
+  "note": "A 320-acre site in Midland County marketed since 2025 as ready-made, off-grid power for data centers. No tenant has been named.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -952,7 +952,7 @@
   "power": "On-site gas; size not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Big Bend region. Same developer as Fort Spunky. Needs verification.",
+  "note": "An 8,400-acre ranch in the Glass Mountains northeast of Alpine, pitched to Brewster County in September 2026 by the developer of Amazon's GW Ranch gas plant. The county agenda said only \"presentation from Pacifico Energy,\" never \"data center,\" yet about 10 residents came to oppose it. The judge said the county would be extremely sensitive to water use. Same developer as Fort Spunky and Cedar Creek.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -962,11 +962,11 @@
   "status": "announced",
   "lat": 31.81,
   "lng": -106.42,
-  "dev": "Carlyle Group, with the U.S. military",
-  "power": "3 GW listed",
-  "water": "Not disclosed",
+  "dev": "Carlyle Group, on Army land under a 50-year lease",
+  "power": "2.5 to 3 GW with its own power plant; more electricity than all of El Paso Electric's customers combined",
+  "water": "Army promises a closed system and \"water neutral\" operation, but its own solicitation rates El Paso's water risk \"extremely high\"; base wells draw on the Hueco Bolson, the city's main aquifer",
   "conf": "Reporting",
-  "note": "Needs verification.",
+  "note": "About $2B on 1,384 acres of Fort Bliss, which the Army calls the Pentagon's first hyperscale data center. Operations targeted for fiscal 2027, after an environmental review. Pin is approximate.",
   "link": "/elpaso/",
   "src": "More Than Just Parks data center tracker"
  },
@@ -977,11 +977,11 @@
   "status": "announced",
   "lat": 30.31,
   "lng": -95.46,
-  "dev": "JMG",
-  "power": "Not disclosed",
+  "dev": "Jarvis Media Group (JMG)",
+  "power": "Small; not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "100 Plantation Drive. Needs verification.",
+  "note": "Converting an empty four-story, 68,000 sq ft office building at 100 Plantation Drive into an enterprise data center. A small reuse, not a campus.",
   "src": "More Than Just Parks data center tracker"
  },
  {
