@@ -1381,13 +1381,13 @@
   "county": "Tom Green",
   "type": "data",
   "status": "announced",
-  "lat": 31.3,
-  "lng": -100.45,
-  "dev": "Cipher Digital",
-  "power": "1 GW listed",
+  "lat": 31.5,
+  "lng": -100.38,
+  "dev": "Cipher Digital (formerly Cipher Mining)",
+  "power": "1 GW, with a direct-connect agreement with AEP; ERCOT gave conditional approval",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Tom Green County dropped its own moratorium plans after the Hill County lawsuit. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Cipher's largest site: about 620 acres northeast of San Angelo, next door to a separate 1.2 GW Skybox/Emergent proposal. Tom Green County dropped its own moratorium plans after the Hill County lawsuit.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1397,11 +1397,11 @@
   "status": "announced",
   "lat": 32.4,
   "lng": -99.8,
-  "dev": "PowerPlay AI / Sharon AI",
-  "power": "400 MW listed",
+  "dev": "PowerPlay AI and Sharon AI (joint venture)",
+  "power": "400 MW from an on-site gas plant (behind the meter), targeted for 2028",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Pitched as an unincorporated site free of zoning. PowerPlay is a new company with one disclosed executive, from hydrogen exploration; it has not yet secured gas or a power producer.",
   "src": "More Than Just Parks data center tracker"
  },
  {
