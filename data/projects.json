@@ -1059,13 +1059,13 @@
   "county": "Bexar",
   "type": "data",
   "status": "announced",
-  "lat": 29.45,
-  "lng": -98.4,
+  "lat": 29.417,
+  "lng": -98.798,
   "dev": "CloudHQ",
-  "power": "600 MW listed",
+  "power": "Up to 600 MW of computing load in five buildings (company figure)",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "About 123 acres in the Texas Research Park, bought from the UT System in 2023, across the street from Microsoft. CloudHQ says it will be ready for tenants within 2027.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1076,10 +1076,10 @@
   "lat": 29.38,
   "lng": -98.7,
   "dev": "Microsoft",
-  "power": "450 MW listed",
+  "power": "The tracker lists 450 MW; Microsoft has not published a figure",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Microsoft's Azure hub since 2008, now spread across several west San Antonio sites, including 158 acres in the Texas Research Park, with a further campus in Castroville.",
   "src": "More Than Just Parks data center tracker"
  },
  {
