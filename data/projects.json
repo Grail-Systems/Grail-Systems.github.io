@@ -552,20 +552,6 @@
   "src": "El Paso Water via KFOX14; El Paso Matters / Texas Standard; El Paso Inc.; Blockspace"
  },
  {
-  "name": "Lancium Childress",
-  "county": "Childress",
-  "type": "data",
-  "status": "operating",
-  "lat": 34.43,
-  "lng": -100.2,
-  "dev": "Lancium",
-  "power": "Not disclosed",
-  "water": "About 11,000 gal/day from the Red River Water Authority; company says it will return 1 million gal/day",
-  "conf": "Reporting",
-  "note": "Same developer as the Stargate Abilene campus. Likely the same site as our Crusoe / Lancium Childress card, where Crusoe is building a 1 GW campus; we are confirming what is operating here today.",
-  "src": "Inside Climate News (Texas House committee testimony, April 2026)"
- },
- {
   "name": "Amazon near Comanche Peak",
   "county": "Somervell",
   "type": "data",
@@ -1209,20 +1195,6 @@
   "src": "More Than Just Parks data center tracker"
  },
  {
-  "name": "EdgeCore El Paso",
-  "county": "El Paso",
-  "type": "data",
-  "status": "announced",
-  "lat": 31.8,
-  "lng": -106.25,
-  "dev": "Listed as EdgeCore; the tracker names Meta as operator",
-  "power": "1 GW listed",
-  "water": "Not disclosed",
-  "conf": "Reporting",
-  "note": "Likely the same campus as Meta El Paso: the tracker lists Meta as operator at the same 1 GW, and we found no EdgeCore project in El Paso. See the Meta El Paso card for the full record.",
-  "src": "More Than Just Parks data center tracker"
- },
- {
   "name": "Guadalupe County Technology Center",
   "county": "Guadalupe",
   "type": "data",
@@ -1478,15 +1450,15 @@
   "name": "Crusoe / Lancium Childress campus",
   "county": "Childress",
   "type": "data",
-  "status": "announced",
-  "lat": 34.42,
-  "lng": -100.22,
+  "status": "construction",
+  "lat": 34.43,
+  "lng": -100.2,
   "dev": "Crusoe and Lancium, with Meta reported as the customer",
   "power": "1 GW, grid connection already approved by ERCOT",
-  "water": "Not disclosed; the companies say they will invest in local water infrastructure",
+  "water": "Lancium told a Texas House committee it would draw about 11,000 gal/day from the Red River Water Authority and return 1 million gal/day; the companies promise closed-loop cooling",
   "conf": "Reporting",
-  "note": "Announced July 2026 on 270 acres Lancium owns, with construction set to start that fall. Likely the same site as our Lancium Childress card. Two months later, the town was under a boil-water notice and a disaster declaration after extreme heat.",
-  "src": "More Than Just Parks data center tracker"
+  "note": "One campus: Lancium owns the 270 acres and the power hookup, and Crusoe builds the data centers. Announced July 2026 with Meta reported as the customer; by October two buildings were under construction. Two months after the announcement, the town was under a boil-water notice and a disaster declaration after extreme heat, and Lancium offered the city a possible new water source.",
+  "src": "Crusoe and Lancium; Inside Climate News; TechRadar"
  },
  {
   "name": "IREN Childress AI and mining campus",
