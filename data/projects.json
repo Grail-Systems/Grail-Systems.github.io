@@ -1237,6 +1237,20 @@
   "src": "More Than Just Parks data center tracker"
  },
  {
+  "name": "Palomino Alpha data center",
+  "county": "Guadalupe",
+  "type": "data",
+  "status": "approved",
+  "lat": 29.66,
+  "lng": -97.78,
+  "dev": "Palomino Alpha, LLC",
+  "power": "Size not disclosed",
+  "water": "Asked Crystal Clear Special Utility District for 500,000 gal/day; the board signaled it may delay or reject it",
+  "conf": "Reporting",
+  "note": "About 900 acres. The county approved a tax abatement while, residents allege, the county judge's family had about 186 acres under contract to sell to the developer. Residents sued in July 2026. A TCEQ wastewater permit is pending.",
+  "src": "Community Impact; San Marcos Record; Guadalupe County; Seguin Today; KSAT"
+ },
+ {
   "name": "McLennan County Data Campus",
   "county": "McLennan",
   "type": "data",
