@@ -1226,14 +1226,14 @@
   "name": "Guadalupe County Technology Center",
   "county": "Guadalupe",
   "type": "data",
-  "status": "announced",
-  "lat": 29.57,
-  "lng": -97.96,
-  "dev": "Not identified",
-  "power": "1.2 GW listed",
+  "status": "construction",
+  "lat": 29.79,
+  "lng": -97.88,
+  "dev": "CloudBurst Data Centers (CloudBurst Texas LLC)",
+  "power": "1.2 GW from an on-site gas plant (behind the meter), with gas from Energy Transfer",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A $14.5B, 10 to 12 building campus on 706 acres along the Hays County line. Commissioners rejected a $500M tax break 3 to 2 in Feb 2026, then approved it 3 to 2 two months later. Residents have sued over open meetings and a conflict of interest.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1552,10 +1552,10 @@
   "lat": 29.88,
   "lng": -97.9,
   "dev": "CloudBurst",
-  "power": "1.2 GW listed",
+  "power": "1.2 GW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Near San Marcos, which banned data centers inside city limits in June 2026. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "The same project as the Guadalupe County Technology Center card: CloudBurst's campus at 2955 Francis Harris Lane straddles the Hays-Guadalupe line. It sits outside San Marcos, which banned data centers inside city limits in June 2026. See the Guadalupe card for the full record.",
   "src": "More Than Just Parks data center tracker"
  },
  {
