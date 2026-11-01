@@ -212,12 +212,12 @@
   "lat": 30.665,
   "lng": -97.012,
   "dev": "Bitdeer (spun off from Bitmain)",
-  "power": "Not confirmed",
+  "power": "563 MW online, with 179 MW more planned (company filings)",
   "water": "Not confirmed",
-  "conf": "Reporting",
-  "note": "Less than half a mile from Riot, also on former Alcoa land.",
+  "conf": "Records",
+  "note": "Less than half a mile from Riot, also on former Alcoa land. Bitdeer says it is weighing converting the site from bitcoin to AI.",
   "link": "/milam/",
-  "src": "Greenpeace USA research"
+  "src": "Bitdeer quarterly reports and SEC filings; Greenpeace USA research"
  },
  {
   "name": "Riot Corsicana",
