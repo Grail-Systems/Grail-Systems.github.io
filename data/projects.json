@@ -1538,10 +1538,10 @@
   "lat": 33.83,
   "lng": -101.84,
   "dev": "Aligned Data Centers",
-  "power": "540 MW listed",
+  "power": "540 MW, from Xcel Energy on the Southwest Power Pool grid, not ERCOT",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Ground broken April 2026 on 313 acres just outside Abernathy: six buildings, about $5B. A separate campus from TeraWulf and Fluidstack, about 2 miles away.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1551,11 +1551,11 @@
   "status": "announced",
   "lat": 33.84,
   "lng": -101.86,
-  "dev": "TeraWulf and Fluidstack",
-  "power": "168 MW listed",
+  "dev": "TeraWulf (51%) and Fluidstack (49%), with Google backing $1.3B of the lease",
+  "power": "168 MW of computing (about 240 MW total)",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "About 120 acres, due in the second half of 2026 under a 25-year lease. The companies describe the customer only as a developer of frontier AI models; one industry tracker names it as Anthropic. A separate campus from Aligned's Project Caprock.",
   "src": "More Than Just Parks data center tracker"
  },
  {
