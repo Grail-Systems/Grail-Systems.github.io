@@ -568,7 +568,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:18, a
 const soon = new Set();
 const fmtD = d => new Date(d + "T12:00:00").toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
 const pslug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const extraFields = p => [["Location", p.loc], ["Related companies and LLCs", p.llc], ["Land", p.land], ["Incentives", p.incent], ["Key dates", p.dates]].filter(x => x[1]);
+const extraFields = p => [["State sales tax break (Comptroller record)", p.comp], ["Location", p.loc], ["Related companies and LLCs", p.llc], ["Land", p.land], ["Incentives", p.incent], ["Key dates", p.dates]].filter(x => x[1]);
 const nextLine = e => `${esc(fmtD(e.date))}${e.time ? ", " + esc(e.time) : ""}: ${esc(e.what)}${e.where ? ", " + esc(e.where) : ""}`;
 const srcLinks = (p, br) => {
   const L = (p.links || []).map(([t, u]) => `<a href="${u}" rel="noopener">${esc(t)}</a>`);

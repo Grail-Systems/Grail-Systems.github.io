@@ -24,7 +24,7 @@
       <div><b>${soon.length}</b><span>upcoming date${soon.length === 1 ? '' : 's'}</span></div></div></section>`;
     h += `<section><h2>The projects</h2><ul class="rows">` + mine.map(p => {
       const links = (p.links || []).map(([t, u]) => `<a href="${esc(u)}" rel="noopener">${esc(t)}</a>`).join(' · ');
-      const extra = [['Location', p.loc], ['Related companies', p.llc], ['Land', p.land], ['Incentives', p.incent], ['Key dates', p.dates]].filter(x => x[1]).map(([k, v]) => `<p><b>${k}:</b> ${esc(v)}</p>`).join('');
+      const extra = [['State sales tax break (Comptroller record)', p.comp], ['Location', p.loc], ['Related companies', p.llc], ['Land', p.land], ['Incentives', p.incent], ['Key dates', p.dates]].filter(x => x[1]).map(([k, v]) => `<p><b>${k}:</b> ${esc(v)}</p>`).join('');
       return `<li><span class="tag">${ST[p.status] || esc(p.status)}</span><span class="tag">${TY[p.type] || ''}</span><span class="tag">${esc(p.conf)}</span>
         <h3><a href="/texas#${slug(p.name)}">${esc(p.name)}</a></h3>
         <p><b>Developer:</b> ${esc(p.dev)}. <b>Power:</b> ${esc(p.power)}. <b>Water:</b> ${esc(p.water)}.</p>${extra}<p>${esc(p.note)}</p>
