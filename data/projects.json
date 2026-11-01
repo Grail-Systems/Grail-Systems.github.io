@@ -732,13 +732,13 @@
   "county": "Bastrop",
   "type": "data",
   "status": "announced",
-  "lat": 30.11,
-  "lng": -97.32,
+  "lat": 29.99,
+  "lng": -97.48,
   "dev": "Pacifico Energy (gas plant), with Black Chamber Partners; reporting links the data center to Anthropic",
   "power": "On-site gas plant: 710 MW reported, and a state air permit filing for about 1,300 MW from 48 turbines",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Not stopped. The moratorium a tracker cited was in Ohio, at Pacifico's alternate site. In Bastrop County, a site-prep permit for the gas plant was issued in July, the developers withdrew their county tax break requests in August, and the first $366M building (\"Project Longhorn\") was filed with the state to start November 30, 2026. More than 100 residents packed a July town hall; the county asked TCEQ for a public meeting on the air permit. Same developer as Fort Spunky in Hood County.",
+  "note": "Not stopped. The moratorium a tracker cited was in Ohio, at Pacifico's alternate site. In Bastrop County, a site-prep permit for the gas plant was issued in July, the developers withdrew their county tax break requests in August, and the first $366M building (\"Project Longhorn\") was filed with the state to start November 30, 2026. More than 100 residents packed a July town hall; the county asked TCEQ for a public meeting on the air permit. Same developer as Fort Spunky in Hood County. Pin is approximate.",
   "src": "More Than Just Parks data center tracker"
  },
  {
