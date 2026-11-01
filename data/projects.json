@@ -1775,11 +1775,11 @@
   "status": "announced",
   "lat": 28.8,
   "lng": -96.98,
-  "dev": "Crusoe, with Blue Energy",
-  "power": "1.5 GW listed",
+  "dev": "Crusoe, with Blue Energy and GE Vernova",
+  "power": "1 GW of gas turbines first, then up to 1.5 GW from five small nuclear reactors",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Port of Victoria campus. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A 1,600-acre campus at the Port of Victoria. The power timeline has already slipped: gas was promised for 2028 and nuclear for 2031; the revised plan says gas in 2030 and reactors from 2032.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1789,11 +1789,11 @@
   "status": "announced",
   "lat": 27.55,
   "lng": -99.5,
-  "dev": "Energy Abundance",
-  "power": "300 MW listed",
-  "water": "Not disclosed",
+  "dev": "Energy Abundance Development Corp (Houston)",
+  "power": "Claims 5 GW, starting with 300 MW, all behind the meter",
+  "water": "Not disclosed, in a county where colonias already face water insecurity",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Announced in 2025 as the world's largest behind-the-meter data center hub, on 50,000 acres near Laredo. As of 2026, the city and county say no application has been filed. Laredo is writing permanent data center rules.",
   "src": "More Than Just Parks data center tracker"
  },
  {
