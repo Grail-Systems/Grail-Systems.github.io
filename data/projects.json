@@ -1468,10 +1468,10 @@
   "lat": 35.4,
   "lng": -101.4,
   "dev": "InfraTech Capital",
-  "power": "Campus; size not disclosed",
+  "power": "Size not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Same county as Fermi America. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A proposed $2.7B campus on more than 5,000 acres near Amarillo, announced August 2026. The tenant, the data center partner and the co-investors are all unnamed, and there is no construction date. Same county as Fermi America's Project Matador.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1747,11 +1747,11 @@
   "status": "announced",
   "lat": 31.2,
   "lng": -99.35,
-  "dev": "Cipher Digital",
-  "power": "500 MW listed",
+  "dev": "Cipher Digital (formerly Cipher Mining)",
+  "power": "500 MW planned",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "About 100 acres outside Brady, first bought as a bitcoin mining site. One of three Cipher option sites in Texas marketed at 500 MW each (with Milsing and McLennan); Cipher also plans Colchis near San Angelo. Power was promised for 2027; trackers now say 2028 to 2030. Pin is approximate.",
   "src": "More Than Just Parks data center tracker"
  },
  {
