@@ -562,7 +562,7 @@
   "power": "Not disclosed",
   "water": "About 11,000 gal/day from the Red River Water Authority; company says it will return 1 million gal/day",
   "conf": "Reporting",
-  "note": "Same developer as the Stargate Abilene campus.",
+  "note": "Same developer as the Stargate Abilene campus. Likely the same site as our Crusoe / Lancium Childress card, where Crusoe is building a 1 GW campus; we are confirming what is operating here today.",
   "src": "Inside Climate News (Texas House committee testimony, April 2026)"
  },
  {
@@ -1481,11 +1481,11 @@
   "status": "announced",
   "lat": 34.42,
   "lng": -100.22,
-  "dev": "Crusoe and Lancium",
-  "power": "1 GW listed",
-  "water": "Not disclosed",
+  "dev": "Crusoe and Lancium, with Meta reported as the customer",
+  "power": "1 GW, grid connection already approved by ERCOT",
+  "water": "Not disclosed; the companies say they will invest in local water infrastructure",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Announced July 2026 on 270 acres Lancium owns, with construction set to start that fall. Likely the same site as our Lancium Childress card. Two months later, the town was under a boil-water notice and a disaster declaration after extreme heat.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1495,11 +1495,11 @@
   "status": "operating",
   "lat": 34.45,
   "lng": -100.18,
-  "dev": "IREN",
-  "power": "750 MW listed",
+  "dev": "IREN (formerly Iris Energy)",
+  "power": "About 750 MW operating, IREN's largest site",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Started as a bitcoin mine in 2022. IREN has since added liquid-cooled AI halls, including capacity for Microsoft. Together with the Crusoe/Lancium campus, Childress would host close to 2 GW of data centers.",
   "src": "More Than Just Parks data center tracker"
  },
  {
