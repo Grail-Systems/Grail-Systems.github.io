@@ -1663,11 +1663,11 @@
   "status": "announced",
   "lat": 32.6,
   "lng": -96.3,
-  "dev": "Prometheus Hyperscale",
-  "power": "200 MW listed",
-  "water": "Not disclosed",
+  "dev": "Prometheus Hyperscale, with Engie North America",
+  "power": "200 MW in four 50 MW buildings; listed with on-site gas generation and batteries",
+  "water": "Liquid-cooled; amount not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "About 500 acres between Talty and Post Oak Bend City, a few miles from Flexential's Talty campus. The same company plans up to 2.5 GW in Reeves County.",
   "src": "More Than Just Parks data center tracker"
  },
  {
