@@ -340,12 +340,12 @@
   "status": "operating",
   "lat": 33.21,
   "lng": -97.13,
-  "dev": "Core Scientific",
+  "dev": "Core Scientific; tenant CoreWeave, which leases it to OpenAI",
   "power": "Not confirmed",
   "water": "Not confirmed",
   "conf": "Reporting",
-  "note": "Bitcoin mining site shifting toward AI hosting.",
-  "src": "CoinShares"
+  "note": "A bitcoin mine being converted into an AI data center, at a cost Core Scientific put at up to $6.1B. The state lists CoreWeave as the occupant.",
+  "src": "CoStar; Dallas Morning News via Government Technology; The Energy Mag; Texas Comptroller"
  },
  {
   "name": "Core Scientific Pecos",
@@ -479,18 +479,18 @@
  },
  {
   "name": "Cawley Partners data center park",
-  "county": "Ellis (to verify)",
+  "county": "Ellis (straddles the Dallas County line)",
   "type": "data",
   "status": "announced",
-  "lat": 32.45,
-  "lng": -96.75,
-  "dev": "Cawley Partners",
+  "lat": 32.534,
+  "lng": -96.666,
+  "dev": "Cawley Partners (Dallas)",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "About 5,200 acres south of Dallas, acquired 2025.",
+  "note": "South Creek Ranch, about 5,200 acres near Ferris, bought in April 2025. Cawley says the first 2,000 acres will become data center parks.",
   "link": "/ellis/",
-  "src": "Baxtel"
+  "src": "Cawley Partners; Data Center Dynamics; FOX 4"
  },
  {
   "name": "PowerHouse Westlake",
@@ -1160,10 +1160,10 @@
   "lat": 33.15,
   "lng": -97.05,
   "dev": "CoreWeave",
-  "power": "394 MW listed",
+  "power": "394 MW listed (not confirmed)",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "This appears to be the same site as Core Scientific Denton, which CoreWeave leases. We are keeping both cards until a record settles it; see that card for details.",
   "src": "More Than Just Parks data center tracker"
  },
  {
