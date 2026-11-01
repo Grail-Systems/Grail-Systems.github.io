@@ -634,7 +634,7 @@
   "power": "2 GW listed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Residents asked the City Commission to oppose it over water and power. A public tracker lists it as blocked by a moratorium; which government acted needs verification.",
+  "note": "Residents asked the City Commission to oppose it over water and power. The City of Harlingen then set a 120-day moratorium on data center applications. Fluidstack later started building outside city limits, out of the moratorium's reach.",
   "src": "Texas Tribune; More Than Just Parks tracker"
  },
  {
@@ -1450,14 +1450,14 @@
   "name": "CleanSpark Valley Gamma",
   "county": "Brazoria",
   "type": "data",
-  "status": "construction",
+  "status": "announced",
   "lat": 29.1,
   "lng": -95.6,
   "dev": "CleanSpark",
-  "power": "300 MW listed",
+  "power": "300 MW, expandable to 600 MW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A land and power deal for up to 447 acres, announced January 2026, with the company still seeking tenants. The same company built a substation in Austin County despite a county moratorium. Pin is approximate.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1959,10 +1959,10 @@
   "lat": 28.68,
   "lng": -99.83,
   "dev": "NFN8 Group",
-  "power": "10 MW listed",
+  "power": "About 10 MW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed as suspended. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A bitcoin mine in a leased warehouse on Old Uvalde Highway. A fire at the site around the 2025 holidays cut the company's capacity in half, and NFN8 filed for bankruptcy in February 2026 and is selling its assets. A reminder to ask any developer: who pays to clean up if the company goes under?",
   "src": "More Than Just Parks data center tracker"
  },
  {
