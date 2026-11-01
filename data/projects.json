@@ -1185,13 +1185,13 @@
   "county": "Ellis",
   "type": "data",
   "status": "construction",
-  "lat": 32.35,
-  "lng": -96.8,
-  "dev": "Not identified",
-  "power": "500 MW listed",
+  "lat": 32.54,
+  "lng": -96.98,
+  "dev": "PowerHouse Data Centers and Provident Data Centers",
+  "power": "1.8 GW switchyard; first 500 MW approved through ERCOT",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "24 buildings in three phases on 768 acres just outside Grand Prairie. Building 1 is filed with the state for 2026 to 2028. PowerHouse is also behind Taylor and Westlake.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1201,11 +1201,11 @@
   "status": "construction",
   "lat": 32.55,
   "lng": -96.75,
-  "dev": "Lincoln Rackhouse",
-  "power": "540 MW listed",
+  "dev": "Lincoln Property Company",
+  "power": "Up to 540 MW in four buildings (company figure)",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A 131-acre, 800,000 sq ft campus in the South Dallas area. Lincoln has not published the exact site, so the pin and county are approximate.",
   "src": "More Than Just Parks data center tracker"
  },
  {
