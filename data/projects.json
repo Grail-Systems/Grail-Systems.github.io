@@ -1313,11 +1313,11 @@
   "status": "construction",
   "lat": 27.8,
   "lng": -97.6,
-  "dev": "Hut 8",
-  "power": "1 GW listed",
-  "water": "Not disclosed",
+  "dev": "Hut 8 (former bitcoin miner), for an unnamed big tech tenant",
+  "power": "1 GW interconnection with AEP Texas; 704 MW leased so far",
+  "water": "Company says closed-loop cooling, filled with water brought from outside Nueces County",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "525 acres outside Robstown, so no city or county permit was needed. Two 15-year leases worth $19.6B. Construction began in 2026; power expected early 2027.",
   "src": "More Than Just Parks data center tracker"
  },
  {
