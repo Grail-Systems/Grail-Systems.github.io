@@ -1901,11 +1901,11 @@
   "status": "stopped",
   "lat": 33.14,
   "lng": -95.6,
-  "dev": "MSB Global",
-  "power": "800 MW listed",
-  "water": "Not disclosed",
+  "dev": "Was MSB Global; CyrusOne now considering it",
+  "power": "MSB planned 3 GW in 30 buildings; CyrusOne pitches an on-site gas plant",
+  "water": "CyrusOne says about 1,000 gal/day per building",
   "conf": "Reporting",
-  "note": "Listed as suspended. East Texas. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "On a coal mine site Luminant gave the city. The old owner says the deed bars power generation, a judge has barred it until a 2027 trial, and construction stopped. Council minutes never mentioned the project. MSB is out; CyrusOne held a community meeting in Sept 2026.",
   "src": "More Than Just Parks data center tracker"
  },
  {
