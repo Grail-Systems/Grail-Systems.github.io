@@ -1705,11 +1705,11 @@
   "status": "announced",
   "lat": 33.25,
   "lng": -100.57,
-  "dev": "Crusoe",
-  "power": "Campus; size not disclosed",
+  "dev": "Crusoe Energy Systems",
+  "power": "Size not disclosed; two buildings of about 759,000 sq ft each",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A $4.8B campus filed with the state in October 2026, in a county of fewer than 1,000 people. Kent County noticed a tax abatement hearing in August. Construction is set for January 2027. It sits between Crusoe's Abilene and Childress builds, with another Crusoe complex proposed next door in Stonewall County.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1874,10 +1874,10 @@
   "lat": 33.23,
   "lng": -97.59,
   "dev": "BlockchAIn Digital Infrastructure",
-  "power": "20 MW listed",
+  "power": "20 MW planned",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "A bitcoin mining site the company lists in its investor pipeline as in due diligence, with power targeted for late 2026. Wise County officials said in 2026 that no data center project had approached the county. Exact site not published.",
   "src": "More Than Just Parks data center tracker"
  },
  {
