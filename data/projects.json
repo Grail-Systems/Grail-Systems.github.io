@@ -1033,11 +1033,11 @@
   "status": "announced",
   "lat": 29.95,
   "lng": -96.26,
-  "dev": "CleanSpark",
-  "power": "285 MW listed",
-  "water": "Not disclosed",
+  "dev": "CleanSpark (a bitcoin miner moving into AI)",
+  "power": "285 MW under contract; over 200 MW targeted for early 2027",
+  "water": "Company says closed-loop cooling using less than 10 homes' worth of water a day; not independently confirmed",
   "conf": "Reporting",
-  "note": "Austin County adopted a moratorium on new AI data centers in July 2026; CleanSpark spoke against it. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "271 acres near Sealy. Austin County adopted a moratorium on new AI data centers in July 2026 over CleanSpark's objection; in August residents drove tractors and trailers to the company's community meeting in protest.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1048,10 +1048,10 @@
   "lat": 29.25,
   "lng": -98.55,
   "dev": "Tract",
-  "power": "720 MW listed",
+  "power": "The tracker lists 720 MW; not confirmed elsewhere",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "339 acres of industrial land on Mauermann Road in south San Antonio, near the Toyota plant. Tract sells powered land to data center operators; no tenant named.",
   "src": "More Than Just Parks data center tracker"
  },
  {
