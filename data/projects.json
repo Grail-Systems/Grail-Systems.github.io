@@ -1607,11 +1607,11 @@
   "status": "announced",
   "lat": 29.88,
   "lng": -93.93,
-  "dev": "Not identified",
-  "power": "300 MW listed",
+  "dev": "Not yet confirmed in written records",
+  "power": "The tracker lists 300 MW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "About 1.5 miles from protected public land, per the tracker. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Pitched to the Port Arthur City Council in Apr 2026 as a data center around Pleasure Island with its own wind, solar, battery storage and a small port. About 1.5 miles from protected public land, per the tracker. Needs a written record.",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -1944,10 +1944,10 @@
   "lat": 32.2,
   "lng": -95.85,
   "dev": "Data Factory",
-  "power": "10 MW listed",
+  "power": "10 MW to start, with bitcoin mining",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed as canceled. Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "After a packed council meeting, Athens paused data centers, then voted 3 to 2 in Aug 2026 for an ordinance banning them. A win for residents, near the separate Diode project at Cedar Creek Lake that was also withdrawn.",
   "link": "/henderson/",
   "src": "More Than Just Parks data center tracker"
  },
