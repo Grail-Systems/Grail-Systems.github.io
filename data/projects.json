@@ -426,7 +426,7 @@
   "status": "operating",
   "lat": 32.47,
   "lng": -96.99,
-  "dev": "Google, built through shell company Alamo Mission LLC (project name Sharka)",
+  "dev": "Google, through Sharka LLC",
   "power": "Not disclosed",
   "water": "182.3 million gallons in 2024, about 500,000 gal/day (Google's own report)",
   "conf": "Reporting",
@@ -441,13 +441,13 @@
   "status": "operating",
   "lat": 32.55,
   "lng": -96.84,
-  "dev": "Google",
+  "dev": "Google, through Alamo Mission LLC",
   "power": "Not disclosed",
-  "water": "Not disclosed",
+  "water": "Up to 1.46 billion gallons a year sought in a 2020 legal filing, about 4 million gal/day (Bloomberg)",
   "conf": "Reporting",
   "note": "About 165 acres. First building operating. Part of Google's $40B Texas plan through 2027.",
   "link": "/ellis/",
-  "src": "Energy Capital HTX; Dallas Morning News"
+  "src": "Energy Capital HTX; Dallas Morning News; Bloomberg via Data Center Knowledge; Data Center Dynamics"
  },
  {
   "name": "Google Haskell County campuses",
