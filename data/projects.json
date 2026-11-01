@@ -1607,11 +1607,11 @@
   "status": "announced",
   "lat": 33.9,
   "lng": -98.5,
-  "dev": "Texas Data Center Campus LLC",
-  "power": "800 MW listed",
+  "dev": "Skybox Datacenters, through Texas Data Centers Campus LLC",
+  "power": "Skybox markets 300+ MW; the tracker lists 800 MW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "Six to 10 buildings; Skybox says 300 to 500 permanent jobs and 2,000 to 3,000 construction workers. Groundbreaking pushed to early 2027 after the state audit.",
   "src": "More Than Just Parks data center tracker"
  },
  {
