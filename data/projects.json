@@ -877,12 +877,12 @@
   "status": "announced",
   "lat": 33.47,
   "lng": -94.29,
-  "dev": "Datahub Developers",
+  "dev": "Datahub Developers LLC, tied to Georgia businessman and governor candidate Rick Jackson; now called Foundrie Hyperscale Data",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "I-30 megasite at the East Texas Logistics Center, Hooks. Needs verification.",
-  "src": "More Than Just Parks data center tracker"
+  "note": "Bowie County, Hooks and New Boston sold public industrial land at the East Texas Logistics Center for $12M in Aug and Sept 2026, under a contract with a confidentiality clause, over residents' objections.",
+  "src": "Atlanta Journal-Constitution; Texarkana Today; KSLA"
  },
  {
   "name": "Project Big Pine",
@@ -891,12 +891,12 @@
   "status": "announced",
   "lat": 33.46,
   "lng": -94.35,
-  "dev": "Not identified (TexAmericas Center)",
-  "power": "Not disclosed",
-  "water": "Not disclosed",
+  "dev": "Potentia Development, with TexAmericas Center",
+  "power": "Planned on-site gas with batteries; size not disclosed",
+  "water": "Company cites regional water availability; amount not disclosed",
   "conf": "Reporting",
-  "note": "Near Texarkana. Needs verification.",
-  "src": "More Than Just Parks data center tracker"
+  "note": "About $3.5B and 120 jobs at full buildout on 450 to 500 acres, still looking for a tenant. On the SPP grid, not ERCOT.",
+  "src": "Data Center Dynamics; Railway Age; KSLA; Texarkana Today"
  },
  {
   "name": "Old Ocean data center",
@@ -1566,10 +1566,10 @@
   "lat": 32.91,
   "lng": -96.13,
   "dev": "Core Scientific",
-  "power": "430 MW listed",
+  "power": "About 285 MW, scalable to 430 MW",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Listed by the More Than Just Parks tracker; needs verification.",
+  "note": "265 acres near Quinlan with an on-site substation; first power expected 2027.",
   "src": "More Than Just Parks data center tracker"
  },
  {
