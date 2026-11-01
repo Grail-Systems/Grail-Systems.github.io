@@ -1,46 +1,498 @@
 {
-"AmpZ / EPG Champion": {
- "people": [["AmpZ reports backing from Carlyle and appears linked to Amp Energy, a Toronto renewable developer Carlyle invested $374M in (2021). Amp Energy's president and CEO, Dave Rogers, is copied on AmpZ's emails to Angelina County.", "Carlyle news release (Jan 2021); DCD; Angelina County records (Oct 2026)"],
-            ["Site development: William Manning-Marshall, AmpZ. Local partner: EPG Champion Development (Atlanta).", "Angelina County records; KSAT/Texas Tribune"]],
- "record": [["Its July 2025 request asked the City of Lufkin about 20 million gallons a day, while City officials later said the campus would use about 500 gallons a day on a closed-loop system.", "City of Lufkin records; FOX 26 (June 2026)"],
-            ["We have not found a completed AmpZ data center campus anywhere. Tell us if you know of one.", "Texas Watch review"]]
-},
-"HyperDataGrid": {
- "people": [["Josh May is HyperDataGrid's contact in County records. Headquarters listed in Houston.", "Angelina County records (June 2026); Data Center Map"]],
- "record": [["Says its sites use closed-loop, direct-to-chip cooling, but its Lufkin application lists five on-site wells and no water cap.", "DCD (July 2026); Angelina County application (Aug 2026)"],
-            ["Also proposed a 20 MW data center in Parsons, Kansas; the city approved a purchase option in July 2026.", "DCD; Baxtel (July 2026)"],
-            ["We have not found a completed HyperDataGrid data center anywhere.", "Texas Watch review"]]
-},
-"WattBridge": {
- "people": [["Owned by PROENERGY of Sedalia, Missouri (CEO Jeff Canon). WattBridge's president has been Mike Alvarado. Longleaf contact: Joe Dominick, Director of Asset Development.", "PROENERGY releases (2020 to 2021); Angelina County records"]],
- "record": [["Has built a string of gas peaker plants around Houston since 2021, including HO Clarke, Topaz, Braes Bayou, Mark One and Brotman.", "Power Engineering; POWER Magazine"],
-            ["PROENERGY sold two of them, Braes Bayou and Brotman, to South Texas Electric Cooperative for $768 million.", "Power Engineering"],
-            ["In Angelina County, Pineywoods GCD approved wells for 80 million gallons a year in late 2024 to early 2025 that were never drilled. In March 2026 it asked for 1.5 billion gallons a year, then put the project on hold in July 2026.", "Pineywoods GCD letters (Sept 22 and Oct 26, 2026)"]]
-},
-"1606 Corp": {
- "people": [["CEO Austen Lambrecht. His father, former CEO Gregory Lambrecht, holds a convertible note of about $1.89 million.", "Company releases (2026); Lufkin Daily News, citing SEC filings"]],
- "record": [["Was a CBD and hemp company: in 2021 its then-CEO announced $20 million in financing to buy CBD businesses.", "MJBizDaily (2021)"],
-            ["A securities filing says Sim Agro, which 1606 agreed to acquire, claims $4.17 million is unpaid for earlier work on the Lufkin biomass plant.", "Lufkin Daily News, citing SEC filing"],
-            ["The plant struggled financially, went through foreclosure and was sold at a sheriff's auction in 2016.", "Lufkin Daily News"],
-            ["In 2026 it hired MDM Group to market the site and signed a non-binding letter of intent with Prime Tex about a possible sale of its rights.", "Company releases (Aug to Oct 2026)"]]
-},
-"MARA Holdings": {
- "people": [["Chairman and CEO Fred Thiel.", "Yahoo Finance (Apr 2026)"]],
- "record": [["Hood County constables issued 37 noise citations to the Granbury plant manager through April 2024; he was later acquitted by a jury.", "Dallas Observer (May 2026)"],
-            ["Residents' group Citizens Concerned About Wolf Hollow sued in state court in Oct 2024 over noise; the court denied MARA's motion to dismiss.", "Earthjustice"],
-            ["Three federal nuisance suits by nearby residents were consolidated in 2026 (Adair, Engle and a May 2026 suit).", "Dallas Observer; Decrypt"],
-            ["The site's owners are seeking a TCEQ permit to discharge up to 1.24 million gallons of wastewater a day into the Brazos River.", "Dallas Observer, citing TCEQ"],
-            ["A federal jury found MARA breached a non-disclosure agreement and awarded $138.8 million (2024), later cut by 20%.", "MARA SEC filing (10-Q, 2026)"]]
-},
-"Diode Ventures": {
- "people": [["Co-presidents Rachel Attebery and Josh Johnson. A subsidiary of engineering firm Black & Veatch.", "Fox 4; DCD (July 2026)"]],
- "record": [["Withdrew its Cedar Creek Lake project on July 22, 2026, saying the site did not meet the standard it believes should guide data center development.", "DCD; Fox 4"],
-            ["Is also pursuing data center projects in Red Oak (Ellis County), Kuna, Idaho, and Calgary, and has developed and sold data center parks around Kansas City.", "DCD (July 2026)"]]
-},
-"Bilateral Energy": {
- "people": [["Leadership not found in public sources yet. Based in Dallas or Houston, depending on the source.", "KERA; Data Center Map"]],
- "record": [["Granbury city leaders toured a Bilateral facility in Dallas on Jan. 2, 2026, before annexing Knox Ranch. Residents' lawsuit alleges they staggered arrivals to avoid a quorum.", "KERA (Apr 2026); DCD"],
-            ["Project Patriot includes a co-located gas plant, the Granbury OpCo 1 station.", "Baxtel"],
-            ["The dispute led to recall petitions against Granbury's mayor and four council members, and a lawsuit to revive the recall.", "KERA (July to Sept 2026)"]]
-}
+ "AmpZ / EPG Champion": {
+  "people": [
+   [
+    "AmpZ reports backing from Carlyle and appears linked to Amp Energy, a Toronto renewable developer Carlyle invested $374M in (2021). Amp Energy's president and CEO, Dave Rogers, is copied on AmpZ's emails to Angelina County.",
+    "Carlyle news release (Jan 2021); DCD; Angelina County records (Oct 2026)"
+   ],
+   [
+    "Site development: William Manning-Marshall, AmpZ. Local partner: EPG Champion Development (Atlanta).",
+    "Angelina County records; KSAT/Texas Tribune"
+   ]
+  ],
+  "record": [
+   [
+    "Its July 2025 request asked the City of Lufkin about 20 million gallons a day, while City officials later said the campus would use about 500 gallons a day on a closed-loop system.",
+    "City of Lufkin records; FOX 26 (June 2026)"
+   ],
+   [
+    "We have not found a completed AmpZ data center campus anywhere. Tell us if you know of one.",
+    "Texas Watch review"
+   ]
+  ]
+ },
+ "HyperDataGrid": {
+  "people": [
+   [
+    "Josh May is HyperDataGrid's contact in County records. Headquarters listed in Houston.",
+    "Angelina County records (June 2026); Data Center Map"
+   ]
+  ],
+  "record": [
+   [
+    "Says its sites use closed-loop, direct-to-chip cooling, but its Lufkin application lists five on-site wells and no water cap.",
+    "DCD (July 2026); Angelina County application (Aug 2026)"
+   ],
+   [
+    "Also proposed a 20 MW data center in Parsons, Kansas; the city approved a purchase option in July 2026.",
+    "DCD; Baxtel (July 2026)"
+   ],
+   [
+    "We have not found a completed HyperDataGrid data center anywhere.",
+    "Texas Watch review"
+   ]
+  ]
+ },
+ "WattBridge": {
+  "people": [
+   [
+    "Owned by PROENERGY of Sedalia, Missouri (CEO Jeff Canon). WattBridge's president has been Mike Alvarado. Longleaf contact: Joe Dominick, Director of Asset Development.",
+    "PROENERGY releases (2020 to 2021); Angelina County records"
+   ]
+  ],
+  "record": [
+   [
+    "Has built a string of gas peaker plants around Houston since 2021, including HO Clarke, Topaz, Braes Bayou, Mark One and Brotman.",
+    "Power Engineering; POWER Magazine"
+   ],
+   [
+    "PROENERGY sold two of them, Braes Bayou and Brotman, to South Texas Electric Cooperative for $768 million.",
+    "Power Engineering"
+   ],
+   [
+    "In Angelina County, Pineywoods GCD approved wells for 80 million gallons a year in late 2024 to early 2025 that were never drilled. In March 2026 it asked for 1.5 billion gallons a year, then put the project on hold in July 2026.",
+    "Pineywoods GCD letters (Sept 22 and Oct 26, 2026)"
+   ]
+  ]
+ },
+ "1606 Corp": {
+  "people": [
+   [
+    "CEO Austen Lambrecht. His father, former CEO Gregory Lambrecht, holds a convertible note of about $1.89 million.",
+    "Company releases (2026); Lufkin Daily News, citing SEC filings"
+   ]
+  ],
+  "record": [
+   [
+    "Was a CBD and hemp company: in 2021 its then-CEO announced $20 million in financing to buy CBD businesses.",
+    "MJBizDaily (2021)"
+   ],
+   [
+    "A securities filing says Sim Agro, which 1606 agreed to acquire, claims $4.17 million is unpaid for earlier work on the Lufkin biomass plant.",
+    "Lufkin Daily News, citing SEC filing"
+   ],
+   [
+    "The plant struggled financially, went through foreclosure and was sold at a sheriff's auction in 2016.",
+    "Lufkin Daily News"
+   ],
+   [
+    "In 2026 it hired MDM Group to market the site and signed a non-binding letter of intent with Prime Tex about a possible sale of its rights.",
+    "Company releases (Aug to Oct 2026)"
+   ]
+  ]
+ },
+ "MARA Holdings": {
+  "people": [
+   [
+    "Chairman and CEO Fred Thiel.",
+    "Yahoo Finance (Apr 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Hood County constables issued 37 noise citations to the Granbury plant manager through April 2024; he was later acquitted by a jury.",
+    "Dallas Observer (May 2026)"
+   ],
+   [
+    "Residents' group Citizens Concerned About Wolf Hollow sued in state court in Oct 2024 over noise; the court denied MARA's motion to dismiss.",
+    "Earthjustice"
+   ],
+   [
+    "Three federal nuisance suits by nearby residents were consolidated in 2026 (Adair, Engle and a May 2026 suit).",
+    "Dallas Observer; Decrypt"
+   ],
+   [
+    "The site's owners are seeking a TCEQ permit to discharge up to 1.24 million gallons of wastewater a day into the Brazos River.",
+    "Dallas Observer, citing TCEQ"
+   ],
+   [
+    "A federal jury found MARA breached a non-disclosure agreement and awarded $138.8 million (2024), later cut by 20%.",
+    "MARA SEC filing (10-Q, 2026)"
+   ]
+  ]
+ },
+ "Diode Ventures": {
+  "people": [
+   [
+    "Co-presidents Rachel Attebery and Josh Johnson. A subsidiary of engineering firm Black & Veatch.",
+    "Fox 4; DCD (July 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Withdrew its Cedar Creek Lake project on July 22, 2026, saying the site did not meet the standard it believes should guide data center development.",
+    "DCD; Fox 4"
+   ],
+   [
+    "Is also pursuing data center projects in Red Oak (Ellis County), Kuna, Idaho, and Calgary, and has developed and sold data center parks around Kansas City.",
+    "DCD (July 2026)"
+   ]
+  ]
+ },
+ "Bilateral Energy": {
+  "people": [
+   [
+    "Leadership not found in public sources yet. Based in Dallas or Houston, depending on the source.",
+    "KERA; Data Center Map"
+   ]
+  ],
+  "record": [
+   [
+    "Granbury city leaders toured a Bilateral facility in Dallas on Jan. 2, 2026, before annexing Knox Ranch. Residents' lawsuit alleges they staggered arrivals to avoid a quorum.",
+    "KERA (Apr 2026); DCD"
+   ],
+   [
+    "Project Patriot includes a co-located gas plant, the Granbury OpCo 1 station.",
+    "Baxtel"
+   ],
+   [
+    "The dispute led to recall petitions against Granbury's mayor and four council members, and a lawsuit to revive the recall.",
+    "KERA (July to Sept 2026)"
+   ]
+  ]
+ },
+ "Riot Platforms": {
+  "people": [
+   [
+    "CEO Jason Les.",
+    "Riot earnings call (Mar 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "In August 2023, ERCOT paid Riot $31.7 million in credits for cutting its power use during a record heat wave.",
+    "CNBC via NBC (Sept 2023)"
+   ],
+   [
+    "Activist investor Starboard Value pressed Riot's leadership in a February 2026 letter.",
+    "Starboard Value letter (Feb 18, 2026)"
+   ],
+   [
+    "Leases AI space at Rockdale to AMD; its whole Corsicana site is under a non-binding letter of intent with one tenant.",
+    "Zacks, Riot Q2 2026 call"
+   ]
+  ]
+ },
+ "Bitdeer": {
+  "people": [
+   [
+    "Chairman Jihan Wu, a co-founder of Bitmain, the Chinese mining-rig maker.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Galaxy Digital": {
+  "people": [
+   [
+    "Founder and CEO Mike Novogratz.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Core Scientific": {
+  "people": [
+   [
+    "CEO Adam Sullivan.",
+    "DCD; Blockworks"
+   ]
+  ],
+  "record": [
+   [
+    "Filed for Chapter 11 bankruptcy in December 2022, about 11 months after going public, and emerged in January 2024.",
+    "The Block; DCD"
+   ],
+   [
+    "Its shareholders rejected CoreWeave's roughly $9 billion takeover on Oct. 30, 2025.",
+    "Yahoo Finance; Barchart"
+   ],
+   [
+    "CoreWeave said it was Core Scientific's only AI hosting customer, about 76% of expected 2026 revenue.",
+    "CoreWeave letter to shareholders (Oct 2025)"
+   ]
+  ]
+ },
+ "Vantage Data Centers": {
+  "people": [
+   [
+    "President and CEO Sureel Choksi, since 2013. Global CFO Scott Beasley, since March 2026. Backed by DigitalBridge.",
+    "Data Centre Magazine; Vantage release (Mar 2026); Data Center Knowledge"
+   ]
+  ],
+  "record": [
+   [
+    "Its $25 billion Frontier campus is financed by a $22 billion loan led by JPMorgan and MUFG.",
+    "FStech"
+   ]
+  ]
+ },
+ "VoltaGrid": {
+  "people": [
+   [
+    "CEO Nathan Ough.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Google": {
+  "people": [
+   [
+    "CEO Sundar Pichai announced Google's $40 billion Texas plan in November 2025.",
+    "Courier Texas"
+   ]
+  ],
+  "record": []
+ },
+ "DataBank": {
+  "people": [
+   [
+    "CEO Raul Martynek. Chairman Michael Foust.",
+    "Company announcements (2025); may have changed; CB Insights"
+   ]
+  ],
+  "record": []
+ },
+ "Compass Datacenters": {
+  "people": [
+   [
+    "CEO Chris Crosby.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "QTS and Lancium": {
+  "people": [
+   [
+    "QTS is owned by Blackstone; CEO Chad Williams. Lancium CEO Michael McNamara.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Lancium": {
+  "people": [
+   [
+    "CEO Michael McNamara.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Crusoe": {
+  "people": [
+   [
+    "Co-founder and CEO Chase Lochmiller.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Cipher Digital": {
+  "people": [
+   [
+    "CEO Tyler Page.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "IREN": {
+  "people": [
+   [
+    "Co-founders and co-CEOs Daniel and Will Roberts.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Tract": {
+  "people": [
+   [
+    "CEO Grant van Rooyen.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "Hut 8": {
+  "people": [
+   [
+    "CEO Asher Genoot.",
+    "Company announcements (2025); may have changed"
+   ]
+  ],
+  "record": []
+ },
+ "CyrusOne": {
+  "people": [
+   [
+    "Owned by investment firms KKR and Global Infrastructure Partners since 2022.",
+    "2022 acquisition announcements"
+   ]
+  ],
+  "record": []
+ },
+ "Fermi America": {
+  "people": [
+   [
+    "Co-founded by former Gov. Rick Perry and Toby Neugebauer. Neugebauer was removed as CEO on April 30, 2026 and sued the board. Perry lost reelection to the board on Oct. 30, 2026.",
+    "KCBD; TipRanks; Texas Tribune (Oct 30, 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Its first tenant pulled out of a $150 million deal in December 2025 (Neugebauer said it was Amazon; Fermi later denied it). The stock fell 34%, and investors filed a class action in January 2026.",
+    "Bisnow; DCD"
+   ],
+   [
+    "Its CFO said in March 2026 that more construction would wait for a signed tenant and financing.",
+    "Axios (Apr 2026)"
+   ],
+   [
+    "Was subpoenaed for records on Project Matador and former management.",
+    "Bisnow"
+   ],
+   [
+    "Neugebauer's previous company, GloriFi, filed for Chapter 7 bankruptcy.",
+    "Industrial Info"
+   ]
+  ]
+ },
+ "Amazon": {
+  "people": [
+   [
+    "Builds through Amazon Data Services, an Amazon affiliate.",
+    "Construction Review; Baxtel"
+   ]
+  ],
+  "record": [
+   [
+    "Sought up to 90% property tax rebates for 30 years in Hood County, then said in September 2026 it would not build there.",
+    "CBS 60 Minutes, via Let's Data Science; Baxtel"
+   ],
+   [
+    "Bought the 8,000-acre GW Ranch site in Pecos County from Pacifico Energy and will buy power from its on-site gas plant: 35 turbines, up to 7.65 GW, permitted for up to 33 million tons of CO2 a year.",
+    "Baxtel, citing Cleanview; NewsBytes"
+   ]
+  ]
+ },
+ "Sailfish Development": {
+  "people": [
+   [
+    "Founder and managing partner Ryan Hughes; Sailfish Investors is based in Florida.",
+    "KERA; DCD"
+   ]
+  ],
+  "record": [
+   [
+    "Had not built a data center before proposing Comanche Circle; says it is planning 17 campuses nationwide.",
+    "Industrial Info; DCD"
+   ],
+   [
+    "Needs a 95-million-gallon flush and fill, then about 150,000 gallons a day.",
+    "Texas Tribune (June 2, 2026)"
+   ],
+   [
+    "Hood County approved the concept plan without conditions on June 9, 2026, after a contentious meeting. NRG withdrew its permit for a 2 GW gas plant meant to power it.",
+    "KERA (June 2026)"
+   ],
+   [
+    "In October 2026 the county rejected a settlement that would have shrunk the project to about 1,375 acres, and rejected a permit appeal.",
+    "Texas Public Radio (Oct 13, 2026)"
+   ]
+  ]
+ },
+ "NextEra Energy": {
+  "people": [
+   [
+    "Project contact: AndersonEnergyCenter@nexteraenergy.com, (713) 226-2702.",
+    "NextEra presentation (Apr 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Site is at FM 2706 and FM 321 in the Bethel-Cayuga area. Gas will come from Comstock Resources, up to about 1 billion cubic feet a day by 2031.",
+    "Anderson County agenda; Comstock release (Mar 2026)"
+   ],
+   [
+    "Told commissioners in April 2026 the plant could power a data center but there were no current plans, while the U.S. Commerce Department said a data center would follow.",
+    "KLTV; The Center Square"
+   ],
+   [
+    "Says it will coordinate permitting with the Neches and Trinity Valleys Groundwater Conservation District.",
+    "NextEra presentation (Apr 2026)"
+   ]
+  ]
+ },
+ "CleanSpark": {
+  "people": [
+   [
+    "Founder and CEO Matt Schultz. Jeff Thomas leads its AI data centers; he previously led Saudi Arabia's Humain AI data center effort.",
+    "Sealy News; The Energy Mag"
+   ]
+  ],
+  "record": [
+   [
+    "Paid cash and shares for about 271 acres in Austin County with 285 MW of power deals, then spoke against the county's July 27, 2026 moratorium.",
+    "DCD; Sealy News"
+   ],
+   [
+    "Also agreed to buy 447 acres in Brazoria County for a 600 MW campus.",
+    "DCD; Yahoo Finance"
+   ]
+  ]
+ },
+ "Black Mountain Power": {
+  "people": [
+   [
+    "CEO Rhett Bennett. A Fort Worth oil, gas and power company.",
+    "KERA; DCD"
+   ]
+  ],
+  "record": [
+   [
+    "Its affiliate Fort Worth Power Core LLC holds gas plant air permits in Tarrant, Jack, Somervell, Bell and Bowie counties. The Bowie application was signed before the land deed was recorded.",
+    "TXK Today; Killeen Daily Herald"
+   ],
+   [
+    "Fort Worth approved a revised site plan for its $10 billion campus in August 2026. Residents said they were shut out; the CEO held a private meeting where filming was not allowed.",
+    "KERA; Bisnow; Spectrum News"
+   ],
+   [
+    "Proposed a 450-acre data center bordering Dinosaur Valley State Park.",
+    "KERA (June 2026)"
+   ]
+  ]
+ },
+ "Pacifico Energy": {
+  "people": [
+   [
+    "CEO Nate Franklin, Pacifico Energy Group.",
+    "Business Wire (Jan 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Won the largest power plant air permit in U.S. history for GW Ranch in Pecos County: 7.65 GW, allowed more than 12,000 tons a year of regulated air pollutants. It then sold the site to Amazon.",
+    "DCD; TCEQ records via Texas Tribune; Baxtel"
+   ],
+   [
+    "Approached Brewster County officials about a similar project in the Glass Mountains.",
+    "Marfa Public Radio (Sept 2026)"
+   ]
+  ]
+ }
 }
