@@ -1139,6 +1139,20 @@
   "src": "More Than Just Parks data center tracker"
  },
  {
+  "name": "Blueprint Projects data center (Taylor parkland)",
+  "county": "Williamson",
+  "type": "data",
+  "status": "approved",
+  "lat": 30.58,
+  "lng": -97.42,
+  "dev": "Blueprint Projects Data Centers (NCP Travis TPP Project, LLC)",
+  "power": "About 60 MW, with an on-site substation; power expected 2027",
+  "water": "Not disclosed",
+  "conf": "Reporting",
+  "note": "Three buildings totaling 135,000 sq ft on land a family deeded in 1999 to be held for a public park. The city's development corporation sold it for $10M in 2025. Neighbors sued, and the Attorney General opened an investigation in Sept 2026.",
+  "src": "Texas Attorney General; KUT; Texas Scorecard; Fox 7"
+ },
+ {
   "name": "Mesone data center (Jarrell)",
   "county": "Williamson",
   "type": "data",
