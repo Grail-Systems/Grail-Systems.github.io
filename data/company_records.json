@@ -494,5 +494,145 @@
     "Marfa Public Radio (Sept 2026)"
    ]
   ]
+ },
+ "Crusoe / Oracle / OpenAI (Stargate)": {
+  "people": [
+   [
+    "A joint venture of OpenAI, Oracle and SoftBank, with Abu Dhabi's MGX, announced in January 2025 at up to $500 billion. In Abilene, Crusoe builds the campus on land owned by Lancium; Oracle is Crusoe's customer, and OpenAI is Oracle's.",
+    "SDxCentral; Baxtel; Crusoe (May 2025)"
+   ],
+   [
+    "The Texas Comptroller lists Oracle America Cloud Services as the occupant of all 10 Abilene registrations (Lancium Abilene Clean Campus I through X) and of Vantage's 10 Frontier buildings in Shackelford County.",
+    "Texas Comptroller data center list (2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Crusoe raised $11.6 billion in debt and equity in May 2025 to grow Abilene to eight buildings, about 1.2 GW.",
+    "Crusoe, via Baxtel and Benzinga"
+   ],
+   [
+    "March 2026: Bloomberg reported Oracle and OpenAI dropped a planned 600 MW Abilene expansion over financing and OpenAI's shifting needs. Oracle called parts of the reporting false and said the campus was on schedule. Meta and Microsoft were reported to be in talks for the space.",
+    "Bloomberg, via Tom's Hardware; Structure Research (Mar 2026)"
+   ],
+   [
+    "Crusoe paused a 1.8 GW data center build in Wyoming in June 2026.",
+    "Baxtel (June 2026)"
+   ]
+  ]
+ },
+ "RCM Hill LLC": {
+  "people": [
+   [
+    "A Texas developer. News coverage has not named its owners or officers; its public statements came through its attorneys.",
+    "KWTX (May 29, 2026)"
+   ]
+  ],
+  "record": [
+   [
+    "Project Aquila: 1,235 MW on more than 800 acres in unincorporated Hill County, near Hillsboro. Its land contracts with four families total about $80 million, roughly $100,000 an acre, about 14 times appraised value.",
+    "KWTX (June 30, 2026); Texas Tribune"
+   ],
+   [
+    "May 27, 2026: sued Hill County, the county judge and two commissioners in federal court for $100 million over the first county data center moratorium in Texas. The county rescinded the moratorium on June 4 and adopted a development checklist and public notice rules instead.",
+    "KWTX; KERA; Fox 7 Austin"
+   ],
+   [
+    "July 2026: dismissed the suit with prejudice. Hill County agreed to pay $100,000 toward RCM Hill's attorney fees.",
+    "KWTX (July 15, 2026); KXXV"
+   ]
+  ]
+ },
+ "Stream Data Centers": {
+  "people": [
+   [
+    "A Texas-based developer of hyperscale data centers. Apollo agreed to acquire Stream in August 2025. Project Saltworks is pursued through its affiliate Headwaters Site Development.",
+    "Baxtel; Data Center Dynamics"
+   ]
+  ],
+  "record": [
+   [
+    "Project Saltworks: about 890 acres near Graham, about $10 billion, capacity not disclosed. The Young County Appraisal District estimated about $14 million a year in local revenue at a $1 billion valuation.",
+    "Data Center Dynamics; Baxtel"
+   ],
+   [
+    "July 2026: agreed to pay up to $76.5 million for Plug Power's canceled hydrogen site near Graham (about 66 acres) and its grid connection. Graham has discussed sewer service and non-drinking water from Plug's pipeline.",
+    "Olney Enterprise (July 2026)"
+   ],
+   [
+    "Young County accepted its tax abatement application in August 2026. The county later announced Stream had abandoned the abatement talks, which would have carried protections for residents, and Graham moved to seek its own safeguards.",
+    "Olney Enterprise (Aug 13, 2026, and later)"
+   ],
+   [
+    "The Comptroller lists Stream campuses in Dallas (occupant Google) and San Antonio (occupant Microsoft) for the state sales tax break.",
+    "Texas Comptroller data center list"
+   ]
+  ]
+ },
+ "Meta": {
+  "people": [
+   [
+    "Meta's El Paso campus is held through Wurldwide LLC, registered with the Comptroller as Wurldwide LLC DBA Statue LLC, with Roadrunner Leap LLC as occupant. In Temple, Meta subsidiary Polmer LLC occupies Rowan's data centers.",
+    "Texas Comptroller data center list; Texas Tribune; The Texan"
+   ]
+  ],
+  "record": [
+   [
+    "El Paso: $10 billion, 1 GW. The City signed an incentive agreement with Wurldwide in December 2023 for a 1,000-acre site; city and county incentives could be worth up to $110 million. A council member later proposed ending the agreement, and El Paso County paused its deal in February 2026.",
+    "Texas Tribune; El Paso Times via KVIA; KTSM; Hoodline"
+   ],
+   [
+    "Power: El Paso Electric is seeking a 366 MW gas plant (McCloud) of 813 small generators from Enchanted Rock, a contractor Meta recommended. In September 2026, administrative law judges found the utility had not weighed alternatives or sought bids, and recommended approval only if ratepayers are protected. The plant already has a TCEQ air permit.",
+    "Inside Climate News (Sept 24, 2026)"
+   ],
+   [
+    "Water: closed-loop cooling. Meta compared its use to a golf course, about 350,000 gallons a day, and pledged to restore 200% of the water it uses.",
+    "El Paso Inc; KFOX"
+   ]
+  ]
+ },
+ "Big Digital Energy / 10NetZero": {
+  "people": [
+   [
+    "Big Digital Energy (Nasdaq: BGDE), based in Pittsburgh, formerly traded as MIGI. CEO Phil Stanley; chairman Josh Kilgore; COO Cody Smith. 10NetZero builds on-site power and data centers, about 129 MW, mostly on the PJM grid in the eastern U.S.",
+    "Company releases (GlobeNewswire, July 2026); Data Center Dynamics; Texas Scorecard"
+   ]
+  ],
+  "record": [
+   [
+    "Hood County: a 50/50 joint venture bought a 50-acre powered industrial site at 2400 County Road 326 for $10 million, closed in July 2026, with 17 MW live and plans for up to about 300 MW.",
+    "The Energy Mag (July 20, 2026); Data Center Dynamics"
+   ],
+   [
+    "August 2026: letter of intent with Tensor IQ for 17 MW of AI capacity at the site.",
+    "GlobeNewswire (Aug 11, 2026)"
+   ],
+   [
+    "A small company: stock market value around $31 million; it raised $15 million alongside the joint venture.",
+    "roic.ai; Panabee"
+   ]
+  ]
+ },
+ "Infrakey": {
+  "people": [
+   [
+    "Infrakey DC Parks, formed in March 2025. CEO Braham Singh; chair Bill Barney, both with telecom and data center experience mostly in Asia.",
+    "Texas Tribune (Nov 24, 2025); Pacific Telecommunications Council"
+   ]
+  ],
+  "record": [
+   [
+    "Bought 520 acres of farmland near Ross, McLennan County, in June 2025 for a $10 billion campus of up to 925 MW. Neighbors learned of it months later.",
+    "Texas Tribune; Data Center Dynamics; KWBU"
+   ],
+   [
+    "Lacy Lakeview approved a non-binding agreement 6 to 1 in December 2025 and signed a data district deal in Honolulu on January 20, 2026. The city would annex the site plus a 3-mile corridor and needs Waco to release the land from its jurisdiction. Projected city tax revenue: $50 million a year.",
+    "KXXV; Pacific Telecommunications Council; KSAT/Texas Tribune (May 2026)"
+   ],
+   [
+    "Plans to cool almost entirely with treated wastewater from Lacy Lakeview and Waco; no agreement with Waco as of May 2026. Lacy Lakeview voters elected opponent Amy Gage in May 2026, and state Rep. Pat Curry has criticized the proposal.",
+    "KSAT/Texas Tribune (May 14, 2026)"
+   ]
+  ]
  }
 }
