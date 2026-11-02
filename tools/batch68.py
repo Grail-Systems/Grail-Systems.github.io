@@ -27,7 +27,7 @@ def block(rs):
                     f'<b>{E(r["agency"])}{num}</b> <span style="color:#555">filed {fmt(r["filed"])}</span><br>'
                     f'<span style="font-weight:600;color:var(--pine,#1f4a36)">{E(r["status"])}</span>'
                     f'<details style="margin-top:6px"><summary style="cursor:pointer">What we asked for</summary><p style="margin:6px 0 0;line-height:1.55">{E(r["asked"])}</p></details>'
-                    f'{docs_html}</li>')
+                    f'{docs_html}' + ''.join(f'<p style="margin:6px 0 0;color:#555">{E(n)}</p>' for n in (r.get("privacy_notes") or [])) + '</li>')
     n_docs = sum(len({x["href"] for x in (r.get("documents") or [])}) for r in rs)
     return ('<!--records:start-->\n<section id="records" style="margin:1.6rem 0">'
             '<h2>Records we asked for</h2>'
