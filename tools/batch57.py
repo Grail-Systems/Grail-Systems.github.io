@@ -1,4 +1,4 @@
-"""Build the Know Your Tools page (/know-your-tools) from lessons verified in the Texas Watch originals check. Reuses the checklist page's header and menu."""
+"""Build the Know Your Tools page (/know-your-tools) from lessons verified in the Ground Truth Texas originals check. Reuses the checklist page's header and menu."""
 import re
 ck = open("checklist.html").read()
 nav = re.search(r'<nav class="top">.*?</nav>', ck, re.S).group(0)
@@ -33,11 +33,11 @@ TOOLS = [
  ("Check old deeds before any deal",
   "Former industrial sites can carry deed restrictions that limit what can be built. Pull the deed history from the county clerk before anyone signs anything.",
   "In Sulphur Springs, a deed restriction barring power generation led to a court order that stopped construction on a data center campus.",
-  [("Texas Watch map: Sulphur Springs card", "/texas")]),
+  [("Ground Truth Texas map: Sulphur Springs card", "/texas")]),
  ("Keep tax abatement guidelines current",
   "Texas counties must adopt abatement guidelines before granting any abatement and review them every two years. Out-of-date guidelines can leave a county with no leverage, and current ones are where permanent standards belong.",
   "Nueces County's abatement guidelines were out of date when a large campus came forward near Robstown, so the county could not have offered one.",
-  [("Texas Watch map: Beacon Point card", "/texas")]),
+  [("Ground Truth Texas map: Beacon Point card", "/texas")]),
  ("Do not move faster than the state",
   "Texas is reviewing data center demand on the grid and pausing some permits. A county can reasonably wait for those reviews before signing long agreements.",
   "In September 2026 the state paused new data center permits while it reviews water and power use, and the ERCOT audit of large loads is expected to finish in December 2026.",
@@ -57,7 +57,7 @@ page = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Know Your Tools | Texas Watch</title>
+<title>Know Your Tools | Ground Truth Texas</title>
 <meta name="description" content="Ten tools Texans have used to get a fair deal, or a no, on data centers, crypto mines and power plants, each with a Texas example and its source.">
 <meta property="og:title" content="Know your tools">
 <meta property="og:description" content="Ten tools that have worked in Texas, each with a real example and a source.">
@@ -82,8 +82,8 @@ page = """<!DOCTYPE html>
 """ + "\n".join(items) + """
 <p class="noprint">Found a tool that worked in your county? Tell us at <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>.</p>
 <footer>
-  <span>Know Your Tools · Texas Watch · Grail Systems</span>
-  <a href="/texas">Texas Watch</a>
+  <span>Know Your Tools · Ground Truth Texas · Grail Systems</span>
+  <a href="/texas">Ground Truth Texas</a>
   <a href="/checklist">Checklist</a>
   <a href="/standards">The Standard</a>
   <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
@@ -93,7 +93,7 @@ page = """<!DOCTYPE html>
 </html>
 """
 open("know-your-tools.html", "w").write(page)
-old = '<span>Checklist · Texas Watch · Grail Systems</span>'
+old = '<span>Checklist · Ground Truth Texas · Grail Systems</span>'
 if 'href="/know-your-tools"' not in ck:
     assert ck.count(old) == 1, "checklist footer not found"
     open("checklist.html", "w").write(ck.replace(old, old + '\n  <a href="/know-your-tools">Know your tools</a>', 1))

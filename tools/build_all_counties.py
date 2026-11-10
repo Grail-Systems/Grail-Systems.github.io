@@ -35,14 +35,14 @@ idx = idx.replace('<meta name="description" content="Data center, crypto mine an
 idx = re.sub(r'<meta property="og:[^>]*>\n', '', idx)
 idx += f'''<div class="hero">
   <h1>Every County Watch page</h1>
-  <p>{len(counties)} Texas counties have at least one data center, crypto mine or large power project on the Texas Watch map. Each page lists the projects, upcoming dates, your legislators and a records-request letter writer.</p>
+  <p>{len(counties)} Texas counties have at least one data center, crypto mine or large power project on the Ground Truth Texas map. Each page lists the projects, upcoming dates, your legislators and a records-request letter writer.</p>
 </div>
 <section><ul class="rows">
 {chr(10).join(rows)}
 </ul></section>
 <footer>
   <span>County Watch · Grail Systems</span>
-  <a href="/texas">Texas Watch</a>
+  <a href="/texas">Ground Truth Texas</a>
   <a href="/legislators">Legislators</a>
   <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
 </footer>

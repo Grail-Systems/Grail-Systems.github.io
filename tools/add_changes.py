@@ -14,16 +14,16 @@ for county, url in pages.items():
 print(f"Changes box added to {done} county pages.", ("Skipped: " + ", ".join(skipped)) if skipped else "")
 T = open("counties.html").read()
 head = T.split('<div class="hero">')[0].replace("Every County Watch page | Grail Systems", "What changed | Grail Systems")
-head = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Every change on Texas Watch, newest first: new projects, status changes, grid requests, records and hearing dates.">', head)
+head = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Every change on Ground Truth Texas, newest first: new projects, status changes, grid requests, records and hearing dates.">', head)
 open("updates.html", "w").write(head + '''<div class="hero">
   <h1>What changed</h1>
-  <p>Every night, Texas Watch checks for new projects, status changes, new ERCOT grid requests, new records, new hearing dates and new state tax-break records. Everything it finds lands here, and on the county page where it happened.</p>
+  <p>Every night, Ground Truth Texas checks for new projects, status changes, new ERCOT grid requests, new records, new hearing dates and new state tax-break records. Everything it finds lands here, and on the county page where it happened.</p>
 </div>
 <section id="changes" data-county=""><p>Loading…</p></section>
 <script src="/assets/changes.js" defer></script>
 <footer>
-  <span>Texas Watch · Grail Systems</span>
-  <a href="/texas">Texas Watch</a>
+  <span>Ground Truth Texas · Grail Systems</span>
+  <a href="/texas">Ground Truth Texas</a>
   <a href="/counties">Every county</a>
   <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
 </footer>

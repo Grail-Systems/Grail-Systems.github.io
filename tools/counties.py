@@ -99,7 +99,7 @@ build(dict(slug="hays", name="Hays", checked=C,
     ("Show up","Hundreds of residents at city hall turned a rezoning vote.")],
   sources="Texas Tribune (June 30, 2026); KSAT; Community Impact; KUT; The Real Deal; Hoodline."))
 build(dict(slug="easttexas", name="East Texas", checked=C,
-  title="East Texas Watch",
+  title="East Ground Truth Texas",
   desc="Old mill sites, gas hubs and data centers across the Piney Woods, from the Angelina and Neches rivers to the Sabine. What's coming to East Texas.",
   intro="Developers have discovered East Texas for the same reasons families love it: water, land and room. From Lufkin's old paper mill to the old plywood mill at Bon Wier, from Cedar Creek Lake to the Neches River, these projects share the same rivers and the same aquifer.",
   counts=[("2","old mill sites targeted: Lufkin and Bon Wier"),("$150M+","incentives granted for a Bon Wier biorefinery that was never built"),("$16B","NextEra's planned gas hub in Anderson County"),("1","project already withdrawn: Cedar Creek Lake")],

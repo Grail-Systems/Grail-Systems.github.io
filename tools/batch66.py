@@ -1,6 +1,6 @@
 """Sign-up button: now says 'Get alerts for your county' (county email alerts went live Nov 1, 2026)."""
 PAIRS = [
- ("Join the Texas Watch network &rarr;</a>", "Get alerts for your county &rarr;</a>"),
+ ("Join the Ground Truth Texas network &rarr;</a>", "Get alerts for your county &rarr;</a>"),
  ("Two minutes. Get records, meeting alerts and tools for your county.",
   "Two minutes. Get an email when something new shows up in your county, plus records, meeting alerts and tools."),
 ]

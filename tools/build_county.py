@@ -19,7 +19,7 @@ T = """<!DOCTYPE html>
 </head>
 <body>
 <div class="wrap">
-<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Texas Watch</a><a href="/standards">The Standard</a><a href="/companies">Companies</a><a href="/records">Records</a><a href="/network">Join the network</a></nav>
+<nav class="top"><a class="brand" href="/">Grail <span>Systems</span></a><a href="/texas">Ground Truth Texas</a><a href="/standards">The Standard</a><a href="/companies">Companies</a><a href="/records">Records</a><a href="/network">Join the network</a></nav>
 <div class="hero">
   <h1>{title}</h1>
   <p>{intro}</p>
@@ -33,7 +33,7 @@ T = """<!DOCTYPE html>
 <section><h2>Sources</h2><p>{sources}</p></section>
 <footer>
   <span>{name} County Watch · Grail Systems</span>
-  <a href="/texas">Texas Watch</a>
+  <a href="/texas">Ground Truth Texas</a>
   <a href="/standards">The Deep East Texas Standard</a>
   <a href="/angelina/">Angelina County Watch</a>
   <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a>
