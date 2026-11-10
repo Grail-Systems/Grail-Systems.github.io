@@ -1,4 +1,4 @@
-// County Watch page built from Texas Watch data. Settings: <main id="auto" data-county="X" data-live="1|0">
+// County Watch page built from Ground Truth Texas data. Settings: <main id="auto" data-county="X" data-live="1|0">
 (() => {
   const root = document.getElementById('auto'); if (!root) return;
   const COUNTY = root.dataset.county, LIVE = root.dataset.live === '1';
