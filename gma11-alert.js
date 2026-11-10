@@ -29,7 +29,7 @@
       '<p>East Texas\u2019s four groundwater districts (Groundwater Management Area 11) are scheduled to vote on adopting the official limits on how far our aquifers can drop through 2080, and to send them to the state.</p>' +
       '<p>Ask them to <strong>keep Scenario 26.1</strong> and to hold meetings when working families can attend.</p>' +
       '<a class="go" href="' + MAIL + '">Email your comment to GMA 11</a>' +
-      '<p><small>Or sign up to speak before the meeting starts (3 minutes). <a href="' + NOTICE + '" target="_blank" rel="noopener">Read the official notice</a>.<br>Protect the Piney Woods and the East Texas Legacy Coalition</small></p></div>';
+      '<p><small>Or sign up to speak before the meeting starts (3 minutes). <a href="' + NOTICE + '" target="_blank" rel="noopener">Read the official notice</a>.<br>Protect Our Piney Woods and the East Texas Legacy Coalition</small></p></div>';
     function close(){ pop.remove(); try { sessionStorage.setItem('gma11-pop','1'); } catch(e) {} }
     pop.querySelector('.x').onclick = close;
     pop.onclick = function(ev){ if (ev.target === pop) close(); };
