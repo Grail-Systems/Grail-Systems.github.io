@@ -122,5 +122,6 @@ render();
 fetch("/data/company_records.json").then(r => r.json()).then(d => { REC = d; render(); }).catch(() => {});
 fetch("/data/projects.json").then(r => r.json()).then(d => { PROJ = d; render(); }).catch(() => {});
 </script>
+<script src="/donate.js" defer></script>
 </body>
 </html>

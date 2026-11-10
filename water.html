@@ -91,5 +91,6 @@ document.getElementById("list").innerHTML = rows.map(r => `<li>
   <div class="bar ${r.kind === "ask" ? "alarm" : ""}" style="width:${Math.max(0.4, 100 * r.gpd / max)}%"></div>
   <p>${esc(r.text)}</p></li>`).join("");
 </script>
+<script src="/donate.js" defer></script>
 </body>
 </html>
