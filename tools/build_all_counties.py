@@ -28,8 +28,8 @@ rows = []
 for c in counties:
     ps = [p for p in P if cty(p["county"]) == c]; act = sum(1 for p in ps if p["status"] != "stopped")
     rows.append(f'<li><h3><a href="{pages[c]}">{E(c)} County</a></h3><p>{len(ps)} project{"s" if len(ps) != 1 else ""} on the map, {act} still active</p></li>')
-idx = T.split("<div class=\"hero\">")[0].replace(f"{{{{COUNTY}}}} County Watch | Grail Systems", "Every County Watch page | Grail Systems")
-idx = re.sub(r"\{\{[A-Z]+\}\}", "", idx).replace(' County Watch | Grail Systems', 'Every County Watch page | Grail Systems', 1)
+idx = T.split("<div class=\"hero\">")[0].replace(f"{{{{COUNTY}}}} County Watch | Ground Truth Texas", "Every County Watch page | Grail Systems")
+idx = re.sub(r"\{\{[A-Z]+\}\}", "", idx).replace(' County Watch | Ground Truth Texas', 'Every County Watch page | Grail Systems', 1)
 idx = idx.replace('<meta name="description" content="Data center, crypto mine and power plant projects in  County, Texas: who is behind them, what they need, upcoming dates and how to ask for records.">',
                   '<meta name="description" content="A County Watch page for every Texas county with a tracked data center, crypto mine or power plant project.">')
 idx = re.sub(r'<meta property="og:[^>]*>\n', '', idx)

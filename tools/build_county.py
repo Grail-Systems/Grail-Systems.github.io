@@ -5,7 +5,7 @@ T = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{name} County Watch | Grail Systems</title>
+<title>{name} County Watch | Ground Truth Texas</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{name} County Watch">
 <meta property="og:description" content="{desc}">
