@@ -1,0 +1,8 @@
+/* Ground Truth Texas skin: brings the county pages, map and tool pages onto the home page's look.
+   Loaded last, so it only changes colors and type, never layout. Nov. 20, 2026. */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Source+Sans+3:wght@400;600;700;800&display=swap");
+:root{--paper:#F4F1EA;--ink:#18201B;--pine:#1F5A41;--brass:#8A5F12;--muted:#56605A;--rule:#DDD6C8;--card:#FFFDF8;--alarm:#A12B1F}
+@media (prefers-color-scheme:dark){:root{--paper:#0F1512;--ink:#E9E6DF;--pine:#8FD0AE;--brass:#D9A93A;--muted:#AEB6AF;--rule:#27322B;--card:#151D18;--alarm:#F08A7E}}
+body{font-family:"Source Sans 3","Public Sans",system-ui,sans-serif!important}
+h1,h2,.brand,.num{font-family:"Libre Caslon Display","Young Serif",Georgia,serif!important}
+h1{text-wrap:balance}
