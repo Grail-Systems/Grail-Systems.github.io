@@ -1,0 +1,5 @@
+/* Ground Truth Texas: shared look. Nov. 20, 2026.
+   A surveyor's field sheet: limestone paper, pine green field, red clay marks; Caslon titles, Source Sans text. */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap");
+:root{--gt-bg:#F4F1EA;--gt-ink:#18201B;--gt-dim:#56605A;--gt-field:#163A2C;--gt-pine:#1F5A41;--gt-clay:#B4472A;--gt-sap:#D9A93A;--gt-line:#DDD6C8;--gt-card:#FFFDF8;--gt-county:#E7E1D3;--gt-on:#CFE0D3;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--gt-bg:#0F1512;--gt-ink:#E9E6DF;--gt-dim:#AEB6AF;--gt-pine:#8FD0AE;--gt-line:#27322B;--gt-card:#151D18;--gt-county:#1C2620;--gt-on:#244233;color-scheme:dark}}
