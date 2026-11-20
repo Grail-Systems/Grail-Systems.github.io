@@ -634,9 +634,9 @@
   "power": "On-site generation (size not disclosed)",
   "water": "On-site water and wastewater; source not disclosed",
   "conf": "Reporting",
-  "note": "About 2,100 to 2,600 acres near Tolar. Conditionally approved Jan 13, 2026, with 45 days to provide water details.",
+  "note": "About 2,100 to 2,600 acres near Tolar. Conditionally approved Jan 13, 2026, with 45 days to provide water details. A 2 GW gas plant planned to power it was withdrawn in June 2026. On Oct 13, 2026, commissioners rejected a scaled-back settlement 3 to 1 and unanimously denied the developer's appeal on its on-site permits. The developer has warned it could sue.",
   "link": "/hood/",
-  "src": "KERA; CBS Texas; Texas Tribune"
+  "src": "KERA; CBS Texas; Texas Tribune; Texas Public Radio (Oct 13, 2026)"
  },
  {
   "name": "Fort Spunky",
@@ -694,9 +694,9 @@
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Project Spectrum: about $5B on 1,265 acres next to Comanche Peak nuclear plant. Reported withdrawn.",
+  "note": "Project Spectrum: about $5B on 1,265 acres next to Comanche Peak nuclear plant. Amazon asked for up to 90% in property tax rebates for 30 years. In Sept 2026 it told CBS News's 60 Minutes it had decided not to build in Hood County. CBS reported the project is moving forward in the next county over, where Amazon got the tax rebate it wanted.",
   "link": "/hood/",
-  "src": "Baxtel; More Than Just Parks tracker"
+  "src": "CBS News, 60 Minutes (Sept 2026); Baxtel; More Than Just Parks tracker"
  },
  {
   "name": "Project Red and Project Yellow",
@@ -2771,21 +2771,6 @@
   "note": "Added from the More Than Just Parks tracker; not yet verified by ETLC. First reported Jan 13, 2026. Map pin is approximate (town center), not the exact site.",
   "link": "/denton/",
   "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://communityimpact.com/dallas-fort-worth/denton/government/2026/01/23/denton-city-council-approves-permit-for-new-ai-and-crypto-data-center/"
- },
- {
-  "name": "Vulcan Core Tyler Downtown Data Center",
-  "county": "Smith",
-  "type": "data",
-  "status": "stopped",
-  "lat": 32.3507,
-  "lng": -95.3134,
-  "dev": "Not disclosed",
-  "power": "Not disclosed",
-  "water": "Not disclosed",
-  "conf": "Reporting",
-  "note": "Added from the More Than Just Parks tracker; not yet verified by ETLC.",
-  "link": "/smith/",
-  "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://www.kltv.com/2026/07/07/tyler-planning-commission-denies-permit-proposed-data-center/"
  },
  {
   "name": "Vapor IO Kinetic Edge Dallas",
