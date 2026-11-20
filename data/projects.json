@@ -1878,7 +1878,7 @@
   "water": "CyrusOne says about 1,000 gal/day per building",
   "conf": "Reporting",
   "note": "On a coal mine site Luminant gave the city. The old owner says the deed bars power generation, a judge has barred it until a 2027 trial, and construction stopped. Council minutes never mentioned the project. MSB is out; CyrusOne held a community meeting in Sept 2026.",
-  "src": "More Than Just Parks data center tracker; Texas Sixth Court of Appeals, No. 06-26-00025-CV"
+  "src": "More Than Just Parks data center tracker"
  },
  {
   "name": "Project Aggie",
@@ -1891,8 +1891,8 @@
   "power": "600 MW planned, with two 300 MW substations",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "Priority Power's plan for about 200 acres of city land in College Station's Midtown Business Park. A petition against the $30 million land sale drew thousands of signatures and nearly 80 people spoke against it. On Sept. 11, 2025, the City Council voted unanimously not to sell the land, which stopped the project there.",
-  "src": "KXXV; BCS Chronicle; KBTX (Sept. 2025); More Than Just Parks tracker"
+  "note": "Planned on about 200 acres of city land in College Station's Midtown Business Park. Amid strong opposition, the City Council refused to sell the land, which stopped the project there.",
+  "src": "More Than Just Parks data center tracker"
  },
  {
   "name": "Zydeco Hutto data center",
@@ -1919,9 +1919,9 @@
   "power": "10 MW to start, with bitcoin mining",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "After a packed council meeting, the Athens City Council adopted an emergency one-year moratorium on data centers, with the option to extend. A win for residents, near the separate Diode project at Cedar Creek Lake that was also withdrawn.",
+  "note": "After a packed council meeting, Athens paused data centers, then voted 3 to 2 in Aug 2026 for an ordinance banning them. A win for residents, near the separate Diode project at Cedar Creek Lake that was also withdrawn.",
   "link": "/henderson/",
-  "src": "Athens Independent; More Than Just Parks tracker"
+  "src": "More Than Just Parks data center tracker"
  },
  {
   "name": "NFN8 Crystal City bitcoin mine",
@@ -1949,6 +1949,21 @@
   "water": "Not disclosed",
   "conf": "Reporting",
   "note": "Rejected. The applicant asked to rezone land zoned for apartments, beside existing homes, to light industrial. The council worried the rezoning would allow other industrial uses too, and voted unanimously no in May 2026, citing the homes and the unknown developer. Three months later the city approved a much smaller data center next door that reuses an empty grocery store building, with conditions.",
+  "src": "More Than Just Parks data center tracker"
+ },
+ {
+  "name": "Highlander SM One (San Marcos)",
+  "county": "Hays",
+  "type": "data",
+  "status": "stopped",
+  "lat": 29.88,
+  "lng": -97.94,
+  "dev": "Highlander SM One LLC",
+  "power": "Size not disclosed",
+  "water": "Not disclosed",
+  "conf": "Reporting",
+  "note": "This is the same project as the San Marcos data center on Francis Harris Lane, which the City Council denied in Feb 2026. See that card for the full record.",
+  "link": "/hays/",
   "src": "More Than Just Parks data center tracker"
  },
  {
@@ -2048,9 +2063,9 @@
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "ONMINE asked for a permit for a $30 million data center on 2.6 acres at 6509 S. Fort Hood St. in Killeen. After residents raised noise and environmental concerns, the Planning and Zoning Commission voted 4 to 0 on April 27, 2026, to recommend denial, and the applicant withdrew its request.",
+  "note": "Added from the More Than Just Parks tracker; not yet verified by ETLC. First reported Apr 27, 2026.",
   "link": "/bell/",
-  "src": "KXXV; Texas Scorecard; Killeen Daily Herald; More Than Just Parks tracker"
+  "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://kdhnews.com/news/local/applicant-for-killeen-data-center-rezoning-withdraws-request/article_bc1255d3-487c-4e1e-9e55-e4bd2e2b75a6.html"
  },
  {
   "name": "Amazon AWS Bitter Blue Campus - Building B",
@@ -2398,19 +2413,19 @@
   "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://www.datacenterdynamics.com/en/news/data-center-to-be-built-in-lueders-texas/"
  },
  {
-  "name": "Lubbock AI data center rezoning",
+  "name": "Corva Data Center (Northeast Lubbock)",
   "county": "Lubbock",
   "type": "data",
   "status": "stopped",
   "lat": 33.59,
   "lng": -101.88,
-  "dev": "Not disclosed",
+  "dev": "Northeast Lubbock",
   "power": "Not disclosed",
   "water": "Not disclosed",
   "conf": "Reporting",
-  "note": "A rezoning for an AI data center in Lubbock was rejected by the Planning Commission and scrapped in January 2026. Separately, the city's economic development group has a partnership with CORVA for a small data center in East Lubbock that it calls not a done deal. In Sept. 2026 the council said it would consider no large data centers until rules are in place, and began the steps toward a 90-day moratorium.",
+  "note": "Added from the More Than Just Parks tracker; not yet verified by ETLC. First reported Jul 28, 2026. Map pin is approximate (town center), not the exact site.",
   "link": "",
-  "src": "High Plains Public Radio (May 2026); Texas Tribune (July 2026); KTTZ; Texas Public Radio (Sept. 2026)"
+  "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://www.kcbd.com/2026/01/16/lubbock-data-center-proposal-heads-city-council-after-planning-commission-rejection/"
  },
  {
   "name": "AWS DFW Metroplex Campus",
