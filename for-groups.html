@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A County Watch for your group | Grail Systems</title>
+<meta name="description" content="Grail Systems builds and runs a County Watch for local groups, small newsrooms and attorneys: a records-request builder, legal deadline clocks, and a public page your neighbors can trust.">
+<meta property="og:title" content="A County Watch for your group">
+<meta property="og:description" content="The same tools behind Angelina County Watch, set up for your county.">
+<meta property="og:image" content="https://grailsystems.io/img/grail_share.jpg">
+<meta property="og:url" content="https://grailsystems.io/for-groups.html">
+<link rel="stylesheet" href="/assets/ground.css">
+<style>
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--gt-bg);color:var(--gt-ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+a{color:var(--gt-pine);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--gt-sap);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 max(5vw,16px)}
+header.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}
+.brand{font-family:"Libre Caslon Display",serif;font-size:22px;color:var(--gt-ink);text-decoration:none}
+.brand small{font:600 13px "Source Sans 3",sans-serif;color:var(--gt-dim);margin-left:8px}
+nav.top{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+nav.top a{color:var(--gt-dim);text-decoration:none}nav.top a:hover{color:var(--gt-ink)}
+.hero{padding:28px 0 48px;max-width:800px}
+.kick{color:var(--gt-clay);font-weight:700;margin:0 0 8px}
+.hero h1{font-size:clamp(40px,5.6vw,72px)}
+.lede{font-family:"Libre Caslon Text",serif;font-size:clamp(19px,2vw,23px);line-height:1.45;margin:18px 0 0;max-width:40ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;text-decoration:none}
+.btn.go{background:var(--gt-field);color:#fff}.btn.alt{border:2px solid var(--gt-field);color:var(--gt-ink)}
+.live{background:var(--gt-field);color:#EEF2EC;border-radius:8px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:20px;align-items:end}
+.live p{margin:0}.live a{color:#F6E7B8}
+.live .lab{font-weight:700;color:var(--gt-sap);margin-bottom:6px}
+.live b{font-family:"Libre Caslon Display",serif;font-weight:400;font-size:44px;line-height:1;display:block;color:#fff}
+.live b.late{color:#F2A08A}
+.live span{font-size:14px;color:#D5DED7}
+.band{padding:56px 0;border-top:1px solid var(--gt-line)}
+h2{font-size:clamp(30px,3.8vw,46px);margin-bottom:16px}
+.prose{max-width:64ch}.prose p{margin:0 0 14px}
+.kit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+.kit div{background:var(--gt-card);border:1px solid var(--gt-line);border-radius:6px;padding:22px}
+.kit h3{font-size:24px;margin-bottom:8px}.kit p{margin:0;color:var(--gt-dim)}
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:20px}
+.who div{border-left:3px solid var(--gt-pine);padding:4px 0 4px 16px}
+.who b{display:block;font-family:"Libre Caslon Display",serif;font-weight:400;font-size:23px;margin-bottom:6px}
+.who p{margin:0;color:var(--gt-dim)}
+ul.rules{padding-left:20px;max-width:64ch}ul.rules li{margin-bottom:10px}
+.free{background:var(--gt-card);border:1px solid var(--gt-line);border-radius:6px;padding:22px;max-width:64ch}
+.sig{font-family:"Libre Caslon Text",serif;font-size:19px;margin-top:20px}
+footer{padding:36px 0 64px;color:var(--gt-dim);font-size:15px;border-top:1px solid var(--gt-line)}
+footer p{margin:0 0 8px}
+@media (max-width:860px){.live,.kit,.who{grid-template-columns:minmax(0,1fr)}}
+</style></head><body>
+<div class="wrap">
+<header class="bar"><a class="brand" href="/">Ground Truth <span>Texas</span><small>built by Grail Systems</small></a>
+<nav class="top" aria-label="Main"><a href="/texas">The map</a><a href="/counties">Counties</a><a href="/records">Records</a><a href="/tools.html">Tools</a><a href="/donate.html">Support</a></nav></header>
+
+<section class="hero">
+ <p class="kick">For local groups, small newsrooms and attorneys</p>
+ <h1>A County Watch for your group</h1>
+ <p class="lede">We built Angelina County Watch to fight for our own water. Now we’ll set up the same tools for your county, and keep them running.</p>
+ <div class="btns"><a class="btn go" href="mailto:contact@grailsystems.io?subject=County%20Watch%20for%20our%20group">Email us about your county</a><a class="btn alt" href="/angelina/">See Angelina County Watch</a></div>
+</section>
+
+<section class="live" aria-live="polite">
+ <div><p class="lab">Live from Angelina County Watch</p><p>These numbers come from the same nightly files the Angelina page reads. Nothing here is typed in by hand. <a href="/angelina/#records">See every request</a></p></div>
+ <div><b id="fgN">…</b><span>public records requests tracked</span></div>
+ <div><b id="fgLate" class="late">…</b><span>past their legal deadline</span></div>
+ <div><b id="fgNext">…</b><span>next answer due</span></div>
+</section>
+</div>
+
+<section class="band"><div class="wrap">
+ <p class="kick">What your group gets</p>
+ <h2>The kit</h2>
+ <div class="kit">
+  <div><h3>A records-request builder</h3><p>Your neighbors pick an agency and a topic, and the page writes a Texas Public Information Act request they can send in minutes. It works for any agency: county, city, groundwater district or state.</p></div>
+  <div><h3>Deadline clocks</h3><p>Under the Texas Public Information Act, an agency has 10 business days to hand over the records, tell you in writing when they’ll be ready, or ask the Attorney General for a ruling. Every request your group files gets a clock that skips weekends and state holidays, and turns red when an agency runs past it.</p></div>
+  <div><h3>Your own County Watch page</h3><p>Projects near you on the statewide map, your records and their status, aquifer water levels and EPA violations, all on one public page your neighbors, reporters and officials can check.</p></div>
+  <div><h3>A records log</h3><p>Every reply, letter and document an agency sends back gets logged by date on your page, the way Angelina’s requests are, so nothing gets lost between volunteers.</p></div>
+ </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <p class="kick">Who it’s for</p>
+ <h2>Built for people doing the work</h2>
+ <div class="who">
+  <div><b>Organized local groups</b><p>Neighbors who are already showing up to meetings and need their records and deadlines in one place.</p></div>
+  <div><b>Small newsrooms</b><p>Reporters who file requests and need to know, at a glance, which agencies are late.</p></div>
+  <div><b>Attorneys</b><p>A dated, sourced record of what was asked, when, and what came back.</p></div>
+ </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <p class="kick">What stays free</p>
+ <h2>The public record is never for sale</h2>
+ <div class="free"><p style="margin:0">The statewide map, every county page, the request builder, the <a href="/checklist">checklist</a> and the <a href="/standards">Deep East Texas Standard</a> stay free for everyone. What we charge for is our time and skill: setting up the kit for your group and keeping it running.</p></div>
+ <h2 style="font-size:30px;margin-top:40px">Our rules</h2>
+ <ul class="rules">
+  <li>We sell tools and skill, never sources. The records we find stay public.</li>
+  <li>We don’t take money from developers or the companies we track.</li>
+  <li>We never publish private residents’ names or contact information without permission.</li>
+  <li>If an outside tracker disagrees with the public record, the public record wins.</li>
+ </ul>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <p class="kick">Pricing</p>
+ <h2>Set with each group</h2>
+ <div class="prose"><p>Every county is different, so we set the price with each group after we talk about what you need. Email us with your county, what’s coming if you know, and who’s working on it.</p>
+ <div class="btns"><a class="btn go" href="mailto:contact@grailsystems.io?subject=County%20Watch%20for%20our%20group">contact@grailsystems.io</a></div>
+ <p class="sig">Fawn Elizabeth Zion<br>Grail Systems, Lufkin, Texas</p></div>
+</div></section>
+
+<div class="wrap"><footer>
+<p>Grail Systems builds Ground Truth Texas. The East Texas Legacy Coalition is our founding partner and first client.</p>
+<p><a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a> · <a href="/network">Start a free watch in your county</a> · <a href="/donate.html">Support Grail Systems</a></p>
+</footer></div>
+<script>
+(() => {
+  const GRID = '/carrizo_wilcox_aquifer/';
+  const get = f => fetch(GRID + f, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
+  const $ = id => document.getElementById(id);
+  const fmt = s => new Date(s + 'T12:00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
+  Promise.all([get('frontend/records.json'), get('frontend/deadlines.json').catch(() => ({requests: []}))]).then(([d, dl]) => {
+    const clock = {}; (dl.requests || []).forEach(x => { if (x.type && x.text) clock[x.key] = x; });
+    const AG = ['City of Lufkin','Lufkin Economic Development Corporation','Angelina County','Pineywoods Groundwater Conservation District'];
+    const rows = d.requests.filter(r => AG.includes(r.agency));
+    const open = rows.map(r => clock[r.agency + '|' + r.filed + '|' + (r.number || '')]).filter(Boolean);
+    const next = open.filter(x => !x.overdue_bd && x.due >= (dl.computed || '')).sort((a, b) => a.due.localeCompare(b.due))[0];
+    $('fgN').textContent = rows.length;
+    $('fgLate').textContent = open.filter(x => x.overdue_bd).length;
+    $('fgNext').textContent = next ? fmt(next.due) : 'none open';
+  }).catch(() => { document.querySelector('.live').hidden = true; });
+})();
+</script>
+</body></html>
