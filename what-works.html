@@ -126,4 +126,5 @@ fetch('/data/projects.json', {cache: 'no-store'}).then(r => r.json()).then(P => 
   document.getElementById('wwTotal').textContent = P.length;
 }).catch(() => { document.querySelector('.score').hidden = true; });
 </script>
+<script src="/donate.js" defer></script>
 </body></html>
