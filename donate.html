@@ -52,14 +52,14 @@ h1 span{display:block;color:var(--brass)}
 <header>
 <h1>Free to use.<span>Not free to run.</span></h1>
 <p class="lead">No login, no paywall, no ads. Anybody in Texas can use these tools to see what's being planned for their water and land, and what their officials are doing about it.</p>
-<p>I build and run all of it myself, and so far the costs have come out of my own pocket. Your gift keeps it online and keeps the records coming.</p>
+<p>I build and run all of it myself, and so far the costs have come out of my own pocket. Gifts go to the East Texas Legacy Coalition, the grassroots group these tools were built for. They pay for the records requests and keep these pages online.</p>
 <p><strong>Fawn Elizabeth Zion</strong>, Grail Systems</p>
 </header>
 
 <section class="runs" aria-labelledby="runs">
 <h2 id="runs">What your gift keeps running</h2>
 <ol>
-<li><a href="/texas">The map</a><span>The statewide map of data centers, crypto mines and power plants, every point sourced.</span></li>
+<li><a href="/texas">The map</a><span>The statewide map of data centers, crypto mines, power plants and industrial plants, every point sourced.</span></li>
 <li><a href="/angelina">County Watch</a><span>County pages with a records request builder and email alerts for your county.</span></li>
 <li><a href="/carrizo_wilcox_aquifer/">Aquifer Defense Grid</a><span>Projects, permits and water levels over the Carrizo-Wilcox, on one map.</span></li>
 <li><a href="/carrizo_wilcox_aquifer/records.html">Records requests</a><span>Every request, what each agency did, and a clock on every legal deadline.</span></li>
@@ -67,38 +67,39 @@ h1 span{display:block;color:var(--brass)}
 </section>
 
 <section class="give" aria-labelledby="give">
-<h2 id="give">Give</h2>
-<p>Pick an amount, then pay with Cash App or Venmo.</p>
+<h2 id="give">Back the public tools</h2>
+<p>Pick an amount, then pay with Cash App or Venmo. Your gift goes to the East Texas Legacy Coalition.</p>
 <div class="amts" role="group" aria-label="Choose an amount">
-<button type="button" data-amt="10" aria-pressed="false">$10</button>
-<button type="button" data-amt="25" aria-pressed="true">$25</button>
-<button type="button" data-amt="50" aria-pressed="false">$50</button>
+<button type="button" data-amt="25" aria-pressed="false">$25</button>
+<button type="button" data-amt="54" aria-pressed="true">$54</button>
 <button type="button" data-amt="100" aria-pressed="false">$100</button>
+<button type="button" data-amt="250" aria-pressed="false">$250</button>
 </div>
 <div class="pay">
-<a class="ca" id="ca" href="https://cash.app/$grailsystems" target="_blank" rel="noopener">Give with Cash App<span>$grailsystems</span></a>
-<a class="vm" id="vm" href="https://venmo.com/u/FawnElizabethZion" target="_blank" rel="noopener">Give with Venmo<span>@FawnElizabethZion</span></a>
+<a class="ca" id="ca" href="https://cash.app/$EastTexasLegacy" target="_blank" rel="noopener">Give with Cash App<span>$EastTexasLegacy</span></a>
+<a class="vm" id="vm" href="https://venmo.com/u/EastTexasLegacy" target="_blank" rel="noopener">Give with Venmo<span>@EastTexasLegacy</span></a>
 </div>
+<p class="fine">$54 pays one records deposit. <a href="https://easttexaslegacy.org/donate.html">See what each gift pays for</a>.</p>
 </section>
 
 <section class="know">
 <div>
 <h2>Good to know</h2>
-<p class="fine">Grail Systems isn't a charity, so gifts aren't tax-deductible. Venmo gifts go to Fawn Zion, who builds and runs Grail Systems.</p>
+<p class="fine">Both accounts belong to the East Texas Legacy Coalition, a grassroots group, not a registered 501(c)(3) charity, so gifts aren't tax-deductible. We don't take money from developers or the companies we track.</p>
 </div>
 <div>
-<h2>Backing the East Texas fight?</h2>
-<p class="fine">You can give straight to the East Texas Legacy Coalition at <a href="https://easttexaslegacy.org/donate.html">easttexaslegacy.org/donate</a>. Questions? <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a></p>
+<h2>Want this for your county?</h2>
+<p class="fine">Grail Systems sets up County Watch pages, records tracking and alerts for groups across Texas. The records always stay free to the public. <a href="/for-groups.html">See how it works</a>. Questions? <a href="mailto:contact@grailsystems.io">contact@grailsystems.io</a></p>
 </div>
 </section>
 </main>
 <script>
 (function(){
-var CA='https://cash.app/$grailsystems',VM='https://venmo.com/FawnElizabethZion?txn=pay&note='+encodeURIComponent('Grail Systems');
+var CA='https://cash.app/$EastTexasLegacy',VM='https://venmo.com/EastTexasLegacy?txn=pay&note='+encodeURIComponent('East Texas Legacy Coalition');
 var ca=document.getElementById('ca'),vm=document.getElementById('vm'),bs=document.querySelectorAll('.amts button');
 function set(a){ca.href=CA+'/'+a;vm.href=VM+'&amount='+a;bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.amt===a?'true':'false')});}
 bs.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.amt)})});
-set('25');
+set('54');
 })();
 </script>
 <script src="/donate.js" defer></script>
