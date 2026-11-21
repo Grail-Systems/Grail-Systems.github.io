@@ -2951,5 +2951,20 @@
   "note": "Added from the More Than Just Parks tracker; not yet verified by ETLC. First reported Nov 5, 2023. Map pin is approximate (town center), not the exact site.",
   "link": "",
   "src": "More Than Just Parks Data Center Tracker (record as of Nov 1, 2026); original: https://www.datacenterdynamics.com/en/news/qts-files-to-expand-fort-worth-data-center-in-texas/"
+ },
+ {
+  "name": "Pitman Family Farms wells near Lake Nacogdoches",
+  "county": "Nacogdoches",
+  "type": "industrial",
+  "status": "filed",
+  "lat": 31.58,
+  "lng": -94.81,
+  "dev": "Pitman Family Farms",
+  "power": "Not reported",
+  "water": "3,363 acre-feet a year requested (about 3 million gal/day) from five lower Wilcox wells, 1,900 to 2,300 ft deep",
+  "conf": "Records",
+  "note": "Proposed poultry plant. Permit applications are pending with the Pineywoods GCD; the hearing date isn't set. Its consultant told the board on Nov. 9, 2026 that modeled drawdown \"will exceed the limits\" in Rule 5.15. Map point is approximate, placed at the center of the modeled drawdown.",
+  "link": "/pitman",
+  "src": "Pineywoods GCD hearing recording, Nov. 9, 2026; general manager's email, Nov. 19, 2026; drawdown maps provided by Protect Our Piney Woods"
  }
 ]
