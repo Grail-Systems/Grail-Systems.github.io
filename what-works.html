@@ -120,7 +120,7 @@ footer p{margin:0 0 8px}
 </footer></div>
 <script>
 fetch('/data/projects.json', {cache: 'no-store'}).then(r => r.json()).then(P => {
-  const s = P.filter(p => p.status === 'stopped');
+  const s = P.filter(p => p.status === 'stopped' && p.type !== 'industrial');
   document.getElementById('wwStopped').textContent = s.length;
   document.getElementById('wwCounties').textContent = new Set(s.map(p => p.county.replace(/\s*\(.*\)/, ''))).size;
   document.getElementById('wwTotal').textContent = P.length;
