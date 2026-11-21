@@ -117,6 +117,7 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
       <option value="data">Data centers</option>
       <option value="crypto">Crypto mines</option>
       <option value="power">Power plants</option>
+      <option value="industrial">Industrial plants</option>
     </select>
     <select id="statusFilter" aria-label="Filter by status">
       <option value="">All statuses</option>
@@ -181,6 +182,11 @@ footer{margin-top:56px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap
 
 <script>
 const projects = [
+  {name:"Pitman Family Farms wells near Lake Nacogdoches", county:"Nacogdoches", type:"industrial", status:"filed", lat:31.580, lng:-94.810,
+   dev:"Pitman Family Farms", power:"Not reported",
+   water:"3,363 acre-feet a year requested (about 3 million gal/day) from five lower Wilcox wells, 1,900 to 2,300 ft deep", conf:"Records",
+   note:"Proposed poultry plant. Permit applications are pending with the Pineywoods GCD; the hearing date isn't set. Its consultant told the board on Nov. 9, 2026 that modeled drawdown \"will exceed the limits\" in Rule 5.15. Map point is approximate, placed at the center of the modeled drawdown.",
+   link:"/pitman", src:"Pineywoods GCD hearing recording, Nov. 9, 2026; general manager's email, Nov. 19, 2026; drawdown maps provided by Protect Our Piney Woods"},
   {name:"Amp Z / Project Lufkin", county:"Angelina", type:"data", status:"filed", lat:31.300, lng:-94.640,
    dev:"AmpZ Champion Data Center Holdings (Denver) with EPG Champion Development", power:"245 MW target, scaling to 2.1 GW; 20 MW available in 2026 per Oncor",
    water:"About 20 million gal/day requested from the City of Lufkin, July 2025", conf:"Records",
@@ -561,7 +567,7 @@ const css = getComputedStyle(document.documentElement);
 const v = n => css.getPropertyValue(n).trim();
 const colors = {announced:"#e8794a", filed:v("--alarm"), approved:"#8b3fa8", construction:v("--brass"), operating:v("--muted"), stopped:"#4cc27a"};
 const statusText = {announced:"Announced or reported", filed:"Filed with a government", approved:"Approved by a government", construction:"Under construction", operating:"Operating", stopped:"Withdrawn or stopped"};
-const typeText = {data:"Data center", crypto:"Crypto mine", power:"Power plant"};
+const typeText = {data:"Data center", crypto:"Crypto mine", power:"Power plant", industrial:"Industrial plant"};
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const counties = new Set(projects.map(p => p.county));

@@ -8,7 +8,7 @@ const raw=(x,y)=>{const rho=Math.sqrt(c-2*n*Math.sin(y))/n;x*=n;return [rho*Math
 const K=3972.4906330216386,yc=raw(0,33.6*r)[1];
 const proj=(lng,lat)=>{const p=raw((lng+100)*r,lat*r);return [403.05162303717583+K*p[0],213.4018737868546-K*(p[1]-yc)]};
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
-const label={data:'Data center',crypto:'Crypto mine',power:'Power plant'};
+const label={data:'Data center',crypto:'Crypto mine',power:'Power plant',industrial:'Industrial plant'};
 Promise.all([fetch('/assets/texas-base.svg').then(r=>r.text()),fetch('/data/projects.json',{cache:'no-store'}).then(r=>r.json())]).then(([svg,P])=>{
   box.innerHTML=svg;
   const s=box.querySelector('svg');s.setAttribute('role','img');

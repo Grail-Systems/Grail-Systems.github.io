@@ -6,7 +6,7 @@
   const cty = c => c.replace(/\s*\(.*\)\s*/, '').trim();
   const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const ST = {announced:'Announced or reported', filed:'Filed with a government', approved:'Approved by a government', construction:'Under construction', operating:'Operating', stopped:'Withdrawn or stopped'};
-  const TY = {data:'Data center', crypto:'Crypto mine', power:'Power plant'};
+  const TY = {data:'Data center', crypto:'Crypto mine', power:'Power plant', industrial:'Industrial plant'};
   const fmtD = d => new Date(d + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
   const get = u => fetch(u).then(r => r.ok ? r.json() : Promise.reject(u));
   Promise.all([get('/data/projects.json'), get('/data/details.json').catch(() => ({})), get('/data/events.json').catch(() => []), get('/data/districts.json')])
