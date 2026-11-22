@@ -21,7 +21,7 @@ Promise.all([fetch('/assets/texas-base.svg').then(r=>r.text()),fetch('/data/proj
   s.appendChild(g);
   s.insertAdjacentHTML('afterbegin',`<title>Map of Texas: ${pts.length} tracked projects in ${counties.size} counties</title>`);
   const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
-  set('gt-n',pts.length);set('gt-c',counties.size);set('gt-s',P.filter(p=>p.status==='stopped').length);
+  set('gt-n',pts.length);set('gt-c',counties.size);set('gt-s',P.filter(p=>p.status==='stopped'&&p.type!=='industrial').length);
 }).catch(()=>{box.innerHTML='<p class="gt-fail">The map didn’t load. <a href="/texas">Open the statewide map</a>.</p>'});
 }
 }
