@@ -14,3 +14,11 @@
   a.setAttribute('aria-label', C.aria);
   (document.body || document.documentElement).appendChild(a);
 })();
+
+/* Who's who, and a link for reporters, at the foot of every page (Nov. 22, 2026) */
+(function(){var f=document.querySelector('body>footer')||document.querySelector('footer');
+  if(!f||document.getElementById('gs-whos'))return;
+  var p=document.createElement('p');p.id='gs-whos';p.style.cssText='margin:.9rem 0 0;font-size:.9rem;line-height:1.5';
+  p.appendChild(document.createTextNode('East Texas Legacy Coalition is the cause. Ground Truth Texas is the free public tool. Grail Systems builds it. '));
+  var a=document.createElement('a');a.href='https://easttexaslegacy.org/press.html';a.textContent='For reporters \u2192';p.appendChild(a);
+  f.appendChild(p);})();
